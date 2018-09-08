@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh-Hant-TW">
+
+<head>
+    <!-- 測試站防止被爬蟲搜尋 -->
+    <!-- 
+        上線後刪除此段Meta與註解
+        參考文件：https://developers.google.com/search/reference/robots_meta_tag?hl=zh-tw
+     -->
+    <meta name="robots" content="noindex, nofollow,noarchive,nosnippet,noimageindex,noodp">
+    <meta name="googlebot" content="noindex, nofollow">
+    <!-- /End 測試站防止被爬蟲搜尋 -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="author" content="Wade,Linus,金錦町">
+    <meta name="copyright" content="金錦町">
+    <meta name="URL" content="">
+
+    <!-- for search engine -->
+    <meta name="description" content="對網站的描述" />
+    <link rel="author" href="google plus 個人頁網址/posts">
+    <link rel="publisher" href="google plus 個人頁網址">
+    <!-- for facebook -->
+    <!-- 參考https://developers.facebook.com/docs/reference/opengraph/object-type/business.business/ --> 
+    <!-- 參考 https://webcode.tools/open-graph-generator/business --> 
+    <meta property="og:title" content="網站名稱或標題" >
+    <meta property="og:url" content="網址">
+    <meta property="og:image" content="要顯示的縮圖網址">
+    <meta property="og:description" content="網頁描述" >
+    <meta property="og:type" content="business.business" />
+    <meta property="business:contact_data:street_address" content="Sample Contact data: Street Address" /> 
+    <meta property="business:contact_data:locality"       content="Sample Contact data: Locality" /> 
+    <meta property="business:contact_data:postal_code"    content="Sample Contact data: Postal Code" /> 
+    <meta property="business:contact_data:country_name"   content="Sample Contact data: Country Name" /> 
+    <meta property="place:location:latitude"              content="Sample Location: Latitude" /> 
+    <meta property="place:location:longitude"             content="Sample Location: Longitude" />    
+
+    <!-- for google plus -->
+    <meta itemprop="name" content="金錦町 JIN JIN DING">
+    <meta itemprop="image" content="要顯示的縮圖網址">
+    <meta itemprop="description" content="網頁描述">
+
+
+
+    <title>金錦町 JIN JIN DING - 有沒有真的的那麼好吃阿</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/touch-icon.png" />
+    <!-- Css -->
+    <!-- <link rel="stylesheet" href="css/loading.min.css"> -->
+
+    <link rel="stylesheet" href="css/style.css">
+<!--     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="css/_vendor/swiper/swiper.css">
+
+</head>
+
+<body>
+<header id="header">
+    <div class="mainContainer">
+        <a class="logo" href="index.html">
+            <picture class="white hide">
+                <source type="image/svg+xml" srcset="images/logo_w-01.svg">
+                <img src="images/logo_03_w.png" alt="My default image">
+            </picture>
+            <picture class="black">
+                <source type="image/svg+xml" srcset="images/logo.svg">
+                <img src="images/logo_03.png" alt="My default image">
+            </picture>
+        </a>
+        <nav class="close">
+            <a href="javascript:;" class="close">
+                <span class="btnBox">
+                    
+                </span>
+                
+            </a>
+            <div class="cartContainerMobile">
+                <a href="javascript:;" class="cart mobile">
+                <span class="quantity">3</span>
+                <i class="data-icon data-icon-jin_cart"></i>
+        </a>
+            </div>
+            <a href="products.html" class="basic">商品資訊</a>
+            <a href="#" class="basic" title="幾何關係">幾何關係</a>
+            <a href="#" class="basic">預約訂製</a>
+            <a href="#" class="basic" id="member_Login">登入</a>
+            <a href="member.html" class="basic" id="member_Login">會員中心</a>
+            <a href="javascript:;" class="cart pc">
+                <span class="quantity">3</span>
+                <i class="data-icon data-icon-jin_cart"></i>
+        </a>
+            <div class="addCartNotic">
+                <p><span class="series">金雀</span><span class="pdName">金箔蜂蜜蛋糕(原味) </span><span class="size">尺寸 : <span class="val">B6</span></span><span class="quantity">數量 : <span class="val">3</span></span>
+                    <br>已加入購物車</p>
+            </div>
+        </nav>
+        <a class="buger">
+            <span class="line"></span>
+        </a>
+    </div>
+</header>
+<article class="cart close">
+    <div class="sideLeft"></div>
+    <div class="sideBar">
+        <div class="mainContent">
+            <a href="javascript:;" class="closeBtn cart"></a>
+            <h3><span class="cartIcon"><i class="data-icon data-icon-jin_cart"></i></span>Shopping Bag</h3>
+        </div>
+        <form action="">
+            <ul class="cartList">
+                <li>
+                    <a class="delete" title="刪除" href="javascript:;" data-confirm="您確定要從購物車刪除此商品?">
+                        <i class="data-icon data-icon-bin"></i>
+                    </a>
+                    <div class="pdPhoto">
+                        <picture>
+                            <img src="images/products_el_14.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="detial">
+                        <h2>金雀</h2>
+                        <h4 class="spec">金箔蜂蜜蛋糕 B10</h4>
+                        <h4 class="taste">原味</h4>
+                        <div class="quantity">
+                            <span class="price">NT$100</span>
+                            <label class="quantity_main">
+                                <a href="javascript:;" class="minus"></a>
+                                <input type="number" value="1" class="Quantity"> <a href="javascript:;" class="plus"></a>
+                            </label>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="delete" title="刪除" href="javascript:;" data-confirm="您確定要從購物車刪除此商品?">
+                        <i class="data-icon data-icon-bin"></i>
+                    </a>
+                    <div class="pdPhoto">
+                        <picture>
+                            <img src="images/products_el_16.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="detial">
+                        <h2>金雀</h2>
+                        <h4 class="spec">金箔蜂蜜蛋糕 B10</h4>
+                        <h4 class="taste">原味</h4>
+                        <div class="quantity">
+                            <span class="price">NT$100</span>
+                            <label class="quantity_main">
+                                <a href="javascript:;" class="minus"></a>
+                                <input type="number" value="1" class="Quantity"> <a href="javascript:;" class="plus"></a>
+                            </label>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="delete" title="刪除" href="javascript:;" data-confirm="您確定要從購物車刪除此商品?">
+                        <i class="data-icon data-icon-bin"></i>
+                    </a>
+                    <div class="pdPhoto">
+                        <picture>
+                            <img src="images/products_el_18.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="detial">
+                        <h2>金雀</h2>
+                        <h4 class="spec">金箔蜂蜜蛋糕 B10</h4>
+                        <h4 class="taste">原味</h4>
+                        <div class="quantity">
+                            <span class="price">NT$100</span>
+                            <label class="quantity_main">
+                                <a href="javascript:;" class="minus"></a>
+                                <input type="number" value="5" class="Quantity"> <a href="javascript:;" class="plus"></a>
+                            </label>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="delete" title="刪除" href="javascript:;" data-confirm="您確定要從購物車刪除此商品?">
+                        <i class="data-icon data-icon-bin"></i>
+                    </a>
+                    <div class="pdPhoto">
+                        <picture>
+                            <img src="images/products_el_18.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="detial">
+                        <h2>金雀</h2>
+                        <h4 class="spec">金箔蜂蜜蛋糕 B10</h4>
+                        <h4 class="taste">原味</h4>
+                        <div class="quantity">
+                            <span class="price">NT$100</span>
+                            <label class="quantity_main">
+                                <a href="javascript:;" class="minus"></a>
+                                <input type="number" value="1" class="Quantity"> <a href="javascript:;" class="plus"></a>
+                            </label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="totalPrice">
+                <div class="title">
+                    Total
+                </div>
+                <div class="result">
+                    NT$1,100
+                </div>
+            </div>
+            <div class="btnContainer">
+                <a href="javscript:;" class="shopping_c">
+                繼續購買
+            </a><a href="checkout.html" class="checkOut">開始結帳</a>
+            </div>
+        </form>
+    </div>
+</article>
+<div class="Check_Register">
+    <div class="popup">
+        <a class="close closeBtn">
+            
+        </a>
+        <div class="cf"></div>
+        <div class="tabContainer">
+            <div class="tabL active">
+                會員登入
+            </div>
+            <div class="tabR">
+                加入會員
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="container">
+            <div class="registerMb ">
+                <h3>我想成為金錦町會員</h3>
+                <p>若您還未註冊金錦町會員 我們將會請您提供必需資訊以便輕鬆購物
+                </p>
+                <a class="send btnbox apply" href="apply.html">
+                    申請會員
+                    <span class="line1">  </span>
+                    <span class="line2">  </span>
+                </a>
+                <div class="line">
+                    <div class="main"></div>
+                    <div class="or">or</div>
+                </div>
+                <div class="share">
+                    <a class="g_login" href="javascript:;">
+                    <img src="images/login_social_32.png" alt="">
+                </a>
+                    <a href="javascript:;" class="fb_login">
+                     <img src="images/login_social_30.png" alt="">
+                </a>
+                </div>
+            </div>
+            <div class="forgetPW ">
+                <h3>忘記密碼？</h3>
+                <p>如果您忘記密碼，請提供您的電子郵件地址， 我們將會寄給給您一封電子郵件， 提示您如何恢復恢復密碼。
+                </p>
+                <label class="emailForm" for="email_1">E-mail
+                    <input placeholder="" type="email" name="email" id="email_1">
+                </label>
+                <button class="send btnbox">
+                    確認
+                    <span class="line1">  </span>
+                    <span class="line2">  </span>
+                </button>
+                <a href="javascript:;" class="cancelForget">
+                    取消
+                </a>
+            </div>
+            <div class="loginPop ">
+                <label class="emailForm" for="email_2">E-mail
+                    <input placeholder="請輸入您註冊的E-mail" type="email" name="email" id="email_2">
+                </label>
+                <label class="emailForm" for="password">密碼
+                    <input placeholder="請輸入您的密碼" type="password" name="password" id="password" aria-describedby="passwordHelpText">
+                </label>
+                <a class="login btnbox" href="checkout2.html">
+                    登入
+                    <span class="line1">  </span>
+                    <span class="line2">  </span>
+                </a>
+                <a href="#" class="forget ">
+                忘記密碼
+            </a>
+                <div class="line">
+                    <div class="main"></div>
+                    <div class="or">or</div>
+                </div>
+                <div class="share">
+                    <a class="g_login" href="javascript:;">
+                    <img src="images/login_social_32.png" alt="">
+                </a>
+                    <a href="javascript:;" class="fb_login">
+                     <img src="images/login_social_30.png" alt="">
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper index">
+	<article class="mainContainer">
+    <!--首頁slider -->
+    <!-- news index -->
+    <section class="indesSlider">
+        <div class="newsboard">
+            <a class="container">
+                <div class="picContainer">
+                    <img src="images/news_pic.jpg" alt="">
+                </div>
+                <div class="detialContainer">
+                    <p>NEWS</p>
+                    <h3>歡慶開幕,線上購物消費滿兩千圓打九折</h3>
+                    <span class="data">2018.09.01</span>
+                </div>
+            </a>
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="slider-contain" id="" title="產品名稱">
+                        <picture>   
+                            <source srcset="images/slider_1_08_m.jpg" media="(max-width: 1025px)">
+                            <img src="images/slider_1_08.jpg" alt="產品名稱" class="slider_pic" alt="產品名稱">
+                        </picture>
+                        
+                        <div class="sloganContain">
+                            <a class="box" href="products.html" >
+                            	
+                                <div class="sloganBox">
+                                    <p>
+                                        It’s Not Just a
+                                        <br>Taste.
+                                    </p>
+                                </div>
+                                <div class="buybox">
+                                <span href="#" class="btnbox">
+                                    <span class="line1"></span>
+                                    <span class="line2"></span>
+
+                                    線上購買
+                                </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-contain" id="" title="產品名稱">
+                        <picture>   
+                            <source srcset="images/mainBanner2_73.jpg" media="(max-width: 1025px)">
+                            <img src="images/mainBanner2_73.jpg" alt="產品名稱" class="slider_pic" alt="產品名稱">
+                        </picture>
+                        
+                        <div class="sloganContain">
+                            <a class="box" href="javascript:;" >
+                                <div class="bg"></div>
+                                <div class="sloganBox">
+                                    <p>
+                                        It’s Not Just a
+                                        <br>Taste.
+                                    </p>
+                                </div>
+                                <div class="buybox">
+                                    <span href="" class="btnbox">
+                                    <span class="line1"></span>
+                                    <span class="line2"></span>    
+                                    線上購買</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!--首頁 幾何關係 -->
+    <section class="relation">
+        <div class="mainBox" style="background-image: url(images/relation.jpg);">
+        </div>
+        <div class="darkMask"></div>
+        <a class="titleBox" href="#">
+            <p class="first">To Make the</p>
+            <p class="sec">RELATION</p>
+            <span class="box">幾何關係</span>
+        </a>
+    </section>
+    <!--首頁 預約訂製 -->
+    <section class="stories">
+        <div class="mainBox" style="background-image: url(images/3cut_gift_84.jpg);">
+        </div>
+        <div class="darkMask"></div>
+        <a class="titleBox" href="#">
+            <p class="first">We wrote the</p>
+            <p class="sec">STORIES</p>
+            <span class="box">
+    				預約訂製
+    			</span>
+        </a>
+    </section>
+    <!--首頁 店鋪資訊 -->
+    <section class="location">
+        <div class="mainBox" style="background-image: url(images/location_bg_03.jpg);">
+        </div>
+        <div class="locationContainer">
+            <div class="info">
+                <h3>店鋪資訊</h3>
+                <div class="address">
+                    店鋪地址
+                </div>
+                <div class="addressContent">
+                    台北市大安區金華街86號
+                    <a href="#" class="mapLink">Google map</a>
+                    <a href="#" class="mapLinkMobile"><i class="data-icon data-icon-map"></i></a>
+                </div>
+                <div class="time">
+                    店鋪地址
+                </div>
+                <div class="timeContent">
+                    Mon. ~ Fri. &nbsp;11:30 ~ 21:30
+                    <br> Sat. ~ Sun. &nbsp;&nbsp;11:00 ~ 21:30
+                </div>
+                <div class="phone">
+                    客服電話
+                </div>
+                <div class="phoneContent">
+                    (02)1234-5678
+                </div>
+                <div class="mail">
+                    電子郵件
+                </div>
+                <div class="mailContent">
+                    <a href="mailto:service@jinjinding.com.tw">ervice@jinjinding.com.tw</a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer" class="index">
+            <div class="mainContainer">
+                <div class="logo">
+                    <picture>
+                        <source type="image/svg+xml" srcset="images/logo-f.svg">
+                        <img src="images/footer_logo_30.png" alt="My default image">
+                    </picture>
+                </div>
+                <div class="right">
+                    <div class="share">
+                        <p>Follow us：</p>
+                        <a href="" class="btn"><i class="data-icon"><img src="images/sns_facebook.png" alt=""/></i></a>
+                        <a href="" class="btn"><i class="data-icon"><img src="images/s_instagram.png" alt=""/></i></a>
+                        <a href="" class="btn"><i class="data-icon"><img src="images/sina.png" alt=""/></i></a>
+                    </div>
+                    <div class="copyright">
+                        Copyright © JINJINDING All Rights Reserved
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </footer>
+    </section>
+</article>
+	
+</div>
+
+
+
+    
+    <!-- JS -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
+    <!--[if lt IE 9]>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/vendor/html5shiv.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+   <!--  <script src="js/vendor/modernizr-custom.min.js"></script> -->
+    <script src="js/vendor/modernizr-custom.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/imagesloaded.min.js"></script>
+<!--     <script src="js/vendor/jquery-imagefill.min.js"></script> -->
+    <!-- <script src="js/vendor/ScrollMagic.min.js"></script> -->
+    <script src="js/vendor/foundation.min.js"></script>
+    <!-- <script src="js/vendor/jquery.easeScroll.min.js"></script> -->
+    <script src="js/vendor/userAgentChecker.min.js"></script>
+<!--     <script src="js/vendor/clamp.min.js"></script> -->
+    <script src="js/app.min.js"></script>
+
+<script src="js/vendor/hammer.min.js"></script>
+<script src="js/vendor/jquery-imagefill.min.js"></script>
+<!-- imagefill.js  http://johnpolacek.github.io/imagefill.js/ -->
+<!-- <script src="js/vendor/jquery.onepage-scroll-pluing.min.js"></script> -->
+<script src="js/vendor/jquery.onepage-scroll.min.js"></script>
+<!--One Page Scroll v1.3.1參考http://www.thepetedesign.com/demos/onepage_scroll_demo.html  -->
+<script src="js/vendor/swiper.min.js"></script>
+<!--Swiper 參考 http://idangero.us/swiper/  -->
+<!-- <script src="js/page/index.min.js"></script> -->
+<script src="js/page/cart_and_register.js"></script>
+<script src="js/page/index.js"></script>
+
+</body>
+
+</html>
