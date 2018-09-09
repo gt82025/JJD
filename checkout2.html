@@ -59,6 +59,7 @@
 
 <body class="inside">
 <header id="header">
+    <!--  頁面選單區域 -->
     <div class="mainContainer">
         <a class="logo" href="index.html">
             <picture class="white hide">
@@ -73,9 +74,7 @@
         <nav class="close">
             <a href="javascript:;" class="close">
                 <span class="btnBox">
-                    
-                </span>
-                
+                </span>         
             </a>
             <div class="cartContainerMobile">
                 <a href="javascript:;" class="cart mobile">
@@ -85,7 +84,7 @@
             </div>
             <a href="products.html" class="basic">商品資訊</a>
             <a href="#" class="basic" title="幾何關係">幾何關係</a>
-            <a href="#" class="basic">預約訂製</a>
+            <a href="reservation.html" class="basic">預約訂製</a>
             <a href="#" class="basic" id="member_Login">登入</a>
             <a href="member.html" class="basic" id="member_Login">會員中心</a>
             <a href="javascript:;" class="cart pc">
@@ -209,9 +208,13 @@
                 </div>
             </div>
             <div class="btnContainer">
-                <a href="javscript:;" class="shopping_c">
-                繼續購買
-            </a><a href="checkout.html" class="checkOut">開始結帳</a>
+                <a href="javscript:;" class="shopping_c btnbox">
+                繼續購買<span class="line1">  </span>
+            <span class="line2">  </span>
+
+            </a><a href="checkout.html" class="checkOut btnbox">開始結帳<span class="line1">  </span>
+            <span class="line2">  </span>
+</a>
             </div>
         </form>
     </div>
@@ -479,7 +482,7 @@
                 </h4>
                 <div class="formContainer ">
                     <div class="left">
-                        <div class="box">
+                        <!--<div class="box">
                             <div class="title">
                                 <label for="date-delivery" class="text-right middle"><i>*</i>到貨日期</label>
                             </div>
@@ -488,7 +491,7 @@
                                     <option value="husker">請選擇</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="box">
                             <div class="title">
                                 <label for="time-delivery" class="text-right middle"><i>*</i>到貨時間</label>
@@ -532,37 +535,42 @@
                                 <label for="Uniform-name" class="text-right middle">收件人姓名</label>
                             </div>
                             <div class="content">
-                               <input type="text" id="Uniform-name" placeholder="" aria-describedby="mailHelpText">
+                                <input type="text" id="Uniform-name" placeholder="" aria-describedby="mailHelpText">
                             </div>
                         </div>
                         <div class="box">
-                        <div class="title">
-                            <label for="Uniform-address" class="text-right middle">地址</label>
+                            <div class="title">
+                                <label for="Uniform-address" class="text-right middle">地址</label>
+                            </div>
+                            <div class="content">
+                                <select id="Uniform-city">
+                                    <option value="husker">請選擇</option>
+                                    <option value="starbuck">台北市</option>
+                                    <option value="hotdog">新北市</option>
+                                </select>
+                                <select id="Uniform-district">
+                                    <option value="husker">請選擇</option>
+                                    <option value="starbuck">大安區</option>
+                                    <option value="hotdog">大同區</option>
+                                </select>
+                                <br>
+                                <input type="text" id="Uniform-add_detail" placeholder="" aria-describedby="mailHelpText">
+                            </div>
                         </div>
-                        <div class="content">
-                            <select id="Uniform-city">
-                                <option value="husker">請選擇</option>
-                                <option value="starbuck">台北市</option>
-                                <option value="hotdog">新北市</option>
-                            </select>
-                            <select id="Uniform-district">
-                                <option value="husker">請選擇</option>
-                                <option value="starbuck">大安區</option>
-                                <option value="hotdog">大同區</option>
-                            </select>
-                            <br>
-                            <input type="text" id="Uniform-add_detail" placeholder="" aria-describedby="mailHelpText">
-                        </div>
-                    </div>
                     </div>
                 </div>
                 <div class="cf"></div>
             </section>
         </div>
-        
         <div class="btnContainer">
-            <a href="checkout1.html" class=" prevStep">上一步</a>
-            <a class=" nextStep" href="checkout3.html">下一步</a>
+            <a href="checkout1.html" class=" prevStep btnbox">上一步
+                        <span class="line1">  </span>
+            <span class="line2">  </span></a>
+            <a class="btnbox nextStep" href="checkout3.html">
+            下一步
+            <span class="line1">  </span>
+            <span class="line2">  </span>
+        </a>
         </div>
         <br>
     </form>

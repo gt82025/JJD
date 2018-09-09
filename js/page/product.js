@@ -78,7 +78,7 @@ function productsBarSlider() {
             slidesPerView: Quantity(),
             spaceBetween: 0,
             initialSlide: 0,
-            slidesPerView:2,
+            slidesPerView: 2,
             navigation: {
                 nextEl: '.BarNext',
                 prevEl: '.BarPrev',
@@ -244,57 +244,6 @@ function scrollMagicStart() {
 
 
     $scrollMagic = new ScrollMagic.Controller({ globalSceneOptions: {} });
-
-
-    //產品 第一cut
-    // var scene = new ScrollMagic.Scene({
-    //         triggerElement: '#addProduct_1',
-    //         duration: $windowHeight,
-    //         tweenChanges: true,
-    //         offset: -$windowHeight * 0.1
-    //     }).setTween($('#addProduct_1').find('.mainPicContain'), { y: "0%", scale: 1.1, ease: Power0.easeNone })
-    //     .on('add', function(event) {
-    //         TweenLite.to($('#addProduct_1').find('.mainPicContain'), 0, { y: "-10%", scale: 1, ease: Power0.easeNone });
-    //     }).on('enter', function(event) {
-    //         $('#addProduct_1').addClass('active');
-    //     }).on("leave", function(event) {
-    //         $('#addProduct_1').removeClass('active');
-    //     }).addIndicators().addTo($scrollMagic);
-
-    // var scene = new ScrollMagic.Scene({
-    //     triggerElement: '#addProduct_1',
-    //     offset: $windowHeight * 0.25
-    // }).on('enter', function(event) {
-    //     $('#addProduct_1').addClass('productsIn');
-    // }).on("leave", function(event) {
-    //     $('#addProduct_1').removeClass('productsIn')
-    // }).addIndicators().addTo($scrollMagic);
-
-    //產品 第二cut
-    // var scene = new ScrollMagic.Scene({
-    //         triggerElement: '#addProduct_2',
-    //         duration: $windowHeight,
-    //         tweenChanges: true,
-    //         offset: -$windowHeight * 0.1
-    //     }).setTween($('#addProduct_2').find('.mainPicContain'), { y: "0%", scale: 1.1, ease: Linear.easeNone })
-    //     .on('add', function(event) {
-    //         TweenLite.to($('#addProduct_2').find('.mainPicContain'), 0, { y: "-10%", scale: 1, ease: Linear.easeNone });
-    //     }).on('enter', function(event) {
-    //         $('#addProduct_2').addClass('active');
-    //     }).on("leave", function(event) {
-    //         $('#addProduct_2').removeClass('active');
-    //     }).addIndicators().addTo($scrollMagic);
-
-    // var scene = new ScrollMagic.Scene({
-    //     triggerElement: '#addProduct_2',
-    //     offset: $windowHeight * 0.25
-    // }).on('enter', function(event) {
-    //     $('#addProduct_2').addClass('productsIn');
-    // }).on("leave", function(event) {
-    //     $('#addProduct_2').removeClass('productsIn')
-    // }).addIndicators().addTo($scrollMagic);
-
-    //禮品 cut
 
 
     if ($(window).width() <= 500) {

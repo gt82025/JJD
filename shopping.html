@@ -59,6 +59,7 @@
 
 <body class="inside">
 <header id="header">
+    <!--  頁面選單區域 -->
     <div class="mainContainer">
         <a class="logo" href="index.html">
             <picture class="white hide">
@@ -73,9 +74,7 @@
         <nav class="close">
             <a href="javascript:;" class="close">
                 <span class="btnBox">
-                    
-                </span>
-                
+                </span>         
             </a>
             <div class="cartContainerMobile">
                 <a href="javascript:;" class="cart mobile">
@@ -85,7 +84,7 @@
             </div>
             <a href="products.html" class="basic">商品資訊</a>
             <a href="#" class="basic" title="幾何關係">幾何關係</a>
-            <a href="#" class="basic">預約訂製</a>
+            <a href="reservation.html" class="basic">預約訂製</a>
             <a href="#" class="basic" id="member_Login">登入</a>
             <a href="member.html" class="basic" id="member_Login">會員中心</a>
             <a href="javascript:;" class="cart pc">
@@ -209,9 +208,13 @@
                 </div>
             </div>
             <div class="btnContainer">
-                <a href="javscript:;" class="shopping_c">
-                繼續購買
-            </a><a href="checkout.html" class="checkOut">開始結帳</a>
+                <a href="javscript:;" class="shopping_c btnbox">
+                繼續購買<span class="line1">  </span>
+            <span class="line2">  </span>
+
+            </a><a href="checkout.html" class="checkOut btnbox">開始結帳<span class="line1">  </span>
+            <span class="line2">  </span>
+</a>
             </div>
         </form>
     </div>
@@ -372,7 +375,7 @@
                      B14 <p>W150 x D200 x H90 mm</p>
                 </span>
                     </div>
-                    <select name="size" form="">
+                    <select name="size" form="" id="size">
                         <option value="B6">B6 W88 x D178 x H70 mm</option>
                         <option value="B10">B10 W88 x D178 x H70 mm</option>
                         <option value="B14">B14 W150 x D200 x H90 mm</option>
@@ -385,6 +388,14 @@
                     <a href="javascript:;" class="minus"></a>
                     <input type="number" value="1" class="Quantity" name="quantity"> <a href="javascript:;" class="plus"></a>
                 </label>
+<!--                 <div class="temperature">
+                                        <img src="images/normal.png" alt="低溫宅配">
+                    <p>商品以常溫宅配</p>
+                </div> -->
+                <div class="temperature">
+                    <img src="images/freezing.png" alt="低溫宅配">
+                    <p>商品以低溫宅配</p>
+                </div>
                 <a href="javascript:;" class="shoppingNow btnbox">
                     <span class="line1">  </span>
                     <span class="line2">  </span>

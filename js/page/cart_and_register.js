@@ -252,8 +252,8 @@ function cartEvent() {
     }
     $carry_more.click(function() {
 
-        if ($('article.checkout').length > 0) {
-            location.href = $shoppingAddress
+        if ($('article.checkout').length > 0 || $('.dashboardContainer').length > 0) {
+            location.href = $shoppingAddress;
             //$(location).attr('href',$shoppingAddress);
             return false;
             console.log($shoppingAddress);

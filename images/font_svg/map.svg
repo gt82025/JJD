@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="23px" height="32px">
+<defs>
+<filter id="Filter_0">
+    <feFlood flood-color="rgb(255, 255, 255)" flood-opacity="1" result="floodOut" />
+    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+</filter>
+
+</defs>
+<g filter="url(#Filter_0)">
+<path fill-rule="evenodd"  fill="rgb(244, 164, 78)"
+ d="M19.631,3.302 C15.140,-1.126 7.858,-1.126 3.366,3.302 C-0.681,7.293 -1.136,14.811 2.300,19.327 L10.993,31.708 C11.238,32.058 11.762,32.058 12.007,31.708 L20.700,19.327 C24.132,14.811 23.678,7.293 19.631,3.302 L19.631,3.302 ZM11.611,14.958 C9.513,14.958 7.815,13.281 7.815,11.212 C7.815,9.146 9.513,7.467 11.611,7.467 C13.709,7.467 15.408,9.146 15.408,11.212 C15.408,13.281 13.709,14.958 11.611,14.958 L11.611,14.958 Z"/>
+</g>
+</svg>

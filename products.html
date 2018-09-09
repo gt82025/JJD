@@ -59,6 +59,7 @@
 
 <body class="inside">
 <header id="header">
+    <!--  頁面選單區域 -->
     <div class="mainContainer">
         <a class="logo" href="index.html">
             <picture class="white hide">
@@ -73,9 +74,7 @@
         <nav class="close">
             <a href="javascript:;" class="close">
                 <span class="btnBox">
-                    
-                </span>
-                
+                </span>         
             </a>
             <div class="cartContainerMobile">
                 <a href="javascript:;" class="cart mobile">
@@ -85,7 +84,7 @@
             </div>
             <a href="products.html" class="basic">商品資訊</a>
             <a href="#" class="basic" title="幾何關係">幾何關係</a>
-            <a href="#" class="basic">預約訂製</a>
+            <a href="reservation.html" class="basic">預約訂製</a>
             <a href="#" class="basic" id="member_Login">登入</a>
             <a href="member.html" class="basic" id="member_Login">會員中心</a>
             <a href="javascript:;" class="cart pc">
@@ -209,9 +208,13 @@
                 </div>
             </div>
             <div class="btnContainer">
-                <a href="javscript:;" class="shopping_c">
-                繼續購買
-            </a><a href="checkout.html" class="checkOut">開始結帳</a>
+                <a href="javscript:;" class="shopping_c btnbox">
+                繼續購買<span class="line1">  </span>
+            <span class="line2">  </span>
+
+            </a><a href="checkout.html" class="checkOut btnbox">開始結帳<span class="line1">  </span>
+            <span class="line2">  </span>
+</a>
             </div>
         </form>
     </div>
@@ -327,11 +330,12 @@
             </div>
         </div>
         <div class="productsBar">
+            <!-- 產品清單 -->
             <div class="container swiper-container">
-                <div class="BarNext">
+                <div class="BarNext"> <!-- 下一步按鈕 -->
                     <i class="data-icon data-icon-arrow-right-01"></i>
                 </div>
-                <div class="BarPrev">
+                <div class="BarPrev"> <!-- 上一步按鈕 -->
                     <i class="data-icon data-icon-arrow-right-01"></i>
                 </div>
                 <div class="productsList swiper-wrapper">
@@ -387,6 +391,8 @@
             </div>
         </div>
         <div class="productsBar ">
+            <!-- 產品列表Start -->
+
             <div class="container swiper-container">
                 <div class="BarNext">
                     <i class="data-icon data-icon-arrow-right-01"></i>
@@ -394,7 +400,9 @@
                 <div class="BarPrev">
                     <i class="data-icon data-icon-arrow-right-01"></i>
                 </div>
+
                 <div class="productsList swiper-wrapper">
+                     <!-- 產品品項 -->
                     <a href="shopping.html" class="swiper-slide">
                         <picture>
                             <img src="images/products_el_17.jpg" alt="金雀 原味 / Original">

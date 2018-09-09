@@ -8683,6 +8683,16 @@ article.shopping .main {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  opacity: 0;
+  filter: blur(100px);
+}
+article.shopping .main.active {
+  opacity: 1;
+  filter: blur(0);
 }
 article.shopping .main .productsBg {
   display: none;
@@ -8694,7 +8704,7 @@ article.shopping .main div.preview {
   width: 100%;
   max-width: 1200px;
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -9053,6 +9063,7 @@ article.shopping .main div.preview .buy_price label .Quantity {
   display: inline-block;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 article.shopping .main div.preview .buy_price label .dropDownbtn {
   width: 40px;
@@ -9343,7 +9354,7 @@ article.shopping .main div.preview .buy_price .shoppingNow:hover {
   height: 30px;
   position: absolute;
   z-index: 500 !important;
-  bottom: 120px !important;
+  bottom: 60px !important;
 }
 
 .shopping .PhotoContent {
@@ -9518,6 +9529,9 @@ article.shopping .main div.preview .buy_price .shoppingNow:hover {
     margin-top: 20px;
     font-size: 1.125rem;
   }
+}
+.btnbox.prevStep:before, .btnbox.ReShopping:before, .btnbox.shopping_c:before {
+  background-color: #6e6e6e;
 }
 .btnbox:before {
   width: 100%;
@@ -9873,6 +9887,7 @@ article.cart .sideBar .shopping_c {
   transition-property: all;
   transition-duration: 0.5s;
   transition-delay: 0s;
+  font-size: 1.125rem;
 }
 article.cart .sideBar .shopping_c:hover {
   background-color: #949494;
@@ -9887,6 +9902,7 @@ article.cart .sideBar .checkOut {
   color: #fff;
   letter-spacing: 1px;
   cursor: pointer;
+  font-size: 1.125rem;
 }
 
 .closeBtn {
@@ -11859,6 +11875,9 @@ label.quantity_main a.plus:hover:after {
   transition-delay: 0s;
   transform: rotate(90deg);
 }
+.dashboardContainer .dashboard .orderTracking .trackingList .hideBar .arrowUp.close {
+  transform: rotate(270deg);
+}
 .dashboardContainer .dashboard .orderTracking .trackingList .hideBar .arrowUp i {
   color: #c1b19a;
 }
@@ -12300,9 +12319,14 @@ label.quantity_main a.plus:hover:after {
 .customize .mainContainer picture {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   overflow: hidden;
+  filter: blur(50px);
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
 }
 .customize .mainContainer picture source {
   width: 100%;
@@ -12317,6 +12341,10 @@ label.quantity_main a.plus:hover:after {
   height: 100%;
   max-width: inherit;
   object-position: center;
+}
+.customize .mainContainer picture.active {
+  filter: blur(0);
+  opacity: 1;
 }
 
 article.appointment {
@@ -12471,6 +12499,22 @@ article.appointment .board .buttonContainer a:hover {
 
 .cb, .cf {
   clear: both;
+}
+
+.temperature {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.temperature img {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+}
+.temperature p {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.9375rem;
+  margin-left: 10px;
 }
 
 /*---------------animation mixin-------------------------------------------------- */

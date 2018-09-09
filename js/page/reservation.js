@@ -4,6 +4,7 @@
     var $popUpBtn = $('.openPopup');
     var $popUp = $('article.appointment');
     var $closBtn = $('.appointment .closeBtn');
+    var $scrollMagic
 
 
 
@@ -13,8 +14,8 @@
     //browser on start-//////////////////////
     (function($, window, document) {
 
-       headChange();
-       openForm();
+        headChange();
+        openForm();
 
 
 
@@ -28,13 +29,15 @@
     //browser on loaded-/////////////////////
 
     $(window).load(function() {
+        $('.customize picture').addClass('active');
+        
 
     });
 
     //other function-////////////////////////
 
-    function headChange(){
-        if($('article.customize').length > 0){
+    function headChange() {
+        if ($('article.customize').length > 0) {
             $('picture.white').removeClass('hide');
             $('picture.black').addClass('hide');
             $menu.addClass('white');
@@ -42,19 +45,17 @@
         }
 
     }
-    function openForm(){
 
-        $popUpBtn.click(function(){
+    function openForm() {
+
+        $popUpBtn.click(function() {
             $popUp.toggleClass('close');
 
 
         })
-        $closBtn.click(function(){
+        $closBtn.click(function() {
             $popUp.toggleClass('close');
         })
 
     }
 
-
-
-   

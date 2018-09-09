@@ -5,11 +5,21 @@ var $shoppingNow
 var $productMainPhoto //產品細節按鈕
 var $productPhotoContainer //產品細節容器
 var $productMainPhotoClose //產品細節照片按鈕
+var $blurMax = 50;
 //browser on start-//////////////////////
 (function($, window, document) {
-
-
-
+    //圖片讀取完畢
+    $('article.shopping').imagesLoaded()
+        .done(function(instance) {
+            $('.shopping section.main').addClass('active');
+        })
+        .fail(function() {
+            $('.shopping section.main').addClass('active');
+        })
+        .progress(function(instance, image) {
+            var result = image.isLoaded ? 'loaded' : 'broken';
+            console.log('image is ' + result + ' for ' + image.img.src);
+        });
     //控制產品規格下拉選單
     SelectCtrl();
 
@@ -24,21 +34,15 @@ var $productMainPhotoClose //產品細節照片按鈕
 
     //PRODUCTS PICKS 商品推薦 slider
     products_picks();
-
-
-
-
-
-
-
-
-
 })(jQuery, window, document);
 
 
 //browser on loaded-/////////////////////
 
 $(window).load(function() {
+
+    scrollMagicStart();
+
 
 
 
@@ -186,3 +190,17 @@ function AddCart() {
 
 
 }
+
+function scrollMagicStart() {
+
+    $(window).scroll(function() {
+        // Get scroll position
+        var s = $(window).scrollTop(),
+            // scroll value and opacity
+            blurVal = (s / 100);
+        // opacity value 0% to 100%
+        $('article.shopping .main').css('filter', 'blur(' + blurVal + 'px)');
+        $('article.shopping .main').css('transition-property', 'unset');
+        $('article.shopping .main').css('transition-duration', '0s');
+    });
+};
