@@ -195,9 +195,14 @@ function scrollMagicStart() {
 
     $(window).scroll(function() {
         // Get scroll position
-        var s = $(window).scrollTop(),
+        var s = $(window).scrollTop();
             // scroll value and opacity
-            blurVal = (s / 100);
+            if($(window).width() >= 600){
+                blurVal = (s / 100);
+            }else{
+                blurVal = 0;
+            }
+            
         // opacity value 0% to 100%
         $('article.shopping .main').css('filter', 'blur(' + blurVal + 'px)');
         $('article.shopping .main').css('transition-property', 'unset');

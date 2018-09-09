@@ -78,7 +78,6 @@ function productsBarSlider() {
             slidesPerView: Quantity(),
             spaceBetween: 0,
             initialSlide: 0,
-            slidesPerView: 2,
             navigation: {
                 nextEl: '.BarNext',
                 prevEl: '.BarPrev',
