@@ -88,7 +88,7 @@ function PdPhotoSlider() {
 //PRODUCTS PICKS 商品推薦 slider
 function products_picks() {
     $pdPickSlider = new Swiper('.Picks_slider', {
-        slidesPerView: 3,
+        slidesPerView: Quantity(),
         spaceBetween: 45,
 
         navigation: {
@@ -98,6 +98,18 @@ function products_picks() {
 
     });
 }
+
+    function Quantity() {
+        var q
+        if ($(window).width() <= 600) {
+            q = 1;
+            return (q);
+        } else {
+            q = 3;
+            return (q);
+        }
+
+    }
 //控制產品數量按鈕
 function QuantityCtrl() {
     var $minusBtn = $('label.Quantity .minus');
