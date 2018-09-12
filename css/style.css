@@ -10370,15 +10370,37 @@ article.checkout .orderInfo .formContainer .left, article.checkout .recipient .f
   width: 50%;
   padding-top: 20px;
 }
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .left, article.checkout .recipient .formContainer .left, article.checkout .freight .formContainer .left, article.checkout .invoice .formContainer .left {
+    width: 100%;
+  }
+}
 article.checkout .orderInfo .formContainer .left .box, article.checkout .recipient .formContainer .left .box, article.checkout .freight .formContainer .left .box, article.checkout .invoice .formContainer .left .box {
   width: 100%;
+}
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .left .box, article.checkout .recipient .formContainer .left .box, article.checkout .freight .formContainer .left .box, article.checkout .invoice .formContainer .left .box {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 article.checkout .orderInfo .formContainer .right, article.checkout .recipient .formContainer .right, article.checkout .freight .formContainer .right, article.checkout .invoice .formContainer .right {
   width: 50%;
   padding-top: 20px;
 }
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .right, article.checkout .recipient .formContainer .right, article.checkout .freight .formContainer .right, article.checkout .invoice .formContainer .right {
+    width: 100%;
+    padding-top: 0;
+  }
+}
 article.checkout .orderInfo .formContainer .right .box, article.checkout .recipient .formContainer .right .box, article.checkout .freight .formContainer .right .box, article.checkout .invoice .formContainer .right .box {
   width: 100%;
+}
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .right .box div:nth-child(3), article.checkout .recipient .formContainer .right .box div:nth-child(3), article.checkout .freight .formContainer .right .box div:nth-child(3), article.checkout .invoice .formContainer .right .box div:nth-child(3) {
+    display: none;
+  }
 }
 article.checkout .orderInfo .formContainer.first, article.checkout .recipient .formContainer.first, article.checkout .freight .formContainer.first, article.checkout .invoice .formContainer.first {
   padding-top: 20px;
@@ -10396,6 +10418,12 @@ article.checkout .orderInfo .formContainer .box, article.checkout .recipient .fo
   padding-bottom: 10px;
   text-align: left;
 }
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .box, article.checkout .recipient .formContainer .box, article.checkout .freight .formContainer .box, article.checkout .invoice .formContainer .box {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 article.checkout .orderInfo .formContainer .box #above, article.checkout .recipient .formContainer .box #above, article.checkout .freight .formContainer .box #above, article.checkout .invoice .formContainer .box #above {
   display: inline-block;
   margin: 0;
@@ -10403,6 +10431,11 @@ article.checkout .orderInfo .formContainer .box #above, article.checkout .recipi
 }
 article.checkout .orderInfo .formContainer .box .title, article.checkout .recipient .formContainer .box .title, article.checkout .freight .formContainer .box .title, article.checkout .invoice .formContainer .box .title {
   width: 20%;
+}
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .box .title, article.checkout .recipient .formContainer .box .title, article.checkout .freight .formContainer .box .title, article.checkout .invoice .formContainer .box .title {
+    width: 25%;
+  }
 }
 article.checkout .orderInfo .formContainer .box .title.credit, article.checkout .recipient .formContainer .box .title.credit, article.checkout .freight .formContainer .box .title.credit, article.checkout .invoice .formContainer .box .title.credit {
   width: 30%;
@@ -10421,6 +10454,11 @@ article.checkout .orderInfo .formContainer .box .title label i, article.checkout
 }
 article.checkout .orderInfo .formContainer .box .content, article.checkout .recipient .formContainer .box .content, article.checkout .freight .formContainer .box .content, article.checkout .invoice .formContainer .box .content {
   width: 80%;
+}
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .box .content, article.checkout .recipient .formContainer .box .content, article.checkout .freight .formContainer .box .content, article.checkout .invoice .formContainer .box .content {
+    width: 100%;
+  }
 }
 article.checkout .orderInfo .formContainer .box .content.credit, article.checkout .recipient .formContainer .box .content.credit, article.checkout .freight .formContainer .box .content.credit, article.checkout .invoice .formContainer .box .content.credit {
   width: 70%;
@@ -10446,11 +10484,21 @@ article.checkout .orderInfo .formContainer .box .content input, article.checkout
 article.checkout .orderInfo .formContainer .box .content input#Email, article.checkout .orderInfo .formContainer .box .content input#recipient-Email, article.checkout .recipient .formContainer .box .content input#Email, article.checkout .recipient .formContainer .box .content input#recipient-Email, article.checkout .freight .formContainer .box .content input#Email, article.checkout .freight .formContainer .box .content input#recipient-Email, article.checkout .invoice .formContainer .box .content input#Email, article.checkout .invoice .formContainer .box .content input#recipient-Email {
   width: 270px;
 }
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .box .content input#Email, article.checkout .orderInfo .formContainer .box .content input#recipient-Email, article.checkout .recipient .formContainer .box .content input#Email, article.checkout .recipient .formContainer .box .content input#recipient-Email, article.checkout .freight .formContainer .box .content input#Email, article.checkout .freight .formContainer .box .content input#recipient-Email, article.checkout .invoice .formContainer .box .content input#Email, article.checkout .invoice .formContainer .box .content input#recipient-Email {
+    width: 100%;
+  }
+}
 article.checkout .orderInfo .formContainer .box .content input#add_detail, article.checkout .orderInfo .formContainer .box .content input#recipient-add_detail, article.checkout .orderInfo .formContainer .box .content input#Uniform-add_detail, article.checkout .recipient .formContainer .box .content input#add_detail, article.checkout .recipient .formContainer .box .content input#recipient-add_detail, article.checkout .recipient .formContainer .box .content input#Uniform-add_detail, article.checkout .freight .formContainer .box .content input#add_detail, article.checkout .freight .formContainer .box .content input#recipient-add_detail, article.checkout .freight .formContainer .box .content input#Uniform-add_detail, article.checkout .invoice .formContainer .box .content input#add_detail, article.checkout .invoice .formContainer .box .content input#recipient-add_detail, article.checkout .invoice .formContainer .box .content input#Uniform-add_detail {
   margin-top: 15px;
 }
 article.checkout .orderInfo .formContainer .box .content input#fullName, article.checkout .recipient .formContainer .box .content input#fullName, article.checkout .freight .formContainer .box .content input#fullName, article.checkout .invoice .formContainer .box .content input#fullName {
   width: 280px;
+}
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .box .content input#fullName, article.checkout .recipient .formContainer .box .content input#fullName, article.checkout .freight .formContainer .box .content input#fullName, article.checkout .invoice .formContainer .box .content input#fullName {
+    width: 100%;
+  }
 }
 article.checkout .orderInfo .formContainer .box .content input#areaNumber, article.checkout .orderInfo .formContainer .box .content input#recipient-areaNumber, article.checkout .recipient .formContainer .box .content input#areaNumber, article.checkout .recipient .formContainer .box .content input#recipient-areaNumber, article.checkout .freight .formContainer .box .content input#areaNumber, article.checkout .freight .formContainer .box .content input#recipient-areaNumber, article.checkout .invoice .formContainer .box .content input#areaNumber, article.checkout .invoice .formContainer .box .content input#recipient-areaNumber {
   width: 100px;
@@ -10462,6 +10510,11 @@ article.checkout .orderInfo .formContainer .box .content input#phoneNumber, arti
 article.checkout .orderInfo .formContainer .box .content input#mobilePhone, article.checkout .orderInfo .formContainer .box .content input#recipient-mobilePhone, article.checkout .recipient .formContainer .box .content input#mobilePhone, article.checkout .recipient .formContainer .box .content input#recipient-mobilePhone, article.checkout .freight .formContainer .box .content input#mobilePhone, article.checkout .freight .formContainer .box .content input#recipient-mobilePhone, article.checkout .invoice .formContainer .box .content input#mobilePhone, article.checkout .invoice .formContainer .box .content input#recipient-mobilePhone {
   width: 270px;
   margin-top: 10px;
+}
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .box .content input#mobilePhone, article.checkout .orderInfo .formContainer .box .content input#recipient-mobilePhone, article.checkout .recipient .formContainer .box .content input#mobilePhone, article.checkout .recipient .formContainer .box .content input#recipient-mobilePhone, article.checkout .freight .formContainer .box .content input#mobilePhone, article.checkout .freight .formContainer .box .content input#recipient-mobilePhone, article.checkout .invoice .formContainer .box .content input#mobilePhone, article.checkout .invoice .formContainer .box .content input#recipient-mobilePhone {
+    width: 100%;
+  }
 }
 article.checkout .orderInfo .formContainer .box .content input#expiry-Month, article.checkout .recipient .formContainer .box .content input#expiry-Month, article.checkout .freight .formContainer .box .content input#expiry-Month, article.checkout .invoice .formContainer .box .content input#expiry-Month {
   width: 90px;
@@ -10484,6 +10537,11 @@ article.checkout .orderInfo .formContainer .box .content select, article.checkou
   margin: 0;
   cursor: pointer;
 }
+@media screen and (max-width: 37.5em) {
+  article.checkout .orderInfo .formContainer .box .content select, article.checkout .recipient .formContainer .box .content select, article.checkout .freight .formContainer .box .content select, article.checkout .invoice .formContainer .box .content select {
+    width: 100%;
+  }
+}
 article.checkout .orderInfo .formContainer .box .content select#city, article.checkout .orderInfo .formContainer .box .content select#recipient-city, article.checkout .orderInfo .formContainer .box .content select#Uniform-city, article.checkout .recipient .formContainer .box .content select#city, article.checkout .recipient .formContainer .box .content select#recipient-city, article.checkout .recipient .formContainer .box .content select#Uniform-city, article.checkout .freight .formContainer .box .content select#city, article.checkout .freight .formContainer .box .content select#recipient-city, article.checkout .freight .formContainer .box .content select#Uniform-city, article.checkout .invoice .formContainer .box .content select#city, article.checkout .invoice .formContainer .box .content select#recipient-city, article.checkout .invoice .formContainer .box .content select#Uniform-city {
   width: 100px;
 }
@@ -10505,10 +10563,26 @@ article.checkout .final {
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
+@media screen and (max-width: 37.5em) {
+  article.checkout .final {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+  }
+}
 article.checkout .final section.freight, article.checkout .final section.invoice {
   width: 48%;
   padding: 35px;
   background-color: #fff;
+}
+@media screen and (max-width: 37.5em) {
+  article.checkout .final section.freight, article.checkout .final section.invoice {
+    width: 100%;
+    padding: 15px;
+    padding-top: 20px;
+  }
 }
 article.checkout .final section.freight h4, article.checkout .final section.invoice h4 {
   padding-bottom: 15px;
@@ -10538,8 +10612,18 @@ article.checkout .invoice .formContainer .left fieldset label {
 article.checkout .invoice .formContainer .box .title {
   width: 30%;
 }
+@media screen and (max-width: 37.5em) {
+  article.checkout .invoice .formContainer .box .title {
+    width: 100%;
+  }
+}
 article.checkout .invoice .formContainer .box .content {
   width: 70%;
+}
+@media screen and (max-width: 37.5em) {
+  article.checkout .invoice .formContainer .box .content {
+    width: 100%;
+  }
 }
 article.checkout .freight {
   margin-left: 0 !important;
@@ -10994,6 +11078,11 @@ label.quantity_main a.plus:hover:after {
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 30px;
+}
+@media screen and (max-width: 37.5em) {
+  .btnContainer {
+    margin-top: 0;
+  }
 }
 .btnContainer .ReShopping, .btnContainer .prevStep {
   width: 160px;
@@ -11697,11 +11786,23 @@ label.quantity_main a.plus:hover:after {
   background-color: #fff;
   padding: 40px 40px;
 }
+@media screen and (max-width: 37.5em) {
+  .shoppingEnd {
+    padding: 40px 15px;
+    width: 90%;
+  }
+}
 .shoppingEnd h3 {
   margin: 0;
 }
 .shoppingEnd p {
   font-size: 1rem;
+}
+@media screen and (max-width: 37.5em) {
+  .shoppingEnd p {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+  }
 }
 .shoppingEnd .shoppingInfo {
   width: 100%;
@@ -11736,6 +11837,11 @@ label.quantity_main a.plus:hover:after {
   letter-spacing: 1px;
   text-align: center;
 }
+@media screen and (max-width: 37.5em) {
+  .shoppingEnd .shoppingInfo li .title {
+    width: 35%;
+  }
+}
 .shoppingEnd .shoppingInfo li .content {
   width: 84%;
   display: inline-block;
@@ -11745,6 +11851,11 @@ label.quantity_main a.plus:hover:after {
   text-indent: 20px;
   letter-spacing: 1px;
   text-align: left;
+}
+@media screen and (max-width: 37.5em) {
+  .shoppingEnd .shoppingInfo li .content {
+    width: 65%;
+  }
 }
 .shoppingEnd .shoppingInfo li .content p {
   display: inline-block;
@@ -11761,6 +11872,11 @@ label.quantity_main a.plus:hover:after {
   margin-right: auto;
   margin-left: auto;
 }
+@media screen and (max-width: 37.5em) {
+  .confirmList {
+    width: 90%;
+  }
+}
 .confirmList .confirmCart {
   width: 100%;
   background-color: #fff;
@@ -11768,6 +11884,13 @@ label.quantity_main a.plus:hover:after {
   padding-left: 40px;
   padding-right: 40px;
   margin-top: 30px;
+}
+@media screen and (max-width: 37.5em) {
+  .confirmList .confirmCart {
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .confirmList .confirmCart .head {
   width: 100%;
@@ -11815,6 +11938,12 @@ label.quantity_main a.plus:hover:after {
   height: auto;
   background-color: #fff;
   padding-bottom: 0;
+}
+@media screen and (max-width: 37.5em) {
+  .confirmList .confirmDetial .orderInfo, .confirmList .confirmDetial .delivery {
+    width: 100%;
+    padding: 30px 15px 5px 15px;
+  }
 }
 .confirmList .confirmDetial .orderInfo h3, .confirmList .confirmDetial .delivery h3 {
   font-size: 20px;
@@ -11873,6 +12002,12 @@ label.quantity_main a.plus:hover:after {
   position: relative;
   font-size: 1rem;
 }
+@media screen and (max-width: 37.5em) {
+  .confirmList .confirmDetial .orderInfo ul.content li .title, .confirmList .confirmDetial .delivery ul.content li .title {
+    width: 27%;
+    vertical-align: top;
+  }
+}
 .confirmList .confirmDetial .orderInfo ul.content li .title.noColon:after, .confirmList .confirmDetial .delivery ul.content li .title.noColon:after {
   display: none;
 }
@@ -11896,6 +12031,14 @@ label.quantity_main a.plus:hover:after {
   height: 40px;
   line-height: 40px;
 }
+@media screen and (max-width: 37.5em) {
+  .confirmList .confirmDetial .orderInfo ul.content li .content, .confirmList .confirmDetial .delivery ul.content li .content {
+    width: 71%;
+    vertical-align: top;
+    height: auto;
+    line-height: 35px;
+  }
+}
 .confirmList .btnContainer {
   margin-right: 0;
   margin-left: 0;
@@ -11918,6 +12061,12 @@ label.quantity_main a.plus:hover:after {
   padding: 40px;
   background-color: #fff;
 }
+@media screen and (max-width: 37.5em) {
+  .confirmList .container {
+    padding: 15px;
+    padding-top: 20px;
+  }
+}
 .confirmList .container .ListTitle {
   width: 100%;
   list-style: none;
@@ -11932,6 +12081,11 @@ label.quantity_main a.plus:hover:after {
   -ms-flex-pack: justify;
       justify-content: space-between;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 37.5em) {
+  .confirmList .container .ListTitle {
+    display: none;
+  }
 }
 .confirmList .container .ListTitle li {
   color: #fff;
@@ -11995,6 +12149,11 @@ label.quantity_main a.plus:hover:after {
   position: relative;
   max-height: 160px;
   display: inline-block;
+}
+@media screen and (max-width: 37.5em) {
+  .confirmList .container .cart li .pd picture img {
+    max-height: 120px;
+  }
 }
 .confirmList .container .cart li .des {
   width: 26%;
@@ -12065,6 +12224,11 @@ label.quantity_main a.plus:hover:after {
   background-color: #f6f4ef;
   padding-top: 150px;
   padding-bottom: 30px;
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer {
+    padding-top: 100px;
+  }
 }
 .dashboardContainer .memberBar {
   width: 100%;
@@ -12878,6 +13042,11 @@ article.appointment .board .fillInfo .formBox {
 article.appointment .board .fillInfo .formBox .title {
   width: 20%;
 }
+@media screen and (max-width: 37.5em) {
+  article.appointment .board .fillInfo .formBox .title {
+    width: 30%;
+  }
+}
 article.appointment .board .fillInfo .formBox .title label {
   margin: 0;
   padding: 0;
@@ -12925,21 +13094,103 @@ article.appointment .board .buttonContainer a:hover {
 .confirmList .container .cart li .pd {
   width: 20% !important;
 }
+@media screen and (max-width: 37.5em) {
+  .confirmList .container .cart li .pd {
+    width: 30% !important;
+  }
+}
 
 .confirmList .container .cart li .des {
   width: 33% !important;
+}
+@media screen and (max-width: 37.5em) {
+  .confirmList .container .cart li .des {
+    width: 70% !important;
+  }
 }
 
 .confirmList .container .cart li .price {
   width: 15% !important;
 }
+@media screen and (max-width: 37.5em) {
+  .confirmList .container .cart li .price {
+    width: 35.5% !important;
+    padding-top: 15px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .confirmList .container .cart li .price p {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .confirmList .container .cart li .price:before {
+    content: attr(dataTitle);
+    font-size: 0.875rem;
+    color: #ba9142;
+    width: 100%;
+    text-align: center;
+  }
+}
 
 .confirmList .container .cart li .quantity {
   width: 17% !important;
 }
+@media screen and (max-width: 37.5em) {
+  .confirmList .container .cart li .quantity {
+    width: 28% !important;
+    padding-top: 15px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .confirmList .container .cart li .quantity p {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .confirmList .container .cart li .quantity:before {
+    content: attr(dataTitle);
+    font-size: 0.875rem;
+    color: #ba9142;
+    width: 100%;
+    text-align: center;
+  }
+}
 
 .confirmList .container .cart li .check {
   width: 15% !important;
+}
+@media screen and (max-width: 37.5em) {
+  .confirmList .container .cart li .check {
+    width: 35.5% !important;
+    padding-top: 10px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .confirmList .container .cart li .check p {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .confirmList .container .cart li .check:before {
+    content: attr(dataTitle);
+    font-size: 0.875rem;
+    color: #ba9142;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .cb, .cf {
@@ -12960,6 +13211,24 @@ article.appointment .board .buttonContainer a:hover {
   vertical-align: middle;
   font-size: 0.9375rem;
   margin-left: 10px;
+}
+
+.mobileShow {
+  display: none;
+}
+@media screen and (max-width: 37.5em) {
+  .mobileShow {
+    display: inline;
+  }
+}
+
+.mobilePb15 {
+  padding-bottom: 0;
+}
+@media screen and (max-width: 37.5em) {
+  .mobilePb15 {
+    padding-bottom: 15px !important;
+  }
 }
 
 /*---------------animation mixin-------------------------------------------------- */
