@@ -41,13 +41,7 @@ var $blurMax = 50;
 
 $(window).load(function() {
 
-    scrollMagicStart();
-
-
-
-
-
-
+    //scrollMagicStart();
 });
 
 //other function-////////////////////////

@@ -57,10 +57,11 @@ var $totalprice //全域 購物車列表商品總價
 //browser on loaded-/////////////////////
 
 $(window).load(function() {
-    $(document).scrollScope();
+    if ($('.wrapper.index').length > 0) {
 
-
-
+    } else {
+        $(document).scrollScope();
+    }
 
 
 });
@@ -95,7 +96,7 @@ function checkOutNow() {
 
             } else {
                 $body.addClass('stop-scrolling');
-                $body.attr('data-scroll-scope','force');
+                $body.attr('data-scroll-scope', 'force');
 
                 if ($touchEvent) {
                     $('body').unbind('touchmove');
@@ -337,7 +338,7 @@ function cartEvent() {
 
         } else {
             $body.removeClass('stop-scrolling');
-             $body.removeAttr('data-scroll-scope');
+            $body.removeAttr('data-scroll-scope');
             if ($touchEvent) {
                 $('body').bind('touchmove', function(e) { e.preventDefault() });
             }
