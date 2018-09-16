@@ -7,6 +7,7 @@ var $windowHeight
 var $touchEvent // 全域 偵測是否支援touchEvent
 
 
+
 //browser on start-//////////////////////
 (function($, window, document) {
 
@@ -58,6 +59,8 @@ var $touchEvent // 全域 偵測是否支援touchEvent
 
 
 
+
+
 })(jQuery, window, document);
 
 //browser on scroll-//////////////////////
@@ -82,6 +85,8 @@ $(window).load(function() {
 });
 
 //other function-////////////////////////
+
+
 
 //漢堡選單
 function bugerEvent() {

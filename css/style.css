@@ -6248,6 +6248,11 @@ header#header .mainContainer nav .addCartNotic {
   transform: translateY(30px);
   pointer-events: none;
 }
+@media screen and (max-width: 50em) {
+  header#header .mainContainer nav .addCartNotic {
+    right: 105%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   header#header .mainContainer nav .addCartNotic {
     position: fixed;
@@ -6339,6 +6344,12 @@ footer#footer .mainContainer {
   margin-left: auto;
   position: relative;
   height: 160px;
+}
+@media screen and (max-width: 93.75em) {
+  footer#footer .mainContainer {
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+  }
 }
 @media screen and (max-width: 37.5em) {
   footer#footer .mainContainer {
@@ -6936,9 +6947,15 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain .slo
   text-align: left;
   box-sizing: border-box;
 }
+@media screen and (max-width: 93.75em) {
+  article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain {
+    padding-right: 3%;
+    padding-left: 2.5%;
+  }
+}
 @media screen and (max-width: 64.0625em) {
   article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain {
-    padding-right: 2.5%;
+    padding-right: 3%;
     padding-left: 2.5%;
   }
 }
@@ -7725,7 +7742,8 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
 }
 @media screen and (max-width: 50em) {
   .mainContainer.products .product_content .mainPicContain .textContent.bottom .box {
-    width: calc( 350px + 5vw );
+    width: calc( 400px + 5vw );
+    padding-bottom: 130px;
   }
 }
 @media screen and (max-width: 37.5em) {
@@ -8301,6 +8319,11 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
   position: relative;
   background-color: #fff;
 }
+@media screen and (max-width: 64.0625em) {
+  .mainContainer.products .singleProduct {
+    height: 90vh;
+  }
+}
 @media screen and (max-width: 37.5em) {
   .mainContainer.products .singleProduct {
     height: auto;
@@ -8445,6 +8468,11 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
     height: 80%;
   }
 }
+@media screen and (max-width: 50em) {
+  .mainContainer.products .singleProduct .productsPhoto {
+    height: 77%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   .mainContainer.products .singleProduct .productsPhoto {
     height: 75vh;
@@ -8539,6 +8567,11 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
     width: 85%;
     left: 7.5%;
     height: 20%;
+  }
+}
+@media screen and (max-width: 50em) {
+  .mainContainer.products .singleProduct .scrollList {
+    height: 23%;
   }
 }
 @media screen and (max-width: 37.5em) {
@@ -8717,6 +8750,11 @@ article.shopping .main {
   opacity: 0;
   filter: blur(100px);
 }
+@media screen and (max-width: 64.0625em) {
+  article.shopping .main {
+    background-position: center;
+  }
+}
 article.shopping .main.active {
   opacity: 1;
   filter: blur(0);
@@ -8756,6 +8794,15 @@ article.shopping .main div.preview .detialPhoto {
   bottom: 50px;
   left: 0;
   background-color: #333;
+}
+@media screen and (max-width: 64.0625em) {
+  article.shopping .main div.preview .detialPhoto {
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    left: 30px;
+    font-size: 1.125rem;
+  }
 }
 @media screen and (max-width: 37.5em) {
   article.shopping .main div.preview .detialPhoto {
@@ -8874,6 +8921,13 @@ article.shopping .main div.preview .buy_price {
   z-index: 500;
   box-shadow: 0 0 17px rgba(0, 0, 0, 0.3);
   background-color: #fff;
+}
+@media screen and (max-width: 64.0625em) {
+  article.shopping .main div.preview .buy_price {
+    margin-right: 50px;
+    width: 460px;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
 }
 @media screen and (max-width: 37.5em) {
   article.shopping .main div.preview .buy_price {
@@ -9219,6 +9273,11 @@ article.shopping .main div.preview .buy_price .shoppingNow:hover {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+@media screen and (max-width: 64.0625em) {
+  .shopping section.Info .InfoDetial {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   .shopping section.Info .InfoDetial {
     padding-right: 15px;
@@ -9285,6 +9344,11 @@ article.shopping .main div.preview .buy_price .shoppingNow:hover {
   padding-top: 35px;
   padding-bottom: 35px;
 }
+@media screen and (max-width: 64.0625em) {
+  .shopping section.picks .mainContent {
+    width: 90%;
+  }
+}
 .shopping section.picks .mainContent .swiper-button-next {
   right: 0;
   width: 50px;
@@ -9303,6 +9367,11 @@ article.shopping .main div.preview .buy_price .shoppingNow:hover {
   transition-duration: 0.5s;
   transition-delay: 0s;
   outline: none;
+}
+@media screen and (max-width: 64.0625em) {
+  .shopping section.picks .mainContent .swiper-button-next {
+    right: -30px;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .shopping section.picks .mainContent .swiper-button-next {
@@ -9340,6 +9409,11 @@ article.shopping .main div.preview .buy_price .shoppingNow:hover {
   transition-delay: 0s;
   transform: scaleX(-1);
   outline: none;
+}
+@media screen and (max-width: 64.0625em) {
+  .shopping section.picks .mainContent .swiper-button-prev {
+    left: -30px;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .shopping section.picks .mainContent .swiper-button-prev {
@@ -9948,6 +10022,11 @@ article.cart .sideBar .cartList li .detial label.quantity_main {
   width: 100%;
   max-width: 300px;
 }
+@media screen and (max-width: 64.0625em) {
+  article.cart .sideBar .cartList li .detial label.quantity_main {
+    text-align: left;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.cart .sideBar .cartList li .detial label.quantity_main {
     text-align: left;
@@ -10196,7 +10275,7 @@ article.cart .sideBar .checkOut {
 }
 
 .stop-scrolling {
-  height: 100%;
+  height: 100% !important;
   overflow: hidden;
 }
 
@@ -10432,6 +10511,11 @@ article.checkout .orderInfo .formContainer .box #above, article.checkout .recipi
 article.checkout .orderInfo .formContainer .box .title, article.checkout .recipient .formContainer .box .title, article.checkout .freight .formContainer .box .title, article.checkout .invoice .formContainer .box .title {
   width: 20%;
 }
+@media screen and (max-width: 50em) {
+  article.checkout .orderInfo .formContainer .box .title, article.checkout .recipient .formContainer .box .title, article.checkout .freight .formContainer .box .title, article.checkout .invoice .formContainer .box .title {
+    width: 28%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.checkout .orderInfo .formContainer .box .title, article.checkout .recipient .formContainer .box .title, article.checkout .freight .formContainer .box .title, article.checkout .invoice .formContainer .box .title {
     width: 25%;
@@ -10454,6 +10538,11 @@ article.checkout .orderInfo .formContainer .box .title label i, article.checkout
 }
 article.checkout .orderInfo .formContainer .box .content, article.checkout .recipient .formContainer .box .content, article.checkout .freight .formContainer .box .content, article.checkout .invoice .formContainer .box .content {
   width: 80%;
+}
+@media screen and (max-width: 50em) {
+  article.checkout .orderInfo .formContainer .box .content, article.checkout .recipient .formContainer .box .content, article.checkout .freight .formContainer .box .content, article.checkout .invoice .formContainer .box .content {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 37.5em) {
   article.checkout .orderInfo .formContainer .box .content, article.checkout .recipient .formContainer .box .content, article.checkout .freight .formContainer .box .content, article.checkout .invoice .formContainer .box .content {
@@ -10563,6 +10652,16 @@ article.checkout .final {
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
+@media screen and (max-width: 64.0625em) {
+  article.checkout .final {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 50em) {
+  article.checkout .final {
+    width: 95%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.checkout .final {
     display: -ms-flexbox;
@@ -10576,6 +10675,12 @@ article.checkout .final section.freight, article.checkout .final section.invoice
   width: 48%;
   padding: 35px;
   background-color: #fff;
+}
+@media screen and (max-width: 50em) {
+  article.checkout .final section.freight, article.checkout .final section.invoice {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 @media screen and (max-width: 37.5em) {
   article.checkout .final section.freight, article.checkout .final section.invoice {
@@ -10612,6 +10717,11 @@ article.checkout .invoice .formContainer .left fieldset label {
 article.checkout .invoice .formContainer .box .title {
   width: 30%;
 }
+@media screen and (max-width: 50em) {
+  article.checkout .invoice .formContainer .box .title {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.checkout .invoice .formContainer .box .title {
     width: 100%;
@@ -10619,6 +10729,11 @@ article.checkout .invoice .formContainer .box .title {
 }
 article.checkout .invoice .formContainer .box .content {
   width: 70%;
+}
+@media screen and (max-width: 50em) {
+  article.checkout .invoice .formContainer .box .content {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 37.5em) {
   article.checkout .invoice .formContainer .box .content {
@@ -10634,6 +10749,11 @@ article.checkout .freight .formContainer .left {
 }
 article.checkout .freight .formContainer .left .title {
   width: 25%;
+}
+@media screen and (max-width: 50em) {
+  article.checkout .freight .formContainer .left .title {
+    width: 100%;
+  }
 }
 article.checkout .freight .formContainer .left .content {
   width: 75%;
@@ -10676,6 +10796,19 @@ article.checkout .List, article.checkout .orderInfo, article.checkout .recipient
   padding-left: 40px;
   background-color: #fff;
 }
+@media screen and (max-width: 64.0625em) {
+  article.checkout .List, article.checkout .orderInfo, article.checkout .recipient, article.checkout .freight, article.checkout .invoice {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 50em) {
+  article.checkout .List, article.checkout .orderInfo, article.checkout .recipient, article.checkout .freight, article.checkout .invoice {
+    width: 95%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.checkout .List, article.checkout .orderInfo, article.checkout .recipient, article.checkout .freight, article.checkout .invoice {
     padding-top: 20px;
@@ -10715,21 +10848,51 @@ article.checkout .List .ListTitle li, article.checkout .orderInfo .ListTitle li,
 article.checkout .List .ListTitle li.pd, article.checkout .orderInfo .ListTitle li.pd, article.checkout .recipient .ListTitle li.pd, article.checkout .freight .ListTitle li.pd, article.checkout .invoice .ListTitle li.pd {
   width: 20%;
 }
+@media screen and (max-width: 50em) {
+  article.checkout .List .ListTitle li.pd, article.checkout .orderInfo .ListTitle li.pd, article.checkout .recipient .ListTitle li.pd, article.checkout .freight .ListTitle li.pd, article.checkout .invoice .ListTitle li.pd {
+    width: 18%;
+  }
+}
 article.checkout .List .ListTitle li.des, article.checkout .orderInfo .ListTitle li.des, article.checkout .recipient .ListTitle li.des, article.checkout .freight .ListTitle li.des, article.checkout .invoice .ListTitle li.des {
   width: 20%;
   text-align: left;
 }
+@media screen and (max-width: 64.0625em) {
+  article.checkout .List .ListTitle li.des, article.checkout .orderInfo .ListTitle li.des, article.checkout .recipient .ListTitle li.des, article.checkout .freight .ListTitle li.des, article.checkout .invoice .ListTitle li.des {
+    width: 22%;
+  }
+}
 article.checkout .List .ListTitle li.price, article.checkout .orderInfo .ListTitle li.price, article.checkout .recipient .ListTitle li.price, article.checkout .freight .ListTitle li.price, article.checkout .invoice .ListTitle li.price {
   width: 14%;
+}
+@media screen and (max-width: 64.0625em) {
+  article.checkout .List .ListTitle li.price, article.checkout .orderInfo .ListTitle li.price, article.checkout .recipient .ListTitle li.price, article.checkout .freight .ListTitle li.price, article.checkout .invoice .ListTitle li.price {
+    width: 12%;
+  }
 }
 article.checkout .List .ListTitle li.quantity, article.checkout .orderInfo .ListTitle li.quantity, article.checkout .recipient .ListTitle li.quantity, article.checkout .freight .ListTitle li.quantity, article.checkout .invoice .ListTitle li.quantity {
   width: 18%;
 }
+@media screen and (max-width: 64.0625em) {
+  article.checkout .List .ListTitle li.quantity, article.checkout .orderInfo .ListTitle li.quantity, article.checkout .recipient .ListTitle li.quantity, article.checkout .freight .ListTitle li.quantity, article.checkout .invoice .ListTitle li.quantity {
+    width: 26%;
+  }
+}
 article.checkout .List .ListTitle li.check, article.checkout .orderInfo .ListTitle li.check, article.checkout .recipient .ListTitle li.check, article.checkout .freight .ListTitle li.check, article.checkout .invoice .ListTitle li.check {
   width: 16%;
 }
+@media screen and (max-width: 64.0625em) {
+  article.checkout .List .ListTitle li.check, article.checkout .orderInfo .ListTitle li.check, article.checkout .recipient .ListTitle li.check, article.checkout .freight .ListTitle li.check, article.checkout .invoice .ListTitle li.check {
+    width: 14%;
+  }
+}
 article.checkout .List .ListTitle li.delete, article.checkout .orderInfo .ListTitle li.delete, article.checkout .recipient .ListTitle li.delete, article.checkout .freight .ListTitle li.delete, article.checkout .invoice .ListTitle li.delete {
   width: 8%;
+}
+@media screen and (max-width: 64.0625em) {
+  article.checkout .List .ListTitle li.delete, article.checkout .orderInfo .ListTitle li.delete, article.checkout .recipient .ListTitle li.delete, article.checkout .freight .ListTitle li.delete, article.checkout .invoice .ListTitle li.delete {
+    width: 6%;
+  }
 }
 article.checkout .cart {
   padding-top: 0;
@@ -10765,6 +10928,11 @@ article.checkout .cart li:last-child {
 article.checkout .cart li .pd {
   width: 20%;
 }
+@media screen and (max-width: 50em) {
+  article.checkout .cart li .pd {
+    width: 18%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.checkout .cart li .pd {
     width: 30%;
@@ -10794,6 +10962,11 @@ article.checkout .cart li .des {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
+}
+@media screen and (max-width: 64.0625em) {
+  article.checkout .cart li .des {
+    width: 22%;
+  }
 }
 @media screen and (max-width: 37.5em) {
   article.checkout .cart li .des {
@@ -10828,6 +11001,11 @@ article.checkout .cart li .price {
   -ms-flex-align: center;
       align-items: center;
 }
+@media screen and (max-width: 64.0625em) {
+  article.checkout .cart li .price {
+    width: 12%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.checkout .cart li .price {
     display: none;
@@ -10847,9 +11025,14 @@ article.checkout .cart li .quantity {
       align-items: center;
   text-align: center;
 }
+@media screen and (max-width: 64.0625em) {
+  article.checkout .cart li .quantity {
+    width: 26%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.checkout .cart li .quantity {
-    width: 70%;
+    width: 65%;
     padding-top: 10px;
   }
 }
@@ -10866,9 +11049,14 @@ article.checkout .cart li .check {
   -ms-flex-align: center;
       align-items: center;
 }
+@media screen and (max-width: 64.0625em) {
+  article.checkout .cart li .check {
+    width: 14%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.checkout .cart li .check {
-    width: 30%;
+    width: 35%;
     padding-top: 10px;
   }
 }
@@ -10885,6 +11073,11 @@ article.checkout .cart li .delete {
       align-items: center;
   width: 8%;
   text-align: center;
+}
+@media screen and (max-width: 64.0625em) {
+  article.checkout .cart li .delete {
+    width: 6%;
+  }
 }
 @media screen and (max-width: 37.5em) {
   article.checkout .cart li .delete {
@@ -10938,6 +11131,20 @@ label.quantity_main a.minus {
   transition-duration: 0.5s;
   transition-delay: 0s;
 }
+@media screen and (max-width: 64.0625em) {
+  label.quantity_main a.minus {
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  label.quantity_main a.minus {
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+  }
+}
 label.quantity_main a.minus:before {
   width: 16px;
   height: 2px;
@@ -10969,6 +11176,20 @@ label.quantity_main a.plus {
   transition-duration: 0.5s;
   transition-delay: 0s;
   text-indent: 3px;
+}
+@media screen and (max-width: 64.0625em) {
+  label.quantity_main a.plus {
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  label.quantity_main a.plus {
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+  }
 }
 label.quantity_main a.plus:hover {
   background-color: #b1b1b1;
@@ -11014,6 +11235,11 @@ label.quantity_main a.plus:hover:after {
   margin-top: 30px;
   background-color: #fff;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 50em) {
+  .total_box {
+    width: 95%;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .total_box {
@@ -11099,6 +11325,11 @@ label.quantity_main a.plus:hover:after {
   transition-delay: 0s;
   font-size: 1.25rem;
 }
+@media screen and (max-width: 37.5em) {
+  .btnContainer .ReShopping, .btnContainer .prevStep {
+    width: 140px;
+  }
+}
 .btnContainer .ReShopping:hover, .btnContainer .prevStep:hover {
   background-color: #888;
 }
@@ -11116,6 +11347,11 @@ label.quantity_main a.plus:hover:after {
   transition-duration: 0.5s;
   transition-delay: 0s;
   font-size: 1.25rem;
+}
+@media screen and (max-width: 37.5em) {
+  .btnContainer a.checkOut, .btnContainer .nextStep {
+    width: 140px;
+  }
 }
 .btnContainer a.checkOut:hover, .btnContainer .nextStep:hover {
   background-color: #a17c36;
@@ -11438,6 +11674,11 @@ label.quantity_main a.plus:hover:after {
   transition-duration: 0.5s;
   transition-delay: 0s;
   font-size: 1.25rem;
+}
+@media screen and (max-width: 64.0625em) {
+  .Check_Register .popup .container .loginPop button.login, .Check_Register .popup .container .loginPop a.login {
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .Check_Register .popup .container .loginPop button.login, .Check_Register .popup .container .loginPop a.login {
@@ -11786,6 +12027,11 @@ label.quantity_main a.plus:hover:after {
   background-color: #fff;
   padding: 40px 40px;
 }
+@media screen and (max-width: 64.0625em) {
+  .shoppingEnd {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   .shoppingEnd {
     padding: 40px 15px;
@@ -11837,6 +12083,11 @@ label.quantity_main a.plus:hover:after {
   letter-spacing: 1px;
   text-align: center;
 }
+@media screen and (max-width: 50em) {
+  .shoppingEnd .shoppingInfo li .title {
+    width: 18%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   .shoppingEnd .shoppingInfo li .title {
     width: 35%;
@@ -11851,6 +12102,11 @@ label.quantity_main a.plus:hover:after {
   text-indent: 20px;
   letter-spacing: 1px;
   text-align: left;
+}
+@media screen and (max-width: 50em) {
+  .shoppingEnd .shoppingInfo li .content {
+    width: 82%;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .shoppingEnd .shoppingInfo li .content {
@@ -11871,6 +12127,16 @@ label.quantity_main a.plus:hover:after {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+}
+@media screen and (max-width: 64.0625em) {
+  .confirmList {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 50em) {
+  .confirmList {
+    width: 95%;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .confirmList {
@@ -11974,6 +12240,11 @@ label.quantity_main a.plus:hover:after {
   position: relative;
   display: block;
 }
+@media screen and (max-width: 50em) {
+  .confirmList .confirmDetial .orderInfo ul.content .notice p, .confirmList .confirmDetial .delivery ul.content .notice p {
+    line-height: 1.1875rem;
+  }
+}
 .confirmList .confirmDetial .orderInfo ul.content .notice p:before, .confirmList .confirmDetial .delivery ul.content .notice p:before {
   width: 3px;
   height: 3px;
@@ -12001,6 +12272,12 @@ label.quantity_main a.plus:hover:after {
   letter-spacing: 1px;
   position: relative;
   font-size: 1rem;
+}
+@media screen and (max-width: 50em) {
+  .confirmList .confirmDetial .orderInfo ul.content li .title, .confirmList .confirmDetial .delivery ul.content li .title {
+    width: 33%;
+    vertical-align: top;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .confirmList .confirmDetial .orderInfo ul.content li .title, .confirmList .confirmDetial .delivery ul.content li .title {
@@ -12031,6 +12308,16 @@ label.quantity_main a.plus:hover:after {
   height: 40px;
   line-height: 40px;
 }
+@media screen and (max-width: 64.0625em) {
+  .confirmList .confirmDetial .orderInfo ul.content li .content, .confirmList .confirmDetial .delivery ul.content li .content {
+    width: 78%;
+  }
+}
+@media screen and (max-width: 50em) {
+  .confirmList .confirmDetial .orderInfo ul.content li .content, .confirmList .confirmDetial .delivery ul.content li .content {
+    width: 65%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   .confirmList .confirmDetial .orderInfo ul.content li .content, .confirmList .confirmDetial .delivery ul.content li .content {
     width: 71%;
@@ -12060,6 +12347,11 @@ label.quantity_main a.plus:hover:after {
 .confirmList .container {
   padding: 40px;
   background-color: #fff;
+}
+@media screen and (max-width: 64.0625em) {
+  .confirmList .container {
+    padding: 30px;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .confirmList .container {
@@ -12244,6 +12536,18 @@ label.quantity_main a.plus:hover:after {
   padding-bottom: 10px;
   position: relative;
 }
+@media screen and (max-width: 64.0625em) {
+  .dashboardContainer .memberBar {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .memberBar {
+    width: 90%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 .dashboardContainer .memberBar a.logout {
   display: block;
   position: absolute;
@@ -12257,6 +12561,11 @@ label.quantity_main a.plus:hover:after {
   top: 25px;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .memberBar a.logout {
+    top: 20px;
+  }
+}
 .dashboardContainer .memberBar p {
   display: inline-block;
   font-size: 1.25rem;
@@ -12264,11 +12573,29 @@ label.quantity_main a.plus:hover:after {
   margin-top: 0;
   margin-bottom: 0;
 }
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .memberBar p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+}
 .dashboardContainer .memberBar p.name {
   margin-right: 15px;
 }
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .memberBar p.name {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+}
 .dashboardContainer .memberBar p.id {
   margin-right: 15px;
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .memberBar p.id {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
 }
 .dashboardContainer .dashboard {
   max-width: 1200px;
@@ -12278,6 +12605,16 @@ label.quantity_main a.plus:hover:after {
   margin-left: auto;
   margin-top: 30px;
   background-color: #fff;
+}
+@media screen and (max-width: 64.0625em) {
+  .dashboardContainer .dashboard {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard {
+    width: 90%;
+  }
 }
 .dashboardContainer .dashboard .orderTracking .trackingList {
   width: 100%;
@@ -12316,6 +12653,13 @@ label.quantity_main a.plus:hover:after {
   padding-left: 30px;
   padding-bottom: 30px;
 }
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 .dashboardContainer .dashboard .orderTracking .trackingList .left h3 {
   display: inline-block;
   padding-bottom: 10px;
@@ -12333,6 +12677,11 @@ label.quantity_main a.plus:hover:after {
   color: #333;
   font-size: 0.8125rem;
   margin-top: 30px;
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left .notice {
+    padding: 20px;
+  }
 }
 .dashboardContainer .dashboard .orderTracking .trackingList .left .notice p {
   padding-left: 25px;
@@ -12371,6 +12720,16 @@ label.quantity_main a.plus:hover:after {
   font-size: 1rem;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 50em) {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .title {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .title {
+    width: 30%;
+  }
+}
 .dashboardContainer .dashboard .orderTracking .trackingList .left .box .title:after {
   width: 5px;
   display: block;
@@ -12387,6 +12746,16 @@ label.quantity_main a.plus:hover:after {
   font-size: 1rem;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 50em) {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .content {
+    width: 68%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .content {
+    width: 70%;
+  }
+}
 .dashboardContainer .dashboard .orderTracking .trackingList .boxW {
   width: 100%;
   height: auto;
@@ -12395,6 +12764,13 @@ label.quantity_main a.plus:hover:after {
   padding-left: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .orderTracking .trackingList .boxW {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
 }
 .dashboardContainer .dashboard .orderTracking .trackingList .boxW a.status {
   position: absolute;
@@ -12406,6 +12782,12 @@ label.quantity_main a.plus:hover:after {
   color: #fff;
   right: 30px;
   top: 30px;
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .orderTracking .trackingList .boxW a.status {
+    bottom: 15px;
+    top: auto;
+  }
 }
 .dashboardContainer .dashboard .orderTracking .trackingList .boxW p {
   margin-top: 5px;
@@ -12451,6 +12833,17 @@ label.quantity_main a.plus:hover:after {
   padding: 40px;
   background-color: #fff;
 }
+@media screen and (max-width: 50em) {
+  .dashboardContainer .dashboard .Info_content, .dashboardContainer .dashboard .orderTracking {
+    padding: 30px 20px;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .Info_content, .dashboardContainer .dashboard .orderTracking {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 .dashboardContainer .dashboard .Info_content h2, .dashboardContainer .dashboard .orderTracking h2 {
   width: 100%;
   height: auto;
@@ -12478,6 +12871,11 @@ label.quantity_main a.plus:hover:after {
   width: 100%;
   padding-bottom: 0;
 }
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .Info_content .editContent .btnContainer, .dashboardContainer .dashboard .orderTracking .editContent .btnContainer {
+    text-align: center;
+  }
+}
 .dashboardContainer .dashboard .Info_content .editContent .notice, .dashboardContainer .dashboard .orderTracking .editContent .notice {
   font-size: 0.8125rem;
   color: #c09441;
@@ -12501,6 +12899,16 @@ label.quantity_main a.plus:hover:after {
   width: 50%;
   padding-top: 20px;
 }
+@media screen and (max-width: 64.0625em) {
+  .dashboardContainer .dashboard .Info_content .editContent .left, .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .left, .dashboardContainer .dashboard .orderTracking .editContent .right {
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .Info_content .editContent .left, .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .left, .dashboardContainer .dashboard .orderTracking .editContent .right {
+    width: 100%;
+  }
+}
 .dashboardContainer .dashboard .Info_content .editContent .left .box, .dashboardContainer .dashboard .Info_content .editContent .right .box, .dashboardContainer .dashboard .orderTracking .editContent .left .box, .dashboardContainer .dashboard .orderTracking .editContent .right .box {
   width: 100%;
   display: -ms-flexbox;
@@ -12517,6 +12925,16 @@ label.quantity_main a.plus:hover:after {
 .dashboardContainer .dashboard .Info_content .editContent .left .box .title, .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title {
   width: 20%;
 }
+@media screen and (max-width: 50em) {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .title, .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .title, .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title {
+    width: 100%;
+  }
+}
 .dashboardContainer .dashboard .Info_content .editContent .left .box .title label, .dashboardContainer .dashboard .Info_content .editContent .right .box .title label, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title label, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title label {
   margin: 0;
   padding: 0;
@@ -12532,6 +12950,16 @@ label.quantity_main a.plus:hover:after {
 }
 .dashboardContainer .dashboard .Info_content .editContent .left .box .content, .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content {
   width: 80%;
+}
+@media screen and (max-width: 50em) {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .content, .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .content, .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content {
+    width: 100%;
+  }
 }
 .dashboardContainer .dashboard .Info_content .editContent .left .box .content p, .dashboardContainer .dashboard .Info_content .editContent .right .box .content p, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content p, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content p {
   margin-top: 5px;
@@ -12552,9 +12980,16 @@ label.quantity_main a.plus:hover:after {
   font-size: 1rem;
   display: inline-block;
   letter-spacing: 1px;
+  max-width: inherit;
 }
 .dashboardContainer .dashboard .Info_content .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .Info_content .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input#fullName {
   width: 280px;
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .Info_content .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input#fullName {
+    width: 100%;
+    max-width: inherit;
+  }
 }
 .dashboardContainer .dashboard .Info_content .editContent .left .box .content select, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select {
   height: 40px;
@@ -12570,6 +13005,12 @@ label.quantity_main a.plus:hover:after {
   background-position: right 6px center;
   margin: 0;
   cursor: pointer;
+}
+@media screen and (max-width: 37.5em) {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .content select#title, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#title {
+    width: 100%;
+    max-width: inherit;
+  }
 }
 .dashboardContainer .dashboard .Info_content .editContent .left .box .content select#month, .dashboardContainer .dashboard .Info_content .editContent .left .box .content select#date, .dashboardContainer .dashboard .Info_content .editContent .left .box .content select#year, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#month, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#date, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#year, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#month, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#date, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#year, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#month, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#date, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#year {
   padding: 5px;
@@ -12623,6 +13064,12 @@ label.quantity_main a.plus:hover:after {
   padding-bottom: 30px;
   width: 100%;
   overflow: hidden;
+}
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .orderTracking .orderContainer .closebtn {
   width: 100%;
@@ -12688,6 +13135,11 @@ label.quantity_main a.plus:hover:after {
       justify-content: space-between;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .ListTitle {
+    display: none;
+  }
+}
 .orderTracking .orderContainer .ListTitle li {
   color: #fff;
   text-align: center;
@@ -12732,8 +13184,19 @@ label.quantity_main a.plus:hover:after {
   -ms-flex-align: stretch;
       align-items: stretch;
 }
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .cart li {
+    display: block;
+  }
+}
 .orderTracking .orderContainer .cart li .pd {
   width: 20%;
+}
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .cart li .pd {
+    float: left;
+    width: 35%;
+  }
 }
 .orderTracking .orderContainer .cart li .pd picture {
   width: 100%;
@@ -12748,12 +13211,23 @@ label.quantity_main a.plus:hover:after {
   max-height: 160px;
   display: inline-block;
 }
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .cart li .pd picture img {
+    max-width: 180px;
+  }
+}
 .orderTracking .orderContainer .cart li .des {
   width: 35%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
+}
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .cart li .des {
+    float: left;
+    width: 65%;
+  }
 }
 .orderTracking .orderContainer .cart li .des .Container {
   width: 100%;
@@ -12783,11 +13257,30 @@ label.quantity_main a.plus:hover:after {
   -ms-flex-align: center;
       align-items: center;
 }
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .cart li .price {
+    width: 65%;
+    float: left;
+  }
+}
 .orderTracking .orderContainer .cart li .price p {
   text-align: center;
   font-size: 0.9375rem;
   width: 100%;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .cart li .price p {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .orderTracking .orderContainer .cart li .price p:before {
+    display: inline-block;
+    content: attr(data-title);
+    font-size: 0.9375rem;
+    color: #ba9142;
+  }
 }
 .orderTracking .orderContainer .cart li .quantity {
   width: 15%;
@@ -12797,11 +13290,29 @@ label.quantity_main a.plus:hover:after {
       align-items: center;
   text-align: center;
 }
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .cart li .quantity {
+    width: 65%;
+  }
+}
 .orderTracking .orderContainer .cart li .quantity p {
   text-align: center;
   font-size: 0.9375rem;
   width: 100%;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .cart li .quantity p {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .orderTracking .orderContainer .cart li .quantity p:before {
+    display: inline-block;
+    content: attr(data-title);
+    font-size: 0.9375rem;
+    color: #ba9142;
+  }
 }
 .orderTracking .orderContainer .cart li .check {
   width: 15%;
@@ -12810,11 +13321,30 @@ label.quantity_main a.plus:hover:after {
   -ms-flex-align: center;
       align-items: center;
 }
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .cart li .check {
+    width: 65%;
+  }
+}
 .orderTracking .orderContainer .cart li .check p {
   text-align: center;
   font-size: 0.9375rem;
   width: 100%;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 37.5em) {
+  .orderTracking .orderContainer .cart li .check p {
+    text-align: left;
+    font-size: 0.9375rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .orderTracking .orderContainer .cart li .check p:before {
+    content: attr(data-title);
+    display: inline-block;
+    font-size: 0.9375rem;
+    color: #ba9142;
+  }
 }
 
 .customize {
@@ -12844,6 +13374,12 @@ label.quantity_main a.plus:hover:after {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
+}
+@media screen and (max-width: 64.0625em) {
+  .customize .mainContainer {
+    height: calc(100vh - 160px);
+    min-height: inherit;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .customize .mainContainer {
@@ -12905,9 +13441,16 @@ label.quantity_main a.plus:hover:after {
   overflow: hidden;
   filter: blur(50px);
   opacity: 0;
+  top: 0;
   transition-property: all;
   transition-duration: 0.5s;
   transition-delay: 0s;
+}
+@media screen and (max-width: 50em) {
+  .customize .mainContainer picture {
+    height: calc( 100% - 160px);
+    top: 0;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .customize .mainContainer picture {
@@ -13094,6 +13637,11 @@ article.appointment .board .buttonContainer a:hover {
 .confirmList .container .cart li .pd {
   width: 20% !important;
 }
+@media screen and (max-width: 50em) {
+  .confirmList .container .cart li .pd {
+    width: 24% !important;
+  }
+}
 @media screen and (max-width: 37.5em) {
   .confirmList .container .cart li .pd {
     width: 30% !important;
@@ -13103,6 +13651,11 @@ article.appointment .board .buttonContainer a:hover {
 .confirmList .container .cart li .des {
   width: 33% !important;
 }
+@media screen and (max-width: 50em) {
+  .confirmList .container .cart li .des {
+    width: 26% !important;
+  }
+}
 @media screen and (max-width: 37.5em) {
   .confirmList .container .cart li .des {
     width: 70% !important;
@@ -13111,6 +13664,11 @@ article.appointment .board .buttonContainer a:hover {
 
 .confirmList .container .cart li .price {
   width: 15% !important;
+}
+@media screen and (max-width: 50em) {
+  .confirmList .container .cart li .price {
+    width: 16% !important;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .confirmList .container .cart li .price {
@@ -13140,6 +13698,11 @@ article.appointment .board .buttonContainer a:hover {
 .confirmList .container .cart li .quantity {
   width: 17% !important;
 }
+@media screen and (max-width: 50em) {
+  .confirmList .container .cart li .quantity {
+    width: 18% !important;
+  }
+}
 @media screen and (max-width: 37.5em) {
   .confirmList .container .cart li .quantity {
     width: 28% !important;
@@ -13167,6 +13730,11 @@ article.appointment .board .buttonContainer a:hover {
 
 .confirmList .container .cart li .check {
   width: 15% !important;
+}
+@media screen and (max-width: 50em) {
+  .confirmList .container .cart li .check {
+    width: 16% !important;
+  }
 }
 @media screen and (max-width: 37.5em) {
   .confirmList .container .cart li .check {

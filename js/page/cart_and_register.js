@@ -57,6 +57,7 @@ var $totalprice //全域 購物車列表商品總價
 //browser on loaded-/////////////////////
 
 $(window).load(function() {
+    $(document).scrollScope();
 
 
 
@@ -86,12 +87,40 @@ function checkOutNow() {
         $loginbtn = $('#member_Login');
         $loginbtn.click(function() {
             $checkPopup.addClass('active');
+            if ($('.wrapper.index').length > 0) {
+
+                $.fn.fullpage.setAllowScrolling(false);
+
+
+
+            } else {
+                $body.addClass('stop-scrolling');
+                $body.attr('data-scroll-scope','force');
+
+                if ($touchEvent) {
+                    $('body').unbind('touchmove');
+                } else {
+                    console.log('notouch')
+                }
+            }
         })
         $checkOutBtn.click(function() {
             $checkPopup.addClass('active');
         })
         $checkPopupClose.click(function() {
             $checkPopup.removeClass('active');
+            if ($('.wrapper.index').length > 0) {
+                $.fn.fullpage.setAllowScrolling(true);
+
+            } else {
+                $body.removeClass('stop-scrolling');
+                $body.removeAttr('data-scroll-scope');
+                if ($touchEvent) {
+                    $('body').bind('touchmove', function(e) { e.preventDefault() });
+                }
+
+
+            }
         })
         $forgotbtn.click(function() {
             $registerMb.stop().slideUp();
@@ -235,9 +264,10 @@ function cartEvent() {
 
             } else {
                 $body.addClass('stop-scrolling');
+                //$body.attr('data-scroll-scope','force');
 
                 if ($touchEvent) {
-                    $('body').unbind('touchmove');
+                    $('.srolllock').unbind('touchmove');
                 } else {
                     console.log('notouch')
                 }
@@ -285,6 +315,7 @@ function cartEvent() {
 
         } else {
             $body.removeClass('stop-scrolling');
+            //$body.removeAttr('data-scroll-scope');
             if ($touchEvent) {
                 $('body').bind('touchmove', function(e) { e.preventDefault() });
             }
@@ -306,6 +337,7 @@ function cartEvent() {
 
         } else {
             $body.removeClass('stop-scrolling');
+             $body.removeAttr('data-scroll-scope');
             if ($touchEvent) {
                 $('body').bind('touchmove', function(e) { e.preventDefault() });
             }
