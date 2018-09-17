@@ -27,9 +27,15 @@ var $touchEvent // 全域 偵測是否支援touchEvent
         $("html").addClass('firefox');
     } else if (_uac.browser == "safari") {
         $("html").addClass('safari');
-        //console.log('safari');
+        console.log('safari');
+        $('section.product_content .mainPicContain').addClass('ios');
     } else if (_uac.browser == "chrome") {
         $("html").addClass('chrome');
+        if(iOS() == true){
+            $('section.product_content .mainPicContain').addClass('ios');
+        }else{
+            console.log('no ios');
+        }
         //console.log('chrome');
     }
     //偵測是否有touch事件
@@ -86,7 +92,27 @@ $(window).load(function() {
 
 //other function-////////////////////////
 
+//偵測是否是ios
 
+function iOS() {
+
+  var iDevices = [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ];
+
+  if (!!navigator.platform) {
+    while (iDevices.length) {
+      if (navigator.platform === iDevices.pop()){ return true; }
+    }
+  }
+
+  return false;
+}
 
 //漢堡選單
 function bugerEvent() {

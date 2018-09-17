@@ -148,6 +148,7 @@ function gift() {
     $giftSlider = new Swiper('.gift', {
         slidesPerView: Quantity(),
         spaceBetween: 0,
+        slidesPerGroup: 1,
         // pagination: {
         //   el: '.swiper-pagination',
         //   clickable: true,
@@ -156,6 +157,20 @@ function gift() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+    });
+
+    $giftSlider.on('slideChange', function () {
+
+        //console.log($giftSlider.activeIndex);
+        var nowSelected = $giftSlider.activeIndex;
+        var datalink = $(this).attr('data-link');
+         $('.giftslider').removeClass('active');
+         $('.giftslider').eq(nowSelected).addClass('active');
+         $('.pdPicture').removeClass('active');
+         $('.pdPicture').eq(nowSelected).addClass('active');
+         GiftBoxLink.attr('href', datalink);
+
+
     });
     $('.giftslider').click(function() {
         //console.log($(this).index());

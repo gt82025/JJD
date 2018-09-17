@@ -7645,6 +7645,23 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
     position: relative;
   }
 }
+@media screen and (max-width: 37.5em) {
+  .mainContainer.products .product_content .mainPicContain.mobileHidden {
+    display: none;
+  }
+}
+.mainContainer.products .product_content .mainPicContain.mobileShow {
+  display: none;
+}
+@media screen and (max-width: 37.5em) {
+  .mainContainer.products .product_content .mainPicContain.mobileShow {
+    display: block;
+  }
+}
+.mainContainer.products .product_content .mainPicContain.ios {
+  background-attachment: fixed;
+  background-size: auto 100%;
+}
 .mainContainer.products .product_content .mainPicContain .textContent {
   width: 100%;
   max-width: 1200px;
@@ -13464,6 +13481,7 @@ label.quantity_main a.plus:hover:after {
 @media screen and (max-width: 37.5em) {
   .customize .mainContainer picture {
     top: 0;
+    height: calc( 100% - 90px);
   }
 }
 .customize .mainContainer picture source {

@@ -437,5 +437,7 @@ function caclCart() {
             console.log($totalprice);
         }
         $('.totalPrice .result').text('NT$' + $totalprice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+    }else{
+        $('.totalPrice .result').text('NT$' + 0);
     }
 }
