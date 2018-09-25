@@ -58,7 +58,203 @@
 </head>
 
 <body>
+<div id="pageLoading" class="loading">
+    <style>
+@keyframes scrollMove {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes introOpc {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
+#pageLoading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ba9142;
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  transition-property: background;
+  transition-duration: 0.5s;
+  transition-delay: 0.3s;
+  z-index: 9999;
+  margin-right: 0;
+  padding: 0;
+}
+#pageLoading.remove {
+  transform: translateX(-100%);
+}
+#pageLoading.finish {
+  background-color: rgba(186, 145, 66, 0);
+}
+#pageLoading.finish .logo {
+  opacity: 0;
+}
+#pageLoading.finish .logo .lineContainer #HexagonLine {
+  animation: rollFinished 1s forwards linear;
+}
+#pageLoading.finish .logo .lineContainer #HexagonLine path#Line1 {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0s;
+  stroke: transparent;
+  fill: #ba9142;
+  stroke-dashoffset: 0;
+  stroke-width: 0;
+}
+#pageLoading.finish .logo .mainContainer #HexagonLogo {
+  animation: mainRotateFinished 1s forwards linear;
+}
+#pageLoading.loading .logo .lineContainer #HexagonLine {
+  animation: roll 2s infinite linear;
+}
+#pageLoading.loading .logo .lineContainer #HexagonLine path#Line1 {
+  fill: rgba(186, 145, 66, 0);
+  stroke-dasharray: 400 600;
+  animation: dash 3s infinite linear;
+}
+#pageLoading.loading .logo .mainContainer #HexagonLogo {
+  transform-origin: center;
+  animation: mainRotate 2s infinite linear;
+}
+#pageLoading .logo {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0.6s;
+}
+#pageLoading .logo .mainContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 556;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 500px;
+}
+#pageLoading .logo .lineContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 555;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+#pageLoading .logo .lineContainer #HexagonLine path#Line1 {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+@keyframes mainRotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  85% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1000;
+  }
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rollFinished {
+  to {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes mainRotateFinished {
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+
+
+
+
+    </style>
+    <!-- 頁面讀取 -->
+    <div class="logo">
+        <div class="mainContainer">
+            <svg version="1.1" id="HexagonLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80%" height="80%" viewBox="0 0 45 45" enable-background="new 0 0 45 45" xml:space="preserve">
+                <polygon fill="none" stroke="#fff" stroke-miterlimit="10" points="22.5,5.44 2.812,39.561 42.188,39.561 " />
+                <rect x="13.236" y="21.495" fill="none" stroke="#fff" stroke-miterlimit="10" width="18.407" height="18.065" />
+                <line fill="none" stroke="#fff" stroke-miterlimit="10" x1="13.236" y1="27.312" x2="31.644" y2="27.312" />
+                <polyline fill="none" stroke="#fff" stroke-miterlimit="10" points="13.236,31.328 22.5,36.932 31.644,31.081 " />
+                <line fill="none" stroke="#fff" stroke-miterlimit="10" x1="22.5" y1="21.495" x2="22.5" y2="39.561" />
+            </svg>
+        </div>
+        <div class="lineContainer">
+            <svg version="1.1" id="HexagonLine" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="90%" height="90%" viewBox="0 0 129.45 146.471" enable-background="new 0 0 129.45 146.471" xml:space="preserve">
+                <g>
+                    <path id="Line1" fill="none" stroke="#fff" stroke-width="3" d="M64.726,6.362L6.813,39.797v66.873l57.912,33.438l57.912-33.438
+        V39.797L64.726,6.362L64.726,6.362z" />
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
 <header id="header">
     <!--  頁面選單區域 -->
     <div class="mainContainer">
