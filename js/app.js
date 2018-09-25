@@ -5,6 +5,24 @@ var $navClose
 var $scroll_top
 var $windowHeight
 var $touchEvent // 全域 偵測是否支援touchEvent
+var $loadEle = document.getElementById('pageLoading')
+
+//imageloaded
+imagesLoaded( document.querySelector('body'),{ background: true }, function( instance ) {
+  console.log('all images are loaded');
+   if ( $loadEle.classList.contains('loading')) {
+    $loadEle.classList.remove('loading');
+    $loadEle.classList.add('finish');
+    setTimeout(function(){
+        $loadEle.classList.add('remove');
+
+    }, 1300);
+
+   }
+ 
+});
+
+//imageloaded
 
 
 
