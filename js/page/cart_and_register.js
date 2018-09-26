@@ -167,7 +167,7 @@ function checkOutNow() {
                         $setPrice = $price * $nowQuentity
                         $totalPrice.attr("data-price", $setPrice);
                         $totalPrice.text('NT$' + $setPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-                        checkOuttotal();
+                        //checkOuttotal();
 
                     }
 
@@ -180,7 +180,7 @@ function checkOutNow() {
                         $totalPrice.attr("data-price", $setPrice);
                         $totalPrice.text('NT$' + $setPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
                         //console.log($nowQuentity);
-                        checkOuttotal();
+                        //checkOuttotal();
                     }
 
                 })
@@ -189,7 +189,7 @@ function checkOutNow() {
             })
         }
     }
-    checkOuttotal();
+    //checkOuttotal();
 }
 // checkout.html 計算結帳清單
 function checkOuttotal() {

@@ -181,7 +181,7 @@ function MenuEvent(scroll_top) {
 //部分頁面使用 easescroll
 function easeScroll() {
     if ($('article.products').length == 0 && $('.wrapper.index').length == 0) {
-        //console.log('smooth_scroll');
+        console.log('smooth_scroll');
         $("html").easeScroll({
             frameRate: 60,
             animationTime: 1000,

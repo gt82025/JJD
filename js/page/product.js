@@ -102,11 +102,6 @@ function productsBarSlider() {
     //     })
 
     // }
-
-
-
-
-
 }
 //easescroll的設定   參考https://github.com/ivmello/easeScroll
 function smoothScroll() {
