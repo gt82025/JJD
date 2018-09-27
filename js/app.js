@@ -151,7 +151,7 @@ function MenuEvent(scroll_top) {
 
 
     if ($('article.shopping').length > 0 || $('.stepContainer').length > 0) {
-        if (scroll_top >= 200) {
+        if (scroll_top >= 60) {
             $('header#header').addClass('active');
             // $('.topBtn').addClass('open');
             //$('footer .grass').addClass('smaller');
