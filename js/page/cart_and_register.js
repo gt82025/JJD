@@ -15,6 +15,7 @@ var $wholeAndDeliverFee // checkout.html 訂單總價 + 貨運
 var $Freight = 100; // heckout.html 運費
 
 
+
 var $PCLink // apply.html個資保護聲明按鈕。
 var $closePC // apply.html個資保護聲明關閉。
 
@@ -24,9 +25,15 @@ var $ListClosebtn // 全域 購物車列表商品關閉按鈕
 var $carry_more // 全域 繼續購買難紐
 var $shoppingAddress = 'shopping.html';
 
+
 var $body // 全域 body標籤
 var $cartSingle // 全域 購物車列表商品品項
 var $totalprice //全域 購物車列表商品總價
+
+var $tasteDetial // 味道選擇按鈕
+var $contentDetial // 味道選擇內容
+var $tasteClose // 味道選擇關閉
+var $tasteconfirm // 味道選擇確定
 
 
 //browser on start-//////////////////////
@@ -41,6 +48,8 @@ var $totalprice //全域 購物車列表商品總價
     SideCart(); // 全站 右側購物車按鈕UI操作行為
 
     caclCart(); // 全站 右側購物車金額計算
+
+    tasteDetial(); // 全站 商品口味選擇
 
 
 
@@ -354,16 +363,20 @@ function cartEvent() {
 function SideCart() {
 
     $cartSingle.each(function() {
+        var $staticQuantity = $(this).find('.quantityShow p');
         var $QuantityInput = $(this).find('input.Quantity');
         var $deleteThis = $(this).find('a.delete');
         var $thisQuantity = $(this).find('input.Quantity').val();
         var $plus = $(this).find('a.plus');
         var $minus = $(this).find('a.minus');
+        $staticQuantity.html($thisQuantity);
         console.log($thisQuantity);
         //增加商品數量
+
         $plus.click(function() {
             $thisQuantity++
             $QuantityInput.val($thisQuantity);
+            $staticQuantity.html($thisQuantity);
             // 計算購物車商品總價
             caclCart();
 
@@ -374,6 +387,7 @@ function SideCart() {
             if ($thisQuantity > 1) {
                 $thisQuantity--
                 $QuantityInput.val($thisQuantity);
+                $staticQuantity.html($thisQuantity);
             }
             // 計算購物車商品總價
             caclCart();
@@ -384,8 +398,8 @@ function SideCart() {
         //商品數量欄位變更
         $QuantityInput.change(function() {
             $thisQuantity = $QuantityInput.val();
+            $staticQuantity.html($thisQuantity);
             caclCart();
-
         });
         //刪除商品品項
         $deleteThis.click(function() {
@@ -437,7 +451,68 @@ function caclCart() {
             console.log($totalprice);
         }
         $('.totalPrice .result').text('NT$' + $totalprice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-    }else{
+    } else {
         $('.totalPrice .result').text('NT$' + 0);
+    }
+}
+
+
+
+// 全站 商品口味選擇
+function tasteDetial() {
+    if ($('.contentDetialbtn').length > 0) {
+        $tasteDetial = $('.contentDetialbtn');
+        $contentDetial = $('.contentDetial');
+        $tasteClose = $('.detial .closeBtn');
+        $tasteconfirm = $('.btnContainer .confirm');
+        $tasteDetial.click(function() {
+            $contentDetial.addClass('open');
+            if ($('#tasteList.set').length > 0) {
+                $TasteSingle = $('.single.taste');
+                console.log($TasteSingle);
+                $TasteSingle.each(function() {
+                    var $minus = $(this).find('.minus');
+                    var $plus = $(this).find('.plus');
+                    var $nowQuentityInput = $(this).find('.Quantity')
+                    var $nowQuentity = $(this).find('.Quantity').val();
+
+                    $minus.click(function() {
+                        if ($nowQuentity <= 1) {
+
+
+                        } else {
+                            $nowQuentity--;
+                            $nowQuentityInput.val($nowQuentity);
+
+
+                        }
+
+                    })
+                    $plus.click(function() {
+                        if ($nowQuentity) {
+                            $nowQuentity++;
+                            $nowQuentityInput.val($nowQuentity);
+
+                        }
+
+                    })
+
+
+
+                })
+            }
+        });
+        $tasteClose.click(function() {
+            $contentDetial.removeClass('open');
+        });
+        $tasteconfirm.click(function() {
+
+            if (confirm($(this).data('confirm'))) {
+
+                $contentDetial.removeClass('open');
+            };
+
+        })
+
     }
 }

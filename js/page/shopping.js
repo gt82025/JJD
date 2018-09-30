@@ -64,11 +64,16 @@ function PdPhotoSlider() {
 
     $productMainPhoto.click(function() {
         $productPhotoContainer.removeClass('close');
+        $body.addClass('stop-scrolling');
+        $body.attr('data-scroll-scope', 'force');
+
 
 
     })
     $productMainPhotoClose.click(function() {
         $productPhotoContainer.addClass('close');
+        $body.removeClass('stop-scrolling');
+        $body.removeAttr('data-scroll-scope');
 
 
     })
@@ -93,17 +98,17 @@ function products_picks() {
     });
 }
 
-    function Quantity() {
-        var q
-        if ($(window).width() <= 600) {
-            q = 1;
-            return (q);
-        } else {
-            q = 3;
-            return (q);
-        }
-
+function Quantity() {
+    var q
+    if ($(window).width() <= 600) {
+        q = 1;
+        return (q);
+    } else {
+        q = 3;
+        return (q);
     }
+
+}
 //控制產品數量按鈕
 function QuantityCtrl() {
     var $minusBtn = $('label.Quantity .minus');
@@ -202,13 +207,13 @@ function scrollMagicStart() {
     $(window).scroll(function() {
         // Get scroll position
         var s = $(window).scrollTop();
-            // scroll value and opacity
-            if($(window).width() >= 600){
-                blurVal = (s / 100);
-            }else{
-                blurVal = 0;
-            }
-            
+        // scroll value and opacity
+        if ($(window).width() >= 600) {
+            blurVal = (s / 100);
+        } else {
+            blurVal = 0;
+        }
+
         // opacity value 0% to 100%
         $('article.shopping .main').css('filter', 'blur(' + blurVal + 'px)');
         $('article.shopping .main').css('transition-property', 'unset');

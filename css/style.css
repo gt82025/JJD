@@ -9085,27 +9085,60 @@ article.shopping .main div.preview .buy_price label {
   margin-top: 10px;
   display: block;
   position: relative;
-  width: 100%;
+  width: auto;
   max-width: 300px;
+  margin-bottom: 10px;
+}
+article.shopping .main div.preview .buy_price label .contentDetialbtn {
+  width: auto;
+  height: 38px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 2.375rem;
+  margin-left: 10px;
+  background-color: #4c4c4c;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+article.shopping .main div.preview .buy_price label .contentDetialbtn img {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: text-top;
+}
+article.shopping .main div.preview .buy_price label .contentDetialbtn:hover {
+  background-color: #000;
+}
+article.shopping .main div.preview .buy_price label.pdSpec {
+  height: auto;
+  z-index: 500;
+}
+article.shopping .main div.preview .buy_price label.Quantity {
+  max-width: 450px;
 }
 article.shopping .main div.preview .buy_price label .Quantity {
-  width: 80px;
+  width: 60px;
   padding: 10px;
   height: 40px;
 }
 article.shopping .main div.preview .buy_price label .NowSelected {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: auto;
+  position: relative;
   display: block;
   background-color: #fff;
   top: 0;
   left: 0;
   z-index: 5;
   padding-left: 10px;
-  line-height: 40px;
+  line-height: 30px;
   border: #ccc 1px solid;
   cursor: pointer;
+  min-height: 30px;
 }
 article.shopping .main div.preview .buy_price label .NowSelected p {
   font-size: 0.8125rem;
@@ -9117,20 +9150,22 @@ article.shopping .main div.preview .buy_price label .NowSelected p {
 }
 article.shopping .main div.preview .buy_price label .optionContainer {
   width: 100%;
-  margin-top: 40px;
+  margin: 0;
   border: #ccc 1px solid;
   position: absolute;
   z-index: 2;
   overflow: hidden;
   display: none;
+  top: 100%;
 }
 article.shopping .main div.preview .buy_price label .optionContainer .option {
   width: 100%;
-  height: 40px;
+  height: auto;
   position: relative;
   display: block;
   padding-left: 10px;
-  line-height: 40px;
+  line-height: 30px;
+  min-height: 40px;
   cursor: pointer;
   transition-property: all;
   transition-duration: 0.5s;
@@ -9225,7 +9260,7 @@ article.shopping .main div.preview .buy_price label .Quantity {
 }
 article.shopping .main div.preview .buy_price label .dropDownbtn {
   width: 40px;
-  height: 40px;
+  height: 100%;
   display: block;
   background-color: #000;
   position: absolute;
@@ -9233,7 +9268,8 @@ article.shopping .main div.preview .buy_price label .dropDownbtn {
   z-index: 10;
   color: #fff;
   text-align: center;
-  line-height: 40px;
+  line-height: 32px;
+  cursor: pointer;
 }
 article.shopping .main div.preview .buy_price label .dropDownbtn i {
   font-size: 0.75rem;
@@ -9249,11 +9285,13 @@ article.shopping .main div.preview .buy_price label .dropDownbtn i:before {
 }
 article.shopping .main div.preview .buy_price label select {
   display: block;
-  position: relative;
-  height: 40px;
+  position: absolute;
+  height: auto;
+  min-height: 30px;
   padding: 0;
   padding-left: 10px;
   margin-bottom: 20px;
+  top: 0;
 }
 article.shopping .main div.preview .buy_price label select option {
   font-size: 0.8125rem;
@@ -9611,11 +9649,11 @@ article.shopping .main div.preview .buy_price .shoppingNow:hover {
   transform: translateX(100vw);
 }
 .shopping .PhotoContent .photaContainer {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   width: 90%;
   max-width: 1000px;
-  height: auto;
+  height: 100%;
   position: relative;
+  max-height: 65%;
 }
 @media screen and (max-width: 37.5em) {
   .shopping .PhotoContent .photaContainer {
@@ -9934,6 +9972,15 @@ article.cart .sideBar .cartList {
   padding: 0;
   margin-bottom: 0;
 }
+article.cart .sideBar .cartList.hideUi a.delete {
+  display: none;
+}
+article.cart .sideBar .cartList.hideUi .detial .quantityShow {
+  display: block;
+}
+article.cart .sideBar .cartList.hideUi .detial .quantity {
+  display: none;
+}
 article.cart .sideBar .cartList li {
   width: 100%;
   height: auto;
@@ -10030,6 +10077,22 @@ article.cart .sideBar .cartList li .detial h4.taste {
   color: #999;
   margin-top: 0;
   margin-bottom: 2px;
+}
+article.cart .sideBar .cartList li .detial span.price {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+article.cart .sideBar .cartList li .detial span.quantityShow {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 2px;
+  display: none;
+}
+article.cart .sideBar .cartList li .detial span.quantityShow p {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline-block;
 }
 article.cart .sideBar .cartList li .detial .quantity {
   width: 100%;
@@ -13379,6 +13442,11 @@ label.quantity_main a.plus:hover:after {
   }
 }
 
+@media screen and (max-width: 37.5em) {
+  .relation, article.mainContainer section.stories {
+    height: auto !important;
+  }
+}
 .relation .about, article.mainContainer section.stories .about {
   width: 100%;
   height: 100vh;
@@ -13386,6 +13454,11 @@ label.quantity_main a.plus:hover:after {
   min-height: 930px;
   background-color: #8d7a5e;
   z-index: 200;
+}
+@media screen and (max-width: 37.5em) {
+  .relation .about, article.mainContainer section.stories .about {
+    min-height: auto;
+  }
 }
 .relation .about .content, article.mainContainer section.stories .about .content {
   width: 100vw;
@@ -13423,6 +13496,20 @@ label.quantity_main a.plus:hover:after {
       align-items: center;
   pointer-events: none;
 }
+@media screen and (max-width: 50em) {
+  .relation .about .content .svgContaiiner, article.mainContainer section.stories .about .content .svgContaiiner {
+    width: 85vw;
+    left: 7.5vw;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .relation .about .content .svgContaiiner, article.mainContainer section.stories .about .content .svgContaiiner {
+    width: 95vw;
+    height: 95vh;
+    left: 2.5vw;
+    top: 2.5vh;
+  }
+}
 .relation .about .content .svgContaiiner .svgBox, article.mainContainer section.stories .about .content .svgContaiiner .svgBox {
   width: 100%;
   max-width: 1440px;
@@ -13441,10 +13528,34 @@ label.quantity_main a.plus:hover:after {
   -ms-flex-align: center;
       align-items: center;
 }
+@media screen and (max-width: 37.5em) {
+  .relation .about .content .svgContaiiner .svgBox, article.mainContainer section.stories .about .content .svgContaiiner .svgBox {
+    opacity: 0.6;
+  }
+}
 .relation .about .content .svgContaiiner .svgBox .item, article.mainContainer section.stories .about .content .svgContaiiner .svgBox .item {
   width: 25%;
   padding-top: 5%;
   padding-bottom: 5%;
+}
+@media screen and (max-width: 64.0625em) {
+  .relation .about .content .svgContaiiner .svgBox .item, article.mainContainer section.stories .about .content .svgContaiiner .svgBox .item {
+    width: 33.3%;
+  }
+}
+@media screen and (max-width: 50em) {
+  .relation .about .content .svgContaiiner .svgBox .item, article.mainContainer section.stories .about .content .svgContaiiner .svgBox .item {
+    width: 31%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .relation .about .content .svgContaiiner .svgBox .item, article.mainContainer section.stories .about .content .svgContaiiner .svgBox .item {
+    width: 40%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+  }
 }
 .relation .about .content .svgContaiiner .svgBox .item svg, article.mainContainer section.stories .about .content .svgContaiiner .svgBox .item svg {
   width: 100%;
@@ -13470,6 +13581,11 @@ label.quantity_main a.plus:hover:after {
   position: relative;
   width: 49%;
 }
+@media screen and (max-width: 37.5em) {
+  .relation .about .content .box .left, article.mainContainer section.stories .about .content .box .left {
+    width: 100%;
+  }
+}
 .relation .about .content .box .left h1, article.mainContainer section.stories .about .content .box .left h1 {
   font-size: 2.875rem;
   line-height: 3.4375rem;
@@ -13481,6 +13597,12 @@ label.quantity_main a.plus:hover:after {
   padding-bottom: 30px;
   margin-top: 0;
   margin-bottom: 0;
+}
+@media screen and (max-width: 50em) {
+  .relation .about .content .box .left h1, article.mainContainer section.stories .about .content .box .left h1 {
+    font-size: 2.375rem;
+    line-height: 2.6875rem;
+  }
 }
 .relation .about .content .box .left .stick, article.mainContainer section.stories .about .content .box .left .stick {
   display: block;
@@ -13507,6 +13629,11 @@ label.quantity_main a.plus:hover:after {
   position: relative;
   width: 49%;
 }
+@media screen and (max-width: 37.5em) {
+  .relation .about .content .box .right, article.mainContainer section.stories .about .content .box .right {
+    width: 100%;
+  }
+}
 .relation .about .content .box .right p, article.mainContainer section.stories .about .content .box .right p {
   font-size: 1rem;
   text-align: left;
@@ -13514,6 +13641,11 @@ label.quantity_main a.plus:hover:after {
   line-height: 1.875rem;
   margin-top: 0;
   margin-bottom: 0;
+}
+@media screen and (max-width: 37.5em) {
+  .relation .about .content .box .right p, article.mainContainer section.stories .about .content .box .right p {
+    text-align: center;
+  }
 }
 .relation .about.active .item.aboutbottom svg polyline, article.mainContainer section.stories .about.active .item.aboutbottom svg polyline, .relation .about.active .item.aboutbottom svg line, article.mainContainer section.stories .about.active .item.aboutbottom svg line, .relation .about.active .item.aboutbottom svg rect, article.mainContainer section.stories .about.active .item.aboutbottom svg rect, .relation .about.active .item.aboutbottom svg polygon, article.mainContainer section.stories .about.active .item.aboutbottom svg polygon, .relation .about.active .item.aboutbottom svg circle, article.mainContainer section.stories .about.active .item.aboutbottom svg circle, .relation .about.active .item.aboutbottom svg path, article.mainContainer section.stories .about.active .item.aboutbottom svg path {
   transition-property: all;
@@ -13586,6 +13718,22 @@ label.quantity_main a.plus:hover:after {
   -ms-flex-align: center;
       align-items: center;
 }
+@media screen and (max-width: 50em) {
+  .customize .mainContainer .svgContaiiner, .relation .mainContainer .svgContaiiner, article.mainContainer section.stories .mainContainer .svgContaiiner {
+    height: 80vh;
+    top: 10vh;
+    width: 85vw;
+    left: 7.5vw;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .customize .mainContainer .svgContaiiner, .relation .mainContainer .svgContaiiner, article.mainContainer section.stories .mainContainer .svgContaiiner {
+    width: 95vw;
+    height: 95vh;
+    top: 2.5vh;
+    left: 2.5vw;
+  }
+}
 .customize .mainContainer .svgContaiiner .svgBox, .relation .mainContainer .svgContaiiner .svgBox, article.mainContainer section.stories .mainContainer .svgContaiiner .svgBox {
   width: 100%;
   max-width: 1440px;
@@ -13604,10 +13752,34 @@ label.quantity_main a.plus:hover:after {
   -ms-flex-align: center;
       align-items: center;
 }
+@media screen and (max-width: 37.5em) {
+  .customize .mainContainer .svgContaiiner .svgBox, .relation .mainContainer .svgContaiiner .svgBox, article.mainContainer section.stories .mainContainer .svgContaiiner .svgBox {
+    opacity: 0.6;
+  }
+}
 .customize .mainContainer .svgContaiiner .svgBox .item, .relation .mainContainer .svgContaiiner .svgBox .item, article.mainContainer section.stories .mainContainer .svgContaiiner .svgBox .item {
   width: 25%;
   padding-top: 5%;
   padding-bottom: 5%;
+}
+@media screen and (max-width: 64.0625em) {
+  .customize .mainContainer .svgContaiiner .svgBox .item, .relation .mainContainer .svgContaiiner .svgBox .item, article.mainContainer section.stories .mainContainer .svgContaiiner .svgBox .item {
+    width: 33.3%;
+  }
+}
+@media screen and (max-width: 50em) {
+  .customize .mainContainer .svgContaiiner .svgBox .item, .relation .mainContainer .svgContaiiner .svgBox .item, article.mainContainer section.stories .mainContainer .svgContaiiner .svgBox .item {
+    width: 31%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .customize .mainContainer .svgContaiiner .svgBox .item, .relation .mainContainer .svgContaiiner .svgBox .item, article.mainContainer section.stories .mainContainer .svgContaiiner .svgBox .item {
+    width: 40%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+  }
 }
 .customize .mainContainer .svgContaiiner .svgBox .item svg, .relation .mainContainer .svgContaiiner .svgBox .item svg, article.mainContainer section.stories .mainContainer .svgContaiiner .svgBox .item svg {
   width: 100%;
@@ -13647,6 +13819,11 @@ label.quantity_main a.plus:hover:after {
   position: relative;
   z-index: 200;
   text-align: center;
+}
+@media screen and (max-width: 64.0625em) {
+  .customize .mainContainer .textBox, .relation .mainContainer .textBox, article.mainContainer section.stories .mainContainer .textBox {
+    margin-top: 50px;
+  }
 }
 .customize .mainContainer .textBox h3, .relation .mainContainer .textBox h3, article.mainContainer section.stories .mainContainer .textBox h3 {
   color: #fff;
@@ -13715,7 +13892,7 @@ label.quantity_main a.plus:hover:after {
 @media screen and (max-width: 37.5em) {
   .customize .mainContainer picture, .relation .mainContainer picture, article.mainContainer section.stories .mainContainer picture {
     top: 0;
-    height: calc( 100% - 90px);
+    height: 100%;
   }
 }
 .customize .mainContainer picture source, .relation .mainContainer picture source, article.mainContainer section.stories .mainContainer picture source {
@@ -13723,6 +13900,11 @@ label.quantity_main a.plus:hover:after {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+@media screen and (max-width: 64.0625em) {
+  .customize .mainContainer picture source, .relation .mainContainer picture source, article.mainContainer section.stories .mainContainer picture source {
+    object-position: right;
+  }
 }
 .customize .mainContainer picture img, .relation .mainContainer picture img, article.mainContainer section.stories .mainContainer picture img {
   position: relative;
@@ -14058,6 +14240,155 @@ article.appointment .board .buttonContainer a:hover {
   .mobilePb15 {
     padding-bottom: 15px !important;
   }
+}
+
+.contentDetial {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 9995;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  opacity: 0;
+  transform: translateX(100vw);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+.contentDetial.open {
+  opacity: 1;
+  transform: translateX(0);
+}
+.contentDetial .detial {
+  width: 95%;
+  padding: 30px;
+  background-color: #fff;
+  max-width: 900px;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.contentDetial .detial .closeBtn {
+  position: absolute;
+}
+.contentDetial .detial .title {
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.875rem;
+  border-bottom: #c5c5c5 1px solid;
+  color: #333;
+}
+.contentDetial .detial .title span {
+  font-size: 1.125rem;
+}
+.contentDetial .detial .set {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contentDetial .detial .set li {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: #b9b9b9 1px solid;
+}
+.contentDetial .detial .set li .head {
+  letter-spacing: 1px;
+  color: #878787;
+  padding-right: 30px;
+  width: 100%;
+  text-align: center;
+}
+.contentDetial .detial .set li .head p {
+  vertical-align: middle;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  background-color: #adadad;
+  color: #fff;
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+.contentDetial .detial .set li .tastContent {
+  width: 100%;
+  height: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.contentDetial .detial .set li .tastContent .single {
+  text-align: center;
+}
+.contentDetial .detial .set li .tastContent .single img {
+  max-width: 150px;
+}
+.contentDetial .detial .set li .tastContent .single .quantity_main a {
+  width: 30px;
+  height: 30px;
+  line-height: 23px;
+}
+.contentDetial .detial .set li .tastContent .single .quantity_main .Quantity {
+  width: 30px;
+}
+.contentDetial .detial .btnContainer {
+  text-align: center;
+}
+.contentDetial .detial .btnContainer .clear {
+  width: 160px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  background-color: #999;
+  color: #fff;
+  line-height: 50px;
+  font-weight: 1.125rem;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.contentDetial .detial .btnContainer .clear:before {
+  background-color: #6b6b6b;
+}
+.contentDetial .detial .btnContainer .confirm {
+  width: 160px;
+  display: inline-block;
+  height: 50px;
+  text-align: center;
+  background-color: #ba9142;
+  color: #fff;
+  line-height: 50px;
+  font-size: 1.125rem;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.PhotoContent .swiper-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.PhotoContent .swiper-wrapper .swiper-slide {
+  position: relative;
+}
+.PhotoContent .swiper-wrapper .swiper-slide img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 
