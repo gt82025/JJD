@@ -11835,7 +11835,7 @@ label.quantity_main a.plus:hover:after {
     padding-bottom: 15px;
   }
 }
-.Check_Register .popup .container .loginPop .share .g_login {
+.Check_Register .popup .container .loginPop .share .fb_login {
   margin-right: 5px;
   margin-left: 5px;
   width: 240px;
@@ -11848,17 +11848,17 @@ label.quantity_main a.plus:hover:after {
   transition-delay: 0s;
 }
 @media screen and (max-width: 37.5em) {
-  .Check_Register .popup .container .loginPop .share .g_login {
+  .Check_Register .popup .container .loginPop .share .fb_login {
     margin-bottom: 10px;
   }
 }
-.Check_Register .popup .container .loginPop .share .g_login img {
+.Check_Register .popup .container .loginPop .share .fb_login img {
   vertical-align: middle;
 }
-.Check_Register .popup .container .loginPop .share .g_login:hover {
+.Check_Register .popup .container .loginPop .share .fb_login:hover {
   background-color: #bc4035;
 }
-.Check_Register .popup .container .loginPop .share .fb_login {
+.Check_Register .popup .container .loginPop .share .g_login {
   margin-right: 5px;
   margin-left: 5px;
   width: 240px;
@@ -11870,10 +11870,10 @@ label.quantity_main a.plus:hover:after {
   transition-duration: 0.5s;
   transition-delay: 0s;
 }
-.Check_Register .popup .container .loginPop .share .fb_login img {
+.Check_Register .popup .container .loginPop .share .g_login img {
   vertical-align: middle;
 }
-.Check_Register .popup .container .loginPop .share .fb_login:hover {
+.Check_Register .popup .container .loginPop .share .g_login:hover {
   background-color: #39597e;
 }
 
