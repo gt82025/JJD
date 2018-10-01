@@ -77,6 +77,8 @@ imagesLoaded( document.querySelector('body'),{ background: true }, function( ins
     //頁面的緩出效果
     // Reference https://coderwall.com/p/aqyk7a/fade-out-page-when-clicking-links
     //pageFadOut();
+
+    
     //某些頁面禁止購物車欄位修改
     NoEditcCart();
 

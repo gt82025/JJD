@@ -11068,6 +11068,30 @@ article.checkout .cart li .des {
     width: 70%;
   }
 }
+article.checkout .cart li .des .contentDetialbtn {
+  width: auto;
+  height: 38px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 2.375rem;
+  margin-left: 0;
+  background-color: #4c4c4c;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+article.checkout .cart li .des .contentDetialbtn img {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: text-top;
+}
+article.checkout .cart li .des .contentDetialbtn:hover {
+  background-color: #000;
+}
 article.checkout .cart li .des .Container {
   width: 100%;
   display: inline-block;
@@ -14307,7 +14331,7 @@ article.appointment .board .buttonContainer a:hover {
 .contentDetial .detial .set li .head {
   letter-spacing: 1px;
   color: #878787;
-  padding-right: 30px;
+  padding-right: 0;
   width: 100%;
   text-align: center;
 }
@@ -14320,6 +14344,27 @@ article.appointment .board .buttonContainer a:hover {
   color: #fff;
   line-height: 40px;
   letter-spacing: 1px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+.contentDetial .detial .set li .head p.errorNotice {
+  display: inline-block;
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+  background-color: inherit;
+  line-height: 14px;
+  color: #df5620;
+  margin: 0;
+  opacity: 0;
+  height: 0;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+}
+.contentDetial .detial .set li .head p.errorNotice.show {
+  opacity: 1;
+  height: 15px;
 }
 .contentDetial .detial .set li .tastContent {
   width: 100%;
@@ -14341,7 +14386,7 @@ article.appointment .board .buttonContainer a:hover {
   line-height: 23px;
 }
 .contentDetial .detial .set li .tastContent .single .quantity_main .Quantity {
-  width: 30px;
+  width: 40px;
 }
 .contentDetial .detial .btnContainer {
   text-align: center;
@@ -14372,6 +14417,14 @@ article.appointment .board .buttonContainer a:hover {
   font-size: 1.125rem;
   margin-right: 5px;
   margin-left: 5px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+.contentDetial .detial .btnContainer .confirm.not-active {
+  pointer-events: none;
+  cursor: default;
+  background-color: #bbb;
 }
 
 .PhotoContent .swiper-wrapper {

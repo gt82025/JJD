@@ -110,7 +110,7 @@ function checkOutNow() {
                 if ($touchEvent) {
                     $('body').unbind('touchmove');
                 } else {
-                    console.log('notouch')
+                    //console.log('notouch')
                 }
             }
         })
@@ -214,7 +214,7 @@ function checkOuttotal() {
         }
         $('.order_price .wholePrice').text('NT$' + $wholePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         $wholeAndDeliverFee = $wholePrice + $Freight;
-        console.log('$wholeAndDeliverFee =' + $wholeAndDeliverFee);
+        //console.log('$wholeAndDeliverFee =' + $wholeAndDeliverFee);
         $('.order_total .wholeAddFreight').text('NT$' + $wholeAndDeliverFee.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
 
         //$('.totalPrice .result').text('NT$' + $totalprice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
@@ -279,7 +279,7 @@ function cartEvent() {
                 if ($touchEvent) {
                     $('.srolllock').unbind('touchmove');
                 } else {
-                    console.log('notouch')
+                    //console.log('notouch')
                 }
             }
         })
@@ -296,7 +296,7 @@ function cartEvent() {
             location.href = $shoppingAddress;
             //$(location).attr('href',$shoppingAddress);
             return false;
-            console.log($shoppingAddress);
+            //console.log($shoppingAddress);
         } else {
             $shoppingList.addClass('close');
             if ($('.wrapper.index').length > 0) {
@@ -467,9 +467,11 @@ function tasteDetial() {
         $tasteconfirm = $('.btnContainer .confirm');
         $tasteDetial.click(function() {
             $contentDetial.addClass('open');
+            $body.addClass('stop-scrolling');
+            $body.attr('data-scroll-scope', 'force');
             if ($('#tasteList.set').length > 0) {
                 $TasteSingle = $('.single.taste');
-                console.log($TasteSingle);
+                // console.log($TasteSingle);
                 $TasteSingle.each(function() {
                     var $minus = $(this).find('.minus');
                     var $plus = $(this).find('.plus');
@@ -477,33 +479,33 @@ function tasteDetial() {
                     var $nowQuentity = $(this).find('.Quantity').val();
 
                     $minus.click(function() {
-                        if ($nowQuentity <= 1) {
+                        if ($nowQuentity < 1) {
 
 
                         } else {
                             $nowQuentity--;
                             $nowQuentityInput.val($nowQuentity);
+                            calcCombin();
 
 
                         }
 
                     })
                     $plus.click(function() {
-                        if ($nowQuentity) {
+                        if ($nowQuentity < 4) {
                             $nowQuentity++;
                             $nowQuentityInput.val($nowQuentity);
+                            calcCombin();
 
                         }
-
                     })
-
-
-
                 })
             }
         });
         $tasteClose.click(function() {
             $contentDetial.removeClass('open');
+            $body.removeClass('stop-scrolling');
+            $body.removeAttr('data-scroll-scope');
         });
         $tasteconfirm.click(function() {
 
@@ -513,6 +515,47 @@ function tasteDetial() {
             };
 
         })
+        //計算盒裝蛋糕內的總合
+        function calcCombin() {
+            var $tastContent = $('#tasteList li');
+            var $calcfinished = [];
+            var $resultcalc
+            $tastContent.each(
+                function() {
+                    var $cakeQuantity = $(this).find('.single.taste').length;
+                    var $combinTotal = 0
+                    var $notice = $(this).find('.errorNotice');
+
+                    for (var i = 0; i < $cakeQuantity; i++) {
+                        var $singleQuantity = $(this).find('input.Quantity').eq(i).val();
+                        $combinTotal = $combinTotal + parseInt($singleQuantity);
+
+                    }
+                    if ($combinTotal != 4) {
+                        $calcfinished.push(0);
+                        $notice.addClass('show');
+
+                    } else {
+                        $calcfinished.push(1);
+                        $notice.removeClass('show');
+                    }
+                }
+            )
+            //console.log($calcfinished);
+            $resultcalc = $calcfinished.every(function(item, index, array) {
+
+                return item == 1
+            });
+            if ($resultcalc == true) {
+                $tasteconfirm.removeClass('not-active');
+
+            } else {
+                $tasteconfirm.addClass('not-active');
+            }
+
+            console.log($resultcalc);
+
+        }
 
     }
 }
