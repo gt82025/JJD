@@ -468,7 +468,6 @@ function tasteDetial() {
         $tasteDetial.click(function() {
             $contentDetial.addClass('open');
             $body.addClass('stop-scrolling');
-            $body.attr('data-scroll-scope', 'force');
             if ($('#tasteList.set').length > 0) {
                 $TasteSingle = $('.single.taste');
                 // console.log($TasteSingle);
@@ -505,7 +504,6 @@ function tasteDetial() {
         $tasteClose.click(function() {
             $contentDetial.removeClass('open');
             $body.removeClass('stop-scrolling');
-            $body.removeAttr('data-scroll-scope');
         });
         $tasteconfirm.click(function() {
 

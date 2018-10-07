@@ -30,6 +30,7 @@ var $productsBar
 
 
 
+
 })(jQuery, window, document);
 
 
@@ -106,9 +107,10 @@ function productsBarSlider() {
 //easescroll的設定   參考https://github.com/ivmello/easeScroll
 function smoothScroll() {
     $("html").easeScroll({
-        frameRate: 35,
+
+        frameRate: 5,
         animationTime: 700,
-        stepSize: 100,
+        stepSize: 65,
         pulseAlgorithm: 1,
         pulseScale: 6,
         pulseNormalize: 1,
@@ -406,3 +408,5 @@ var cutText = function(obj) {
 
     }
 }
+
+//偵測瀏覽器

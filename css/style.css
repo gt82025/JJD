@@ -7597,7 +7597,7 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
   background-color: #fff;
 }
 .mainContainer.products .product_content.noList .mainPicContain {
-  height: 100vh;
+  height: 100%;
   background-attachment: fixed;
 }
 @media screen and (max-width: 37.5em) {
@@ -7660,8 +7660,8 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
   }
 }
 .mainContainer.products .product_content .mainPicContain.ios {
-  background-attachment: fixed;
-  background-size: auto 100%;
+  background-attachment: scroll;
+  background-size: cover;
 }
 .mainContainer.products .product_content .mainPicContain .textContent {
   width: 100%;
@@ -9043,6 +9043,9 @@ article.shopping .main div.preview .buy_price .price {
 article.shopping .main div.preview .buy_price .price .priceContent {
   position: relative;
 }
+article.shopping .main div.preview .buy_price .price .priceContent:last-child:after {
+  content: "";
+}
 article.shopping .main div.preview .buy_price .price .priceContent:after {
   display: inline-block;
   content: "/";
@@ -9126,7 +9129,7 @@ article.shopping .main div.preview .buy_price label .Quantity {
   height: 40px;
 }
 article.shopping .main div.preview .buy_price label .NowSelected {
-  width: 100%;
+  width: calc(100% - 40px);
   height: auto;
   position: relative;
   display: block;
@@ -9145,7 +9148,7 @@ article.shopping .main div.preview .buy_price label .NowSelected p {
   margin: 0;
   letter-spacing: 1px;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 5px;
   color: #666666;
 }
 article.shopping .main div.preview .buy_price label .optionContainer {
