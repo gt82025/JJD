@@ -43,8 +43,8 @@ var $totalprice //全域 購物車列表商品總價
     caclCart(); // 全站 右側購物車金額計算
 
 
-
-
+    
+   
 
 
 
@@ -73,10 +73,10 @@ function checkOutNow() {
     if ($('.Check_Register').length > 0) {
         $checkPopup = $('.Check_Register');
         $checkPopupClose = $('.popup .closeBtn ');
-        $forgotbtn = $('a.forget');
+        $forgotbtn = $('.Check_Register a.forget');
         $registerMb = $('div.registerMb');
-        $forgetPW = $('div.forgetPW');
-        $loginPop = $('div.loginPop');
+        $forgetPW = $('.Check_Register div.forgetPW');
+        $loginPop = $('.Check_Register div.loginPop');
         $checkOutBtn = $('a.checkOut.Register');
         $cancelForget = $('a.cancelForget');
         $registerMb.stop().slideUp();
@@ -200,14 +200,17 @@ function checkOuttotal() {
         $wholePrice = 0;
         $wholeAndDeliverFee = 0;
         for (var i = 0; i < $SingleQuantity; i++) {
-            var $singlePrice = $checkSingle.eq(i).find('.check p').html().substring(3);
+            var $singlePrice = $checkSingle.eq(i).find('.check p').html().substring(3).replace(/,/g, "");
+            //var $singlePrice = $checkSingle.eq(i).find('.check p').data('price');
+            console.log($singlePrice);
             $wholePrice = $wholePrice + parseInt($singlePrice);
 
         }
-        $('.order_price .wholePrice').text('NT$' + $wholePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-        $wholeAndDeliverFee = $wholePrice + $Freight;
-        console.log('$wholeAndDeliverFee =' + $wholeAndDeliverFee);
-        $('.order_total .wholeAddFreight').text('NT$' + $wholeAndDeliverFee.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
+        $('.order_price .wholePrice,.order_total .result').text('NT$' + $wholePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+       
+        //$wholeAndDeliverFee = $wholePrice + $Freight;
+        //console.log('$wholeAndDeliverFee =' + $wholeAndDeliverFee);
+       // $('.order_total .wholeAddFreight').text('NT$' + $wholeAndDeliverFee.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
 
         //$('.totalPrice .result').text('NT$' + $totalprice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 
@@ -445,11 +448,6 @@ function SideCart() {
         })
 
 
-
-
-
-
-
     })
 
 
@@ -473,3 +471,5 @@ function caclCart() {
         $('.totalPrice .result').text('NT$' + 0);
     }
 }
+
+

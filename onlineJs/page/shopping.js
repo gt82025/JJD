@@ -34,6 +34,9 @@ var $blurMax = 50;
 
     //PRODUCTS PICKS 商品推薦 slider
     products_picks();
+
+    // 全站 商品口味選擇
+    tasteDetial();
 })(jQuery, window, document);
 
 
@@ -221,3 +224,209 @@ function scrollMagicStart() {
         $('article.shopping .main').css('transition-duration', '0s');
     });
 };
+
+// 全站 商品口味選擇
+function tasteDetial() {
+    if ($('.contentDetialbtn').length > 0) {
+     
+        $tasteDetial = $('.contentDetialbtn');
+        $contentDetial = $('.contentDetial');
+        $tasteClose = $('.detial .closeBtn');
+        $tasteconfirm = $('.btnContainer .confirm');
+        $tasteDetial.click(function() {
+            console.log($('input[name="quantity"]').val());
+            $qty = $('input[name="quantity"]').val();
+            $size_id = $('input[name="size"]').val();
+            $('#tasteList').html('');
+            $.ajax({
+				url: '../api/product/inside',
+				type: "get",
+				dataType: "json",
+				success: function(data){
+					var $html = '';
+                    for (let $i = 0; $i < $qty; $i++) {
+                        let $number = $i+1;
+                        $html += '<li>';
+                        $html += '<div class="head">';
+                        $html +=        '<p>盒'+$number+'口味</p>';
+                        $html +=        '<p class="errorNotice show">*單一盒內蛋糕總數不論口味一定需剛好3個</p>';
+                        $html +=    '</div>';
+                        $html +=    '<div class="tastContent">';
+
+                        for (let $k = 0; $k < data.length; $k++) {
+                            $html +=        '<div class="single taste">';
+                            $html +=            '<img src="'+location.protocol+'//'+location.hostname+data[$k].cover+'" alt="'+data[$k].name+'">';
+                            $html +=            '<label class="quantity_main">';
+                            $html +=                '<a href="javascript:;" class="minus"></a>';
+                            $html +=                '<input type="number" value="0" class="Quantity" data-id="'+data[$k].id+'" name="inside'+$k+'"> <a href="javascript:;" class="plus"></a>';
+                            $html +=            '</label>';
+                            $html +=        '</div>';
+                        }
+                        $html +=    '</div>';
+                        $html +='</li>';
+                    }
+                    $('#tasteList').html($html);
+
+                    $contentDetial.addClass('open');
+                    $body.addClass('stop-scrolling');
+                    if ($('#tasteList.set').length > 0) {
+                        $TasteSingle = $('.single.taste');
+                        //console.log($TasteSingle);
+                        $TasteSingle.each(function() {
+                            var $minus = $(this).find('.minus');
+                            var $plus = $(this).find('.plus');
+                            var $nowQuentityInput = $(this).find('.Quantity')
+                            var $nowQuentity = $(this).find('.Quantity').val();
+
+                            $minus.click(function() {
+                                if ($nowQuentity < 1) {
+
+
+                                } else {
+                                    $nowQuentity--;
+                                    $nowQuentityInput.val($nowQuentity);
+                                    calcCombin();
+                                }
+
+                            })
+                            $plus.click(function() {
+                                if ($nowQuentity < 4) {
+                                    $nowQuentity++;
+                                    $nowQuentityInput.val($nowQuentity);
+                                    calcCombin();
+
+                                }
+                            })
+                        })
+                    }
+					console.log(data);
+
+				},complete:function(){
+					//console.log(o);
+				},error:function(e){
+					
+					console.log(o);
+				}
+			});
+        });
+        $tasteClose.click(function() {
+            $contentDetial.removeClass('open');
+            $body.removeClass('stop-scrolling');
+        });
+        $tasteconfirm.click(function() {
+
+            if (confirm($(this).data('confirm'))) {
+                var o = {};
+                var results = [];
+                var form = $('#inside').get(0);
+                for(var i=0;i<form.length;i++){
+                    var f = form.elements[i];
+
+                    if(f.value == '') continue;
+                    if(i%4 == 0){
+                        var o = {};
+                        results.push(o);
+                    };
+
+                    o[f.name] = {'id': $(f).data('id'), 'qty': f.value} ;
+                    
+                };
+                $contentDetial.removeClass('open');
+                o = {};
+                o['quantity'] = $('input[name="quantity"]').val();
+                o['size'] = $('input[name="size"]').val();
+                o['size_name'] = $('input[name="size_name"]').val();
+                o['name'] = $('input[name="name"]').val();
+                o['category_name'] = $('input[name="category_name"]').val();
+                o['content_detail'] = results;
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('input[name="_token"]').attr('value')
+                    }
+                })
+                $.ajax({
+                    url: '../api/cart/addToCart',
+                    type: "POST",
+                    dataType: "json",
+                    data: o,
+                    success: function(data){
+                        
+                        $('.addCartNotic').addClass('active');
+                        $html = '<p>';
+                        $html += '<span class="series">'+o.name+'</span>';
+                        $html += '<span class="pdName">'+o.category_name+'</span>';
+                        $html += '<span class="size">尺寸 : <span class="val">'+o.size_name+'</span></span>';
+                        $html += '<span class="quantity">數量 : <span class="val">'+o.quantity+'</span></span>';
+                        $html += '<br>已加入購物車</p>';	
+                        
+                        $('.addCartNotic').html($html);
+                        var timeOut = setTimeout(function() {
+                            $('.addCartNotic').animate({ opacity: 0 }, 300, function() {
+                                $('.addCartNotic').removeClass('active');
+                                $('.addCartNotic').attr('style', '');
+                                timeOut = null
+                            });
+                            $('.cart.pc,.cart.mobile').find('.quantity').html(data.count);
+                            location.reload();
+                        }, 1000)
+                        
+                        console.log(data);
+                        
+                    },complete:function(){
+                        //console.log(o);
+                    },error:function(e){
+                        toastr.error('伺服器無法回應,請稍候再試','Inconceivable!');
+                        console.log(o);
+                    }
+                });
+
+
+
+
+            };
+
+        })
+        //計算盒裝蛋糕內的總合
+        function calcCombin() {
+            var $tastContent = $('#tasteList li');
+            var $calcfinished = [];
+            var $resultcalc
+            $tastContent.each(
+                function() {
+                    var $cakeQuantity = $(this).find('.single.taste').length;
+                    var $combinTotal = 0
+                    var $notice = $(this).find('.errorNotice');
+
+                    for (var i = 0; i < $cakeQuantity; i++) {
+                        var $singleQuantity = $(this).find('input.Quantity').eq(i).val();
+                        $combinTotal = $combinTotal + parseInt($singleQuantity);
+
+                    }
+                    if ($combinTotal != 3) {
+                        $calcfinished.push(0);
+                        $notice.addClass('show');
+
+                    } else {
+                        $calcfinished.push(1);
+                        $notice.removeClass('show');
+                    }
+                }
+            )
+            //console.log($calcfinished);
+            $resultcalc = $calcfinished.every(function(item, index, array) {
+
+                return item == 1
+            });
+            if ($resultcalc == true) {
+                $tasteconfirm.removeClass('not-active');
+
+            } else {
+                $tasteconfirm.addClass('not-active');
+            }
+
+            console.log($resultcalc);
+           
+        }
+
+    }
+}
