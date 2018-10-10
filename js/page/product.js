@@ -108,7 +108,7 @@ function productsBarSlider() {
 function smoothScroll() {
     $("html").easeScroll({
 
-        frameRate: 5,
+        frameRate: 30,
         animationTime: 700,
         stepSize: 65,
         pulseAlgorithm: 1,

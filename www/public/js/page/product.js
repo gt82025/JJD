@@ -113,7 +113,7 @@ function smoothScroll() {
     $("html").easeScroll({
         frameRate: 35,
         animationTime: 700,
-        stepSize: 100,
+        stepSize: 65,
         pulseAlgorithm: 1,
         pulseScale: 6,
         pulseNormalize: 1,

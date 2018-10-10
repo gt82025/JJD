@@ -25,7 +25,91 @@ var common = function(){
 		no_submit_btn: function(form){
 			if(event.keyCode == 13 && document.activeElement.tagName.toLowerCase() != 'textarea') $(form).find('[rel=submit]').trigger('click');
 		},
+		tasteDetial2: function (id) {
+			
+			
+			$tasteDetial = $('.contentDetialbtn');
+			$contentDetial = $('.contentDetial');
+			$tasteClose = $('.detial .closeBtn');
+			$tasteconfirm = $('.btnContainer .confirm');
 
+			//contentDetial.addClass('open');
+		
+				
+				$qty = $('input[name="quantity"]').val();
+				$size_id = $('input[name="size"]').val();
+				$('#tasteList').html('');
+				
+				
+				$.ajax({
+					url: '../api/cart/inside2/'+id,
+					type: "get",
+					dataType: "json",
+					success: function(data){
+						var $html = '';
+						for (let $i = 0; $i < data.length; $i++) {
+							let $number = $i+1;
+							$html += '<li>';
+							$html += '<div class="head">';
+							$html +=        '<p>盒'+$number+'口味</p>';
+							$html +=    '</div>';
+							$html +=    '<div class="tastContent">';
+							$html +=        '<div class="single taste">';
+							$html +=            '<img src="'+location.protocol+'//'+location.hostname+data[$i].inside0.info.cover+'" alt="'+data[$i].inside0.info.name+'">';
+							$html +=            '<label class="quantity_main">';
+							$html +=                '<input type="number" value="'+data[$i].inside0.qty+'" class="Quantity" readonly>';
+							$html +=            '</label>';
+							$html +=        '</div>';
+
+							$html +=        '<div class="single taste">';
+							$html +=            '<img src="'+location.protocol+'//'+location.hostname+data[$i].inside1.info.cover+'" alt="'+data[$i].inside1.info.name+'">';
+							$html +=            '<label class="quantity_main">';
+							$html +=                '<input type="number" value="'+data[$i].inside1.qty+'" class="Quantity" readonly>';
+							$html +=            '</label>';
+							$html +=        '</div>';
+
+							$html +=        '<div class="single taste">';
+							$html +=            '<img src="'+location.protocol+'//'+location.hostname+data[$i].inside2.info.cover+'" alt="'+data[$i].inside2.info.name+'">';
+							$html +=            '<label class="quantity_main">';
+							$html +=                '<input type="number" value="'+data[$i].inside2.qty+'" class="Quantity" readonly>';
+							$html +=            '</label>';
+							$html +=        '</div>';
+
+							$html +=        '<div class="single taste">';
+							$html +=            '<img src="'+location.protocol+'//'+location.hostname+data[$i].inside3.info.cover+'" alt="'+data[$i].inside3.info.name+'">';
+							$html +=            '<label class="quantity_main">';
+							$html +=                '<input type="number" value="'+data[$i].inside3.qty+'" class="Quantity" readonly>';
+							$html +=            '</label>';
+							$html +=        '</div>';
+							$html +=    '</div>';
+							$html +='</li>';
+						}
+						$('#tasteList').html($html);
+						
+						$contentDetial.addClass('open');
+						$body.addClass('stop-scrolling');
+					
+					
+
+					},complete:function(){
+						//console.log(o);
+					},error:function(e){
+						
+						//console.log(o);
+					}
+				});
+
+	
+			$tasteClose.click(function() {
+				$contentDetial.removeClass('open');
+				$body.removeClass('stop-scrolling');
+			});
+		
+			//計算盒裝蛋糕內的總合
+		
+
+		
+	},
 		// 全站 商品口味選擇
 		tasteDetial: function (sort) {
 			
