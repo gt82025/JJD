@@ -8808,6 +8808,10 @@ article.shopping .main div.preview {
   article.shopping .main div.preview {
     padding-top: 80px;
     padding-bottom: 90px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;    
   }
 }
 article.shopping .main div.preview .detialPhoto {
@@ -8834,8 +8838,9 @@ article.shopping .main div.preview .detialPhoto {
 }
 @media screen and (max-width: 37.5em) {
   article.shopping .main div.preview .detialPhoto {
-    left: calc(( 100vw - 140px) / 2);
-    bottom: 30px;
+    left: calc(( 100vw - 180px) / 2);
+    position: relative;
+    bottom: 0;
   }
 }
 article.shopping .main div.preview .photoPreview {
@@ -9491,6 +9496,7 @@ article.shopping .main div.preview .buy_price .shoppingNow:hover {
     width: 35px;
     height: 35px;
     line-height: 35px;
+    left: 10px;
   }
   .shopping section.picks .mainContent .swiper-button-prev i {
     font-size: 0.875rem;
@@ -11983,6 +11989,15 @@ label.quantity_main a.plus:hover:after {
   text-align: right;
   padding-bottom: 30px;
 }
+@media screen and (max-width: 37.5em) {
+  .applyContainer .sendContainer {
+    text-align: center;
+  }
+}
+.applyContainer .sendContainer input {
+  margin-top: 0;
+  border: 0 none;
+}
 .applyContainer .sendContainer .send {
   width: 160px;
   height: 50px;
@@ -12005,6 +12020,11 @@ label.quantity_main a.plus:hover:after {
   margin-right: auto;
   margin-left: auto;
   padding-top: 110px;
+}
+@media screen and (max-width: 37.5em) {
+  .applyContainer .formContainer {
+    padding-top: 90px;
+  }
 }
 .applyContainer .formContainer h3 {
   text-align: center;
@@ -12039,6 +12059,18 @@ label.quantity_main a.plus:hover:after {
   padding-left: 45px;
   background-color: #fff;
 }
+@media screen and (max-width: 37.5em) {
+  .applyContainer .formContainer .fillInfo {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 25em) {
+  .applyContainer .formContainer .fillInfo {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .applyContainer .formContainer .fillInfo .agree {
   border: none;
   padding-left: 0;
@@ -12056,6 +12088,12 @@ label.quantity_main a.plus:hover:after {
 .applyContainer .formContainer .fillInfo .agree label {
   font-size: 1rem;
   color: #333;
+}
+@media screen and (max-width: 25em) {
+  .applyContainer .formContainer .fillInfo .agree label {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 .applyContainer .formContainer .fillInfo .agree label .PersonalCapital {
   color: #333;
@@ -14251,6 +14289,7 @@ article.appointment .board .buttonContainer a:hover {
   display: inline-block;
   vertical-align: middle;
   font-size: 0.9375rem;
+  margin: 0;
   margin-left: 10px;
 }
 
@@ -14432,7 +14471,9 @@ article.appointment .board .buttonContainer a:hover {
   cursor: default;
   background-color: #bbb;
 }
-
+.login.btnbox input[type=submit] {
+  border: 0 none;
+}
 .PhotoContent .swiper-wrapper {
   display: -ms-flexbox;
   display: flex;
