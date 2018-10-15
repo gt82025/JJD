@@ -205,10 +205,14 @@ article.shopping .main div.preview .buy_price .contentDetialbtn {
                 <div class="share">
                     <span class="minTitle">
                 分享: 
-            </span><a href="" class="shareBtn"><i class="data-icon data-icon-Ei-sc-facebook"></i></a>
+            </span>
+            
+                    <a href="javascript:;" class="shareBtn goodshare" data-type="fb"><i class="data-icon data-icon-Ei-sc-facebook"></i></a>
+                    <!--
                     <a href="" class="shareBtn instagram"><i class="data-icon data-icon-iconmonstr-instagram-11"></i></a>
-                    <a href="" class="shareBtn Weibo"><i class="data-icon data-icon-Weibo_font_awesome-01"></i></a>
-                    <a href="" class="shareBtn linelogo"><i class="data-icon data-icon-line-logo"></i></a>
+                    -->
+                    <a href="javascript:;" class="shareBtn Weibo goodshare" data-type="wb"><i class="data-icon data-icon-Weibo_font_awesome-01"></i></a>
+                    <a href="javascript:;" class="shareBtn linelogo goodshare" data-type="line" ><i class="data-icon data-icon-line-logo"></i></a>
                 </div>
             </div>
             <a href="javascript:;" class="detialPhoto btnbox">
@@ -287,5 +291,6 @@ article.shopping .main div.preview .buy_price .contentDetialbtn {
 @section('script')
 <script src="{{url('js/page/shopping.js')}}"></script>
 <script src="{{url('js/common.js')}}"></script>
+<script src="{{url('js/goodshare.js')}}"></script>
 @endsection
 
