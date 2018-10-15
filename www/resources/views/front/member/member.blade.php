@@ -438,6 +438,11 @@ input[type="submit"] {
                                 <div class="order_price">
                                     <span class="title">訂單金額</span><span class="result">NT${{number_format($v->subtotal)}}</span>
                                 </div>
+                                @if($v->discount> 0)
+                                <div class="order_price">
+                                    <span class="title">折扣金額</span><span class="result">NT${{number_format($v->discount)}}</span>
+                                </div>
+                                @endif
                                 <div class="order_price">
                                     <span class="title">常溫運費</span><span class="result">NT${{number_format($v->shipping_fee)}}</span>
                                 </div>

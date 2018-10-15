@@ -265,6 +265,11 @@
                             <div class="order_price">
                                 <span class="title">訂單金額</span><span class="result">NT${{number_format($order['bill']['subtotal'])}}</span>
                             </div>
+                            @if($order['bill']['discount'] > 0)
+                            <div class="order_price">
+                                <span class="title">折扣金額</span><span class="result">NT${{number_format($order['bill']['discount'])}}</span>
+                            </div>
+                            @endif
                             <div class="order_price">
                                 <span class="title">常溫運費</span><span class="result">NT${{number_format($order['bill']['freight_normal'])}}</span>
                             </div>

@@ -24,6 +24,7 @@ use App\Model\Order;
 use App\Model\OrderDetail;
 use App\Model\UserCategory;
 use App\Model\User;
+use App\Model\Coupon;
 //use App\Task;
 
 class CartController extends Controller
@@ -163,7 +164,7 @@ class CartController extends Controller
 		$order = Session::get('order');
 		$plugin = new CartPluginController;
 		$order['merchant_trade'] = "JID".time();
-		
+		//return $order;
 		$order['order_number'] = $order['order_number']?$order['order_number']:$plugin->orderNumber();
 	
 		$user = Auth::user();
@@ -189,6 +190,10 @@ class CartController extends Controller
 		$data->invoice_name = $order['uniform_name'];//發票收件人
 		$data->invoice_address = $order['uniform_address'];//發票地址
 		$data->ship_time = $order['ship_time'];//收件時間
+		if(isset($order['discount']))$data->coupon = $order['discount']['code'];//折扣金額
+		$data->discount = $order['bill']['discount'];//折扣金額
+		
+
 		$data->subtotal = $order['bill']['subtotal'];//小計
 		$data->shipping_fee = $order['bill']['freight_normal'];//常溫運費
 		$data->shipping_fee_temp = $order['bill']['freight_special'];//常溫運費
@@ -209,10 +214,9 @@ class CartController extends Controller
 			$detail->selling = $v['price'];
 			$detail->qty = $v['qty'];
 			$detail->total = $v['total'];
-			$detail->detail = isset($v['content_detail'])?json_encode($v['content_detail']):'';
+			$detail->detail = isset($v['content_detail'])?json_encode($v['content_detail']):null;
 			$detail->save();
 		}
-		
 		Session::put('order', $order);
 		
 
@@ -239,8 +243,8 @@ class CartController extends Controller
 		return redirect('products');
 
 		$order = Session::get('order');
-		if(!$order['to_name'])return $order['to_name'];
-
+		//if(!$order['to_name'])return $order['to_name'];
+		//return $order;
 		$meta = Meta::find(1);
 		$social = Social::where('published', 1)->orderBy('sort', 'asc')->get();
 		$cart = Session::get('cart');
@@ -275,7 +279,12 @@ class CartController extends Controller
         //    $total = $total + $v->get_bonus - $v->use_bonus;
         //}
 		$order = Session::get('order');
+		if(isset($order['discount'])){
+			$plugin = new CartPluginController;
+			$bill = $plugin->total(Session::get('cart'),$order['discount']); 
+		}
 		$order['bill'] = Session::get('bill');
+		
 		Session::put('order',$order);
 	
         //$cart = Session::get('cart'); 
@@ -401,8 +410,21 @@ class CartController extends Controller
 			$qty = $request->qty[$k] > 500 ? 500 : $qty;
 			$cart[$k]->qty = $qty; 
 		}
-
+		$order = [];
+		$order['cart'] = $cart;
 		//確認運送
+		if($request->coupon){
+			$dt = date('Y-m-d');
+			$discount = Coupon::where('published',1)
+			->where('code',$request->coupon)
+			->where('start_on','<=',$dt)
+			->where('end_on','>=',$dt)
+			->first();
+
+			if(!$discount)return redirect('cart')->with('status', '查無此優惠代碼或已經過期');
+			$order['discount'] = $discount;
+		}
+		
 		//$ship = Ship::find($request->ship);
 
 		//確認紅利
@@ -425,8 +447,7 @@ class CartController extends Controller
 		//$bill = $plugin->total($cart,$ship,$bonus); 
 
 		//建立訂單
-		$order = [];
-		$order['cart'] = $cart;
+		
 		//$order['bill'] = $bill;
 		//$order['ship'] = $ship;
 		Session::put('order', $order);
@@ -526,13 +547,13 @@ class CartController extends Controller
 		foreach ($cart as $k => $v) { 
 			if ($v['id'] == $data['id']) { 
 				$cart[$k]['qty'] = $request->quantity; 
-				$cart[$k]['content_detail'] = isset($request->content_detail)?$request->content_detail:''; 
+				$cart[$k]['content_detail'] = isset($request->content_detail)?$request->content_detail:null; 
 				$has = true; 
 			}
 		} 
 		if (!$has) { 
 			$data->qty = $request->quantity;
-			$data->content_detail = isset($request->content_detail)?$request->content_detail:'';
+			$data->content_detail = isset($request->content_detail)?$request->content_detail:null;
 			$cart[] = $data; 
 			
 			Session::put('cart', $cart);

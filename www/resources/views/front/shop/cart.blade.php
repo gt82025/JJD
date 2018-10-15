@@ -15,6 +15,9 @@
     font-size:12px;
     display:block;
 }
+.alert-error{
+    color:#d95833;
+}
 </style>
 @endsection
 
@@ -193,8 +196,18 @@
                 <div class="order_total">
                     <span class="title">Total</span><span class="result ">NT${{$bill['subtotal']}}</span>
                 </div>
-     
+            </div>
+            <div class="ShippingDetails">
                 <div class="ship_remark">
+                    <h4>優惠代碼</h4>
+                    <input type="text" name="coupon" style="width:150px;">
+                    @if (session('status'))
+                    <div class="alert alert-error">
+                        {{ session('status') }} 
+                    </div>
+                    @endif
+                </div>
+                                <div class="ship_remark">
                 <h4>常溫運費</h4>
                     @foreach($ship_normal as $k => $v)
                     <span class="title">{{$v->name}}</span>
@@ -206,8 +219,7 @@
                     <span class="title">{{$v->name}}</span>
                     @endforeach
                 </div>
-
-               
+                
             </div>
         </section>
         <div class="btnContainer">

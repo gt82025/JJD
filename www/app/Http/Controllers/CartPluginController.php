@@ -197,7 +197,7 @@ class CartPluginController extends Controller
 		return $list;
     }
 
-    public function total($cart, $ship = null, $bonus = null){
+    public function total($cart, $discount = null, $bonus = null){
 		//$user = Auth::user();
 		//$user = User::with('category')->find($user->id);
 		$specials_subtotal = 0;//特價品小計
@@ -242,12 +242,16 @@ class CartPluginController extends Controller
 		//	$bill['freight'] = $subtotal > $ship->condition?0:$ship->price;
 			//$bill['freight'] = $user->category->freight?0:$bill['freight']; //vip免運
 		//}
-		
+		$bill['discount'] = 0 ;
+		if($discount){
+			$bill['discount_subtotal'] = round(($bill['subtotal'] - $discount->discount_cash) * ($discount->discount / 100));
+			$bill['discount'] = $bill['subtotal'] - $bill['discount_subtotal'];
+		}
 
 		//if($bonus){
 		//	$bill['use_bonus'] = $bonus>$bill['subtotal']-$bill['discount_total']?$bill['subtotal']-$bill['discount_total'] :$bonus;
 		//}
-		$bill['total'] =  $bill['subtotal']+$bill['freight_normal']+$bill['freight_special'];
+		$bill['total'] =  $bill['subtotal'] - $bill['discount'] +$bill['freight_normal']+$bill['freight_special'];
 		
         Session::put('cart', $cart);
 		Session::put('bill', $bill);
