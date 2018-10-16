@@ -87,9 +87,37 @@ function checkOutNow() {
             $tabLogin.removeClass('active');
         });        
     }
-
-
-
-
-
 }
+
+
+$('.cart-delete').click(function() {
+    if (confirm($(this).data('confirm'))) {
+        var $listObj = $(this);
+        var o = {};
+        o['id']=$(this).data('id');
+
+        
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('input[name="_token"]').attr('value')
+            }
+        })
+        $.ajax({
+            url: '../api/cart/removeToCart',
+            type: "POST",
+            dataType: "json",
+            data: o,
+            success: function(data){
+                location.reload();
+                
+            },complete:function(){
+                
+                //console.log(o);
+            },error:function(e){
+                toastr.error('伺服器無法回應,請稍候再試','Inconceivable!');
+                console.log(o);
+            }
+        });
+
+    }
+})

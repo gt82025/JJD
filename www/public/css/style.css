@@ -7662,7 +7662,6 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
 .mainContainer.products .product_content .mainPicContain.ios {
   background-attachment: scroll;
   background-size: cover;
-
 }
 .mainContainer.products .product_content .mainPicContain .textContent {
   width: 100%;
@@ -8811,7 +8810,7 @@ article.shopping .main div.preview {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;    
+        flex-wrap: wrap;
   }
 }
 article.shopping .main div.preview .detialPhoto {
@@ -9049,17 +9048,15 @@ article.shopping .main div.preview .buy_price .price {
 article.shopping .main div.preview .buy_price .price .priceContent {
   position: relative;
 }
-
+article.shopping .main div.preview .buy_price .price .priceContent:last-child:after {
+  content: "";
+}
 article.shopping .main div.preview .buy_price .price .priceContent:after {
   display: inline-block;
   content: "/";
   vertical-align: middle;
   margin-right: 10px;
   margin-left: 5px;
-}
-
-article.shopping .main div.preview .buy_price .price .priceContent:last-child:after {
-  content: "";
 }
 article.shopping .main div.preview .buy_price .price .priceContent span {
   display: inline-block;
@@ -11379,11 +11376,15 @@ label.quantity_main a.plus:hover:after {
 @media screen and (max-width: 37.5em) {
   .total_box {
     padding: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 .total_box .ShippingDetails {
   width: 35%;
-  padding: 30px;
+  padding: 20px 30px;
   border: #ba9142 1px solid;
   line-height: 1.75rem;
   font-size: 1rem;
@@ -11391,9 +11392,58 @@ label.quantity_main a.plus:hover:after {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 64.0625em) {
+  .total_box .ShippingDetails {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 50em) {
+  .total_box .ShippingDetails {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .total_box .ShippingDetails {
+    width: 100%;
+  }
 }
 .total_box .ShippingDetails .ship_remark {
   width: 45%;
+}
+.total_box .ShippingDetails .ship_remark h4 {
+  color: #ba9142;
+  font-size: 1.125rem;
+}
+.total_box .ShippingDetails .ship_remark:first-child {
+  width: 100%;
+  text-align: left;
+}
+.total_box .ShippingDetails .ship_remark:first-child h4 {
+  display: inline-block;
+  color: #727272;
+}
+.total_box .ShippingDetails .ship_remark:first-child input {
+  display: inline-block;
+  height: 30px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.total_box .ShippingDetails .ship_remark:nth-child(2) {
+  position: relative;
+  width: 47%;
+}
+.total_box .ShippingDetails .ship_remark:nth-child(2):after {
+  width: 1px;
+  height: 90%;
+  position: absolute;
+  right: 0;
+  top: 5%;
+  background-color: #ba9142;
+  content: "";
 }
 .total_box .ShippingDetails .ship_remark h4 {
   margin-top: 0;
@@ -11418,6 +11468,11 @@ label.quantity_main a.plus:hover:after {
   padding-right: 0;
   padding-left: 0;
   padding-bottom: 10px;
+}
+@media screen and (max-width: 37.5em) {
+  .total_box .result .order_price {
+    margin-top: 30px;
+  }
 }
 .total_box .result .order_price .title {
   letter-spacing: 1px;
@@ -11507,6 +11562,9 @@ label.quantity_main a.plus:hover:after {
 @media screen and (max-width: 37.5em) {
   .btnContainer a.checkOut, .btnContainer .nextStep {
     width: 140px;
+  }
+  .btnContainer a.checkOut input.send, .btnContainer .nextStep input.send {
+    margin-top: 0;
   }
 }
 .btnContainer a.checkOut:hover, .btnContainer .nextStep:hover {
@@ -11840,6 +11898,7 @@ label.quantity_main a.plus:hover:after {
   .Check_Register .popup .container .loginPop button.login, .Check_Register .popup .container .loginPop a.login {
     line-height: 45px;
     height: 45px;
+    max-width: 300px !important;
   }
 }
 .Check_Register .popup .container .loginPop button.login:hover, .Check_Register .popup .container .loginPop a.login:hover {
@@ -14496,9 +14555,11 @@ article.appointment .board .buttonContainer a:hover {
   cursor: default;
   background-color: #bbb;
 }
+
 .login.btnbox input[type=submit] {
   border: 0 none;
 }
+
 .PhotoContent .swiper-wrapper {
   display: -ms-flexbox;
   display: flex;
@@ -14519,6 +14580,7 @@ article.appointment .board .buttonContainer a:hover {
 input[type=submit] {
   border: none;
 }
+
 
 
 /*# sourceMappingURL=maps/style.css.map */

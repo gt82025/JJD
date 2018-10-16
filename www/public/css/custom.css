@@ -168,9 +168,7 @@ input[type="submit"]{
   }
   #memberPage .container .loginPop {
     width: 100%;
-    position: relative;
     height: auto;
-    z-index: 100;
   }
   #memberPage .container .loginPop .emailForm {
     width: 100%;
