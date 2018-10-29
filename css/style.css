@@ -6236,13 +6236,13 @@ header#header .mainContainer nav .cart i:before {
     border-bottom: #ba9142 1px solid;
   }
 }
-header#header .mainContainer nav .addCartNotic {
+
+.addCartNotic {
   width: auto;
   position: absolute;
   padding: 20px;
   background-color: #fff;
   border: #ba9142 1px solid;
-  right: 0;
   top: 90px;
   text-align: right;
   white-space: nowrap;
@@ -6253,53 +6253,64 @@ header#header .mainContainer nav .addCartNotic {
   transform: translateY(30px);
   pointer-events: none;
 }
-@media screen and (max-width: 50em) {
-  header#header .mainContainer nav .addCartNotic {
-    right: 105%;
+@media screen and (max-width: 312.5em) {
+  .addCartNotic {
+    right: calc( (100vw - 1500px)/2 );
+  }
+}
+@media screen and (max-width: 93.75em) {
+  .addCartNotic {
+    right: 5%;
   }
 }
 @media screen and (max-width: 37.5em) {
-  header#header .mainContainer nav .addCartNotic {
+  .addCartNotic {
     position: fixed;
-    right: 105%;
+    right: 5%;
     width: 90%;
     top: 90px;
     z-index: 9999;
     padding: 10px;
     text-align: left;
-    white-space: normal;
+    word-wrap: break-word;
+  }
+  .addCartNotic p {
+    word-wrap: break-word;
+  }
+  .addCartNotic span {
+    display: inline;
   }
 }
-header#header .mainContainer nav .addCartNotic.active {
+.addCartNotic.active {
   opacity: 1;
   transform: translateY(0);
 }
-header#header .mainContainer nav .addCartNotic p {
+.addCartNotic p {
   margin: 0;
   font-size: 0.9375rem;
   letter-spacing: 1px;
   font-weight: bold;
   line-height: 1.625rem;
 }
-header#header .mainContainer nav .addCartNotic .series {
+.addCartNotic .series {
   display: inline-block;
   padding-right: 5px;
   padding-left: 5px;
   color: #ba9142;
 }
-header#header .mainContainer nav .addCartNotic .pdName {
+.addCartNotic .pdName {
   color: #666;
   padding-right: 5px;
   padding-left: 5px;
   display: inline-block;
 }
-header#header .mainContainer nav .addCartNotic .size {
+.addCartNotic .size {
   color: #666;
   padding-right: 5px;
   padding-left: 5px;
   display: inline-block;
 }
-header#header .mainContainer nav .addCartNotic .quantity {
+.addCartNotic .quantity {
   color: #666;
   padding-right: 5px;
   padding-left: 5px;
@@ -7321,6 +7332,7 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
     width: 80%;
     right: 5%;
     bottom: 250px;
+    pointer-events: none;
   }
 }
 .mainContainer.products .GiftCombin .slideContainer .txtBox h3 {
@@ -7378,6 +7390,7 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
     font-size: 0.875rem;
     padding: 12px 15px;
     width: 160px;
+    display: none;
   }
 }
 .mainContainer.products .GiftCombin .slideContainer .swiper-container.gift {
@@ -7453,6 +7466,20 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
 }
 .mainContainer.products .GiftCombin .slideContainer .swiper-container.gift .swiper-wrapper .swiper-slide.noline::before {
   display: none;
+}
+.mainContainer.products .GiftCombin .slideContainer .swiper-container.gift .swiper-wrapper .swiper-slide a {
+  display: none;
+}
+@media screen and (max-width: 37.5em) {
+  .mainContainer.products .GiftCombin .slideContainer .swiper-container.gift .swiper-wrapper .swiper-slide a {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
 }
 .mainContainer.products .GiftCombin .slideContainer .swiper-container.gift .swiper-wrapper .swiper-slide h3 {
   font-size: 1.625rem;
@@ -8382,10 +8409,11 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
 }
 @media screen and (max-width: 37.5em) {
   .mainContainer.products .singleProduct .txtContainer .shopBtn {
-    width: 85%;
+    width: auto;
     right: 7.5%;
-    left: auto;
+    left: 50%;
     bottom: 30px;
+    margin-left: -80px;
   }
 }
 .mainContainer.products .singleProduct .txtContainer .shopBtn h3 {
@@ -8408,6 +8436,7 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
 }
 @media screen and (max-width: 37.5em) {
   .mainContainer.products .singleProduct .txtContainer .shopBtn p {
+    display: none;
     font-size: 0.875rem;
   }
 }
@@ -8440,7 +8469,7 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
   .mainContainer.products .singleProduct .txtContainer .mainNameContainer {
     width: 85%;
     left: 7.5%;
-    top: 30px;
+    top: 110px;
   }
 }
 .mainContainer.products .singleProduct .txtContainer .mainNameContainer h2 {
@@ -8461,6 +8490,8 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
   .mainContainer.products .singleProduct .txtContainer .mainNameContainer h2 {
     font-size: 2.1875rem;
     line-height: 2.8125rem;
+    color: #fff;
+    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
   }
 }
 .mainContainer.products .singleProduct .txtContainer .mainNameContainer h2:after {
@@ -8472,6 +8503,11 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
   bottom: 0;
   left: calc((100% - 102px) * 0.5);
 }
+@media screen and (max-width: 37.5em) {
+  .mainContainer.products .singleProduct .txtContainer .mainNameContainer h2:after {
+    background-color: #FFF;
+  }
+}
 .mainContainer.products .singleProduct .txtContainer .mainNameContainer p {
   font-size: 1.5rem;
   font-weight: bold;
@@ -8479,6 +8515,8 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
 @media screen and (max-width: 37.5em) {
   .mainContainer.products .singleProduct .txtContainer .mainNameContainer p {
     font-size: 1.125rem;
+    color: #fff;
+    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
   }
 }
 .mainContainer.products .singleProduct .productsPhoto {
@@ -8497,6 +8535,7 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
   .mainContainer.products .singleProduct .productsPhoto {
     height: calc(90vh - 180px);
     position: relative;
+    background-color: #000;
   }
 }
 .mainContainer.products .singleProduct .productsPhoto .pdPicture {
@@ -8573,6 +8612,11 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
   max-width: none;
   left: 0;
   top: 0;
+}
+@media screen and (max-width: 37.5em) {
+  .mainContainer.products .singleProduct .productsPhoto .pdPicture img {
+    opacity: 0.8;
+  }
 }
 .mainContainer.products .singleProduct .scrollList {
   position: absolute;
@@ -11363,6 +11407,10 @@ label.quantity_main a.plus:hover:after {
   margin-top: 30px;
   background-color: #fff;
   padding-bottom: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 @media screen and (max-width: 50em) {
   .total_box {
@@ -11372,13 +11420,87 @@ label.quantity_main a.plus:hover:after {
 @media screen and (max-width: 37.5em) {
   .total_box {
     padding: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
+.total_box .ShippingDetails {
+  width: 35%;
+  padding: 20px 30px;
+  border: #ba9142 1px solid;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 64.0625em) {
+  .total_box .ShippingDetails {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 50em) {
+  .total_box .ShippingDetails {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .total_box .ShippingDetails {
+    width: 100%;
+  }
+}
+.total_box .ShippingDetails .ship_remark {
+  width: 45%;
+}
+.total_box .ShippingDetails .ship_remark h4 {
+  color: #ba9142;
+  font-size: 1.125rem;
+}
+.total_box .ShippingDetails .ship_remark:first-child {
+  width: 100%;
+  text-align: left;
+}
+.total_box .ShippingDetails .ship_remark:first-child h4 {
+  display: inline-block;
+  color: #727272;
+}
+.total_box .ShippingDetails .ship_remark:first-child input {
+  display: inline-block;
+  height: 30px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.total_box .ShippingDetails .ship_remark:nth-child(2) {
+  position: relative;
+  width: 47%;
+}
+.total_box .ShippingDetails .ship_remark:nth-child(2):after {
+  width: 1px;
+  height: 90%;
+  position: absolute;
+  right: 0;
+  top: 5%;
+  background-color: #ba9142;
+  content: "";
+}
+.total_box .ShippingDetails .ship_remark h4 {
+  margin-top: 0;
+  vertical-align: top;
+}
+.total_box .ShippingDetails .ship_remark span {
+  vertical-align: top;
+}
 .total_box .result {
-  width: 430px;
+  width: 35%;
   padding: 0;
-  margin-right: 0;
-  margin-left: auto;
+  -ms-flex-order: 2;
+      order: 2;
 }
 @media screen and (max-width: 37.5em) {
   .total_box .result {
@@ -11390,6 +11512,11 @@ label.quantity_main a.plus:hover:after {
   padding-right: 0;
   padding-left: 0;
   padding-bottom: 10px;
+}
+@media screen and (max-width: 37.5em) {
+  .total_box .result .order_price {
+    margin-top: 30px;
+  }
 }
 .total_box .result .order_price .title {
   letter-spacing: 1px;
@@ -11479,6 +11606,9 @@ label.quantity_main a.plus:hover:after {
 @media screen and (max-width: 37.5em) {
   .btnContainer a.checkOut, .btnContainer .nextStep {
     width: 140px;
+  }
+  .btnContainer a.checkOut input.send, .btnContainer .nextStep input.send {
+    margin-top: 0;
   }
 }
 .btnContainer a.checkOut:hover, .btnContainer .nextStep:hover {
@@ -11812,6 +11942,7 @@ label.quantity_main a.plus:hover:after {
   .Check_Register .popup .container .loginPop button.login, .Check_Register .popup .container .loginPop a.login {
     line-height: 45px;
     height: 45px;
+    max-width: 300px !important;
   }
 }
 .Check_Register .popup .container .loginPop button.login:hover, .Check_Register .popup .container .loginPop a.login:hover {
@@ -14150,6 +14281,11 @@ article.appointment .board .buttonContainer a:hover {
     width: 24% !important;
   }
 }
+@media screen and (max-width: 64.0625em) {
+  .confirmList .container .cart li .pd {
+    padding-right: 10px;
+  }
+}
 @media screen and (max-width: 37.5em) {
   .confirmList .container .cart li .pd {
     width: 30% !important;
@@ -14342,6 +14478,12 @@ article.appointment .board .buttonContainer a:hover {
   max-height: 80vh;
   overflow-y: auto;
 }
+@media screen and (max-width: 37.5em) {
+  .contentDetial .detial {
+    width: 97%;
+    padding: 20px;
+  }
+}
 .contentDetial .detial .closeBtn {
   position: absolute;
 }
@@ -14416,16 +14558,48 @@ article.appointment .board .buttonContainer a:hover {
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
+@media screen and (max-width: 37.5em) {
+  .contentDetial .detial .set li .tastContent {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .contentDetial .detial .set li .tastContent .single {
   text-align: center;
 }
+@media screen and (max-width: 37.5em) {
+  .contentDetial .detial .set li .tastContent .single {
+    width: 50%;
+  }
+}
 .contentDetial .detial .set li .tastContent .single img {
   max-width: 150px;
+}
+@media screen and (max-width: 50em) {
+  .contentDetial .detial .set li .tastContent .single img {
+    max-width: 120px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .contentDetial .detial .set li .tastContent .single img {
+    max-width: 90px;
+    margin-bottom: 10px;
+  }
 }
 .contentDetial .detial .set li .tastContent .single .quantity_main a {
   width: 30px;
   height: 30px;
   line-height: 23px;
+}
+@media screen and (max-width: 37.5em) {
+  .contentDetial .detial .set li .tastContent .single .quantity_main a {
+    width: 25px;
+    height: 25px;
+    line-height: 19px;
+  }
 }
 .contentDetial .detial .set li .tastContent .single .quantity_main .Quantity {
   width: 40px;
@@ -14488,6 +14662,18 @@ article.appointment .board .buttonContainer a:hover {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+input[type=submit] {
+  border: none;
+}
+
+.confirmDetial .orderInfo:nth-child(4) .content li:first-child .title.noColon {
+  width: 100%;
+}
+.confirmDetial .orderInfo:nth-child(4) .content li:first-child .content {
+  width: 100%;
+  display: none;
 }
 
 
