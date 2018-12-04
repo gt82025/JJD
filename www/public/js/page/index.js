@@ -9,18 +9,18 @@ var onePageScrollIndex
     $('html').addClass('index');
     $('picture').imagesLoaded()
         .always(function(instance) {
-            console.log('all images loaded');
+            //console.log('all images loaded');
         })
         .done(function(instance) {
-            console.log('all images successfully loaded');
+            //console.log('all images successfully loaded');
             imgFill();
         })
         .fail(function() {
-            console.log('all images loaded, at least one is broken');
+            //console.log('all images loaded, at least one is broken');
         })
         .progress(function(instance, image) {
             var result = image.isLoaded ? 'loaded' : 'broken';
-            console.log('image is ' + result + ' for ' + image.img.src);
+            //console.log('image is ' + result + ' for ' + image.img.src);
         });
 
     IndexSlider();

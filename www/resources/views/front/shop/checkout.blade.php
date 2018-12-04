@@ -177,6 +177,16 @@
                                 &nbsp;
                             </div>
                         </li>
+                        @if(isset($order['uniform_title']))
+                        <li>
+                            <div class="title">
+                                公司抬頭
+                            </div>
+                            <div class="content">
+                            {{$order['uniform_title']}}
+                            </div>
+                        </li>
+                        @endif
                         @if(isset($order['uniform']))
                         <li>
                             <div class="title">
@@ -187,6 +197,7 @@
                             </div>
                         </li>
                         @endif
+                        
                         @if(isset($order['uniform_name']))
                         <li>
                             <div class="title">
@@ -210,7 +221,7 @@
             </div>
             <div class="confirmCart">
                 <div class="head">
-                    付款方式：信用卡
+                    付款方式：{{$order['PaymentType']}}
                 </div>
                 <div class="container">
                     <ul class="ListTitle">
@@ -226,7 +237,7 @@
                         <li class="">
                             <div class="pd">
                                 <picture>
-                                    <img src="{{$v->product->cover}}" alt="">
+                                    <img src="{{url('assets/thumbs/timthumb.php?src=')}}{{url($v->product->cover)}}&h=200&w=200&zc=1&q=90&a=t" alt="">
                                 </picture>
                             </div>
                             <div class="des">

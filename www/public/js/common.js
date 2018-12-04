@@ -243,8 +243,8 @@ var common = function(){
 					$html = '<p>';
 					$html += '<span class="series">'+o.name+'</span>';
 					$html += '<span class="pdName">'+o.category_name+'</span>';
-					$html += '<span class="size">尺寸 : <span class="val">'+o.size_name+'</span></span>';
-					$html += '<span class="quantity">數量 : <span class="val">'+o.quantity+'</span></span>';
+					$html += '<p class="size">尺寸 : <span class="val">'+o.size_name+'</span></p>';
+					$html += '<p class="quantity">數量 : <span class="val">'+o.quantity+'</span></p>';
 					$html += '<br>已加入購物車</p>';	
 					
 					$('.addCartNotic').html($html);

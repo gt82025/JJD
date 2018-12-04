@@ -222,7 +222,7 @@ input[type="submit"] {
                 <div class="detial">
                     <div class="boxW">
                         <p>訂購日期 : {{date('Y/m/d  A H:i:s', strtotime($v->order_date))}}</p>
-                        <p>付款方式 : 信用卡</p>
+                        <p>付款方式 : {{$v->PaymentType}}</p>
                         <a class="status">
                         {{$v->category->name}}
                     </a>
@@ -347,6 +347,16 @@ input[type="submit"] {
                             {{$v->invoice}}
                             </div>
                         </div>
+                        @if($v->invoice_title)
+                        <div class="box">
+                            <div class="title">
+                                公司抬頭
+                            </div>
+                            <div class="content">
+                            {{$v->invoice_title}}
+                            </div>
+                        </div>
+                        @endif
                         @if($v->invoice_number)
                         <div class="box">
                             <div class="title">

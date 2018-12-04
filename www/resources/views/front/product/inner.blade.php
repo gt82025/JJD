@@ -26,7 +26,10 @@ article.shopping .main div.preview .buy_price .contentDetialbtn {
         font-size: 1.25rem;
     }
 }
-
+.storeonly{
+    cursor: initial;
+    background-color:#414141!important;
+}
 </style>
 @endsection
 
@@ -188,17 +191,25 @@ article.shopping .main div.preview .buy_price .contentDetialbtn {
                 </div> 
                 @endif
 
-                @if($result->name == '幾何慕斯蛋糕(三入裝)' || $result->name == '幾何慕斯蛋糕')
-                <a href="javascript:;" class="contentDetialbtn">
-                    <img src="{{url('images/productsDetial.png')}}" alt=""> 口味選擇
-                </a>
-                
+                @if($result->store == 1)
+                    
+                    <a href="javascript:;" class="shoppingNow btnbox storeonly" >
+                        <span class="line1">  </span>
+                        <span class="line2">  </span>
+                        限店內購買 </a>
                 @else
-                <a href="javascript:;" class="shoppingNow btnbox" onclick="common.submitForm(this)">
-                    <span class="line1">  </span>
-                    <span class="line2">  </span>
-                加入購物車 </a>
+                    @if($result->name == '幾何慕斯蛋糕(三入裝)' || $result->name == '幾何慕斯蛋糕')
+                    <a href="javascript:;" class="contentDetialbtn">
+                        <img src="{{url('images/productsDetial.png')}}" alt=""> 口味選擇
+                    </a>
+                    @else
+                    <a href="javascript:;" class="shoppingNow btnbox" onclick="common.submitForm(this)">
+                        <span class="line1">  </span>
+                        <span class="line2">  </span>
+                    加入購物車 </a>
+                    @endif
                 @endif
+
                 
                 <div class="line" style="margin-top: 25px;">
                 </div>
@@ -220,7 +231,7 @@ article.shopping .main div.preview .buy_price .contentDetialbtn {
                     <span class="line1">    </span>
                     <span class="line2">    </span>
                
-                產品細節
+                更多產品圖片
             </a>
         </div>
         <form>

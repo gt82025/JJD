@@ -237,12 +237,21 @@
                         </fieldset>
                         <div class="box ">
                             <div class="title">
+                                <label for="Uniform2" class="text-right middle">公司抬頭</label>
+                            </div>
+                            <div class="content">
+                                <input type="text" id="Uniform2" placeholder="" name="uniform_title" aria-describedby="mailHelpText">
+                            </div>
+                        </div>
+                        <div class="box ">
+                            <div class="title">
                                 <label for="Uniform" class="text-right middle">統一編號</label>
                             </div>
                             <div class="content">
                                 <input type="text" id="Uniform" placeholder="" name="uniform" aria-describedby="mailHelpText">
                             </div>
                         </div>
+                        
                         <!---->
                         <div class="box uniform-hide">
                             <div class="title">

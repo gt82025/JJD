@@ -67,10 +67,13 @@
             <h2>STORIES</h2>
             <a href="{{url('products#giftProduct')}}">喜餅禮盒</a>
             <a href="{{url('products#giftProduct')}}" >企業送禮</a>
+            <!--
             <a href="javascript:;" class="openPopup">預約品嚐</a>
+            --> 
+            <a href="javascript:(alert('預約品嚐即將開放'));" >預約品嚐</a>
         </div>
         <picture>
-            <source srcset="{{url('images/element_49.jpg')}}" media="(max-width: 1025px)">
+            <source srcset="{{url('images/cus_39.jpg')}}" media="(max-width: 1025px)">
             <img src="{{url('images/cus_39.jpg')}}" alt="預約訂製" class="slider_pic" alt="預約訂製">
         </picture>
     </div>

@@ -15,18 +15,18 @@
 		
         //信用卡測試卡號	4311-9522-2222-2222
         //信用卡測試安全碼 222
-		
+		/*
         $obj->ServiceURL  = "https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5";         //服務位置
         $obj->HashKey     = '5294y06JbISpM5x9' ;                                            //測試用Hashkey，請自行帶入AllPay提供的HashKey
         $obj->HashIV      = 'v77hoKGq4kWxNNIS' ;                                            //測試用HashIV，請自行帶入AllPay提供的HashIV
         $obj->MerchantID  = '2000132';                                                      //測試用MerchantID，請自行帶入AllPay提供的MerchantID
 		
-	    /*
+	    */
 		$obj->ServiceURL  = "https://payment.ecpay.com.tw/Cashier/AioCheckOut/V5"; //服務位置
-        $obj->HashKey     = 'ti7u612oiqLyhCmr' ;                                          //測試用Hashkey，請自行帶入AllPay提供的HashKey
-        $obj->HashIV      = 'vFm9DjF7hltULwaY' ;                                          //測試用HashIV，請自行帶入AllPay提供的HashIV
-        $obj->MerchantID  = '3035639';   
-		*/
+        $obj->HashKey     = 'jeT90otMRCXZ7IMN' ;                                          //測試用Hashkey，請自行帶入AllPay提供的HashKey
+        $obj->HashIV      = 'G3uNGa17KlH5uvL9' ;                                          //測試用HashIV，請自行帶入AllPay提供的HashIV
+        $obj->MerchantID  = '3085055';   
+		
         //基本參數(請依系統規劃自行調整)
         //$obj->Send['ReturnURL']         = "http://cherrynini.com/allPayReturn" ;    //付款完成通知回傳的網址
 		//$obj->Send['ClientBackURL']         = "http://cherrynini.com/" ;    //Client 端返回會員系統的按鈕連結

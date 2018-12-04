@@ -537,7 +537,7 @@ class DatasController extends Controller
             
 			 case 'Order': 
 				$deletedRows = \App\Model\OrderDetail::where('order_id', $request['id'])->delete();
-				$deletedRows = \App\Model\Bonus::where('order_id', $request['id'])->delete();
+				//$deletedRows = \App\Model\Bonus::where('order_id', $request['id'])->delete();
 				//$deletedRows = \App\Model\AdminPermission::where('admin_id', $v)->delete();
 			break;
 			
@@ -711,6 +711,36 @@ class DatasController extends Controller
                 */
                 //return $deleteSpec;
                 //$data = $data::with('spec','stock')->find($data->id);
+                return $data;
+            break;
+
+            case 'Coupon':
+            
+                $data = isset($request['id'])?$data::find($request['id']):$data;
+                foreach($keys as $k => $v){
+                    //if(isset($request[$v]))
+                    if(array_key_exists($v, $request))
+                    $data->$v = $request[$v];
+                    if($v == 'name' && !$data->name)
+                    $data->$v = date('Y-m-d').'優惠專案';
+
+                    if($v == 'discount' && !$data->discount)
+                    $data->$v = 100;
+
+                    if($v == 'discount_cash' && !$data->discount_cash)
+                    $data->$v = 0;
+                }
+                if(isset($request['id'])){
+                    $data->editor_id = $user->id;
+                }else{
+                    $data->added_id = $user->id;
+                }
+                $data->save();
+                
+				//$app = new AppsController;
+                //$sendStatus = $app->sendStatus($data);
+                
+
                 return $data;
             break;
             

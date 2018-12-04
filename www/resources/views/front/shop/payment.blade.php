@@ -2,7 +2,12 @@
 
 @section('title', '付款方式 - ')
 
-
+@section('css')
+<style>
+.checkOut input[type="submit"]{
+    position:relative;
+}
+</style>
 
 @section('content')
 <div class="contentDetial">
@@ -39,16 +44,28 @@
         </div>
     </div>
     <h2>付款方式</h2>
-    <form action="">
+    <form action="{{url('delivery')}}" method="get">
         <section class="orderInfo">
             <h4>請選擇付款方式</h4>
             <div class="formContainer ">
                 <div class="wide">
                     <fieldset class="">
-                        <input id="credit_card" type="radio" value="信用卡" name="invoice" checked>
+                        <input id="credit_card" type="radio" value="信用卡" name="PaymentType" checked>
                         <label for="credit_card">信用卡</label>
                     </fieldset>
                     <p>可使用的信用卡:<img src="images/creditCard_73.png" alt="" class="credit_card_img"></p>
+                </div>
+                <div class="wide">
+                    <fieldset class="">
+                        <input id="atm" type="radio" value="銀行匯款" name="PaymentType">
+                        <label for="atm">銀行匯款</label>
+                    </fieldset>
+                    <p>
+                        戶名：金鉑國際股份有限公司<br>
+                        銀行：上海商業銀行 北中和分行<br>
+                        銀行代碼：011<br>
+                        帳戶號碼：56102000023608
+                    </p>
                 </div>
                 <div class="left hide">
                     <div class="box">
@@ -109,7 +126,7 @@
                     <li class="">
                         <div class="pd">
                             <picture>
-                                <img src="{{$v->product->cover}}" alt="">
+                                <img src="{{url('assets/thumbs/timthumb.php?src=')}}{{url($v->product->cover)}}&h=200&w=200&zc=1&q=90&a=t" alt="">
                             </picture>
                         </div>
                         <div class="des">
@@ -171,10 +188,17 @@
                                     <span class="line1">  </span>
             <span class="line2">  </span></a>
                 </a>
+                <a class="checkOut Register btnbox" href="javascript:;">
+                    <input  class="send btnbox" tabindex="3" type="submit" value="下一步">  
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                </a>
+                <!--
                 <a class="checkOut btnbox" href="{{url('delivery')}}">
             下一步
                                     <span class="line1">  </span>
             <span class="line2">  </span></a>
+-->
                 </a>
             </div>
         </section>

@@ -17,6 +17,7 @@
         </a>
     </section>
     <!--蜂蜜蛋糕-->
+    @if($item1)
     <section class="product_content" id="addProduct_1">
         <div class="mainPicContain mobileHidden" style="background-image: url({{url($item1->cover)}})" id="a_content1">
             <img src="{{url($item1->cover)}}" alt="{{$item1->name}} {{$item1->name_en}}">
@@ -32,7 +33,7 @@
             <img src="{{url($item1->cover_mb)}}" alt="{{$item1->name}} {{$item1->name_en}}">
             <div class="textContent near_right bottom">
                 <div class="box">
-                    <h3>Sesame <br>{!! nl2br($item1->name_en) !!}</h3>
+                    <h3>{!! nl2br($item1->name_en) !!}</h3>
                     <h2 class="pdName">{!! nl2br($item1->name) !!}</h2>
                     <p>{!! nl2br($item1->intro) !!}</p>
                 </div>
@@ -74,8 +75,9 @@
             </div>
         </div>
     </section>
+    @endif
 
-
+    @if($item2)
     <!--土鳳梨-->
     <section class="product_content" id="addProduct_2">
         <div class="mainPicContain mobileHidden" style="background-image: url({{url($item2->cover)}})">
@@ -135,6 +137,9 @@
             </div>
         </div>
     </section>
+    @endif
+
+    @if($item3)
     <!--琥珀堂-->
     <section class="product_content active productsIn" id="addProduct_3">
         <div class="mainPicContain " style="background-image: url({{url($item3->cover)}})">
@@ -180,6 +185,9 @@
             </div>
         </div>
     </section>
+    @endif
+
+    @if($item4)
     <!--組合禮盒-->
     <section class=" GiftCombin" id="giftProduct">
         <div class="pdPictureContainer">
@@ -208,6 +216,7 @@
                     @else
                     <div class="swiper-slide active giftslider" id="s{{$k}}" data-link="{{url('product',$v->id)}}">
                     @endif
+                    <a href="{{url('product',$v->id)}}" class="insideBtn"></a>
                         <h3>{{$v->name}}</h3>
                         <p>{{$v->taste}}</p>
                         <p>{{$v->subtitle}}</p>
@@ -220,6 +229,9 @@
             <div class="swiper-button-prev"><i class="data-icon data-icon-arrow-right-01"></i></div>
         </div>
     </section>
+    @endif
+
+    @if($item5)
     <!--幾何蛋糕-->
     <section class="singleProduct" id="singleProduct">
         <div class="productsPhoto">
@@ -270,6 +282,9 @@
             </div>
         </div>
     </section>
+    @endif
+
+    @if($item6)
     <!--幾何慕絲-->
     <section class="product_content noList active productsIn" id="addProduct_4">
         <div class="mainPicContain " style="background-image: url( {{url($item6->cover)}} )">
@@ -284,7 +299,9 @@
             </div>
         </div>
     </section>
+    @endif
 
+    @if($item7)
     @foreach($item7 as $k =>$v)
     <section class="product_content active productsIn" id="addProduct_5">
         <div class="mainPicContain mobileHidden" style="background-image: url({{url($v->cover)}})">
@@ -342,7 +359,7 @@
         </div>
     </section>
     @endforeach
-
+    @endif
 
 </article>
 @endsection

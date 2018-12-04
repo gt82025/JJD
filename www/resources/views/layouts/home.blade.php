@@ -2,14 +2,9 @@
 <html class="no-js" lang="zh-Hant-TW">
 
 <head>
-    <!-- 測試站防止被爬蟲搜尋 -->
-    <!-- 
-        上線後刪除此段Meta與註解
-        參考文件：https://developers.google.com/search/reference/robots_meta_tag?hl=zh-tw
-     -->
+
     <meta name="robots" content="noindex, nofollow,noarchive,nosnippet,noimageindex,noodp">
     <meta name="googlebot" content="noindex, nofollow">
-    <!-- /End 測試站防止被爬蟲搜尋 -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -341,10 +336,16 @@ html, body {
                             <h4 class="taste">{{$v->product->taste}}</h4>
                             <div class="quantity">
                                 <span class="price">NT${{$v->price}} </span>
+                                @if($v->content_detail)
+                                <label class="quantity_main">
+                                    <input type="number" value="{{$v->qty}}"  name="qty[]" class="Quantity" readonly> 
+                                </label>
+                                @else
                                 <label class="quantity_main">
                                     <a href="javascript:;" class="minus"></a>
                                     <input type="number" value="{{$v->qty}}" class="Quantity" name="qty[]"> <a href="javascript:;" class="plus"></a>
                                 </label>
+                                @endif
                             </div>
                         </div>
                     </li>
@@ -476,7 +477,7 @@ html, body {
         <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
     <!--  <script src="js/vendor/modernizr-custom.min.js"></script> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/vendor/modernizr-custom.min.js"></script>
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/imagesloaded.min.js"></script>
@@ -501,7 +502,7 @@ html, body {
     <!--Swiper 參考 http://idangero.us/swiper/  -->
     <!-- <script src="js/page/index.min.js"></script> -->
     <script src="js/page/cart_and_register.js"></script>
-    <script src="js/page/index2.js"></script> 
+    <script src="js/page/index2.min.js"></script> 
     @yield('script')
 </body>
 

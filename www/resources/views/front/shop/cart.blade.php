@@ -124,7 +124,7 @@
                 <li>
                     <div class="pd">
                         <picture>
-                            <img src="{{url($v->product->cover)}}" alt="">
+                            <img src="{{url('assets/thumbs/timthumb.php?src=')}}{{url($v->product->cover)}}&h=200&w=200&zc=1&q=90&a=t" alt="">
                         </picture>
                     </div>
                     <div class="des">

@@ -2,14 +2,9 @@
 <html class="no-js" lang="zh-Hant-TW">
 
 <head>
-    <!-- 測試站防止被爬蟲搜尋 -->
-    <!-- 
-        上線後刪除此段Meta與註解
-        參考文件：https://developers.google.com/search/reference/robots_meta_tag?hl=zh-tw
-     -->
+
     <meta name="robots" content="noindex, nofollow,noarchive,nosnippet,noimageindex,noodp">
     <meta name="googlebot" content="noindex, nofollow">
-    <!-- /End 測試站防止被爬蟲搜尋 -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -259,6 +254,15 @@ html, body {
     </div>
 </div>
     <header id="header">
+        <div class="addCartNotic">
+            <p>
+                <span class="series">金雀</span>
+                <span class="pdName">金箔蜂蜜蛋糕(原味) </span>
+                <span class="size">尺寸 : <span class="val">B6</span></span>
+                <span class="quantity">數量 : <span class="val">3</span></span>
+                <br>已加入購物車
+            </p>
+        </div>
         <!--  頁面選單區域 -->
         <div class="mainContainer">
             <a class="logo" href="{{url('')}}" title="{{$meta->title}}">
@@ -296,15 +300,7 @@ html, body {
                     <span class="quantity">{{ count(Session::get('cart')) }}</span>
                     <i class="data-icon data-icon-jin_cart"></i>
                 </a>
-                <div class="addCartNotic">
-                    <p>
-                        <span class="series">金雀</span>
-                        <span class="pdName">金箔蜂蜜蛋糕(原味) </span>
-                        <span class="size">尺寸 : <span class="val">B6</span></span>
-                        <span class="quantity">數量 : <span class="val">3</span></span>
-                        <br>已加入購物車
-                    </p>
-                </div>
+                
             </nav>
             <a class="buger">
                 <span class="line"></span>
@@ -340,10 +336,16 @@ html, body {
                             <h4 class="taste">{{$v->product->taste}}</h4>
                             <div class="quantity">
                                 <span class="price">NT${{$v->price}} </span>
+                                @if($v->content_detail)
+                                <label class="quantity_main">
+                                    <input type="number" value="{{$v->qty}}"  name="qty[]" class="Quantity" readonly> 
+                                </label>
+                                @else
                                 <label class="quantity_main">
                                     <a href="javascript:;" class="minus"></a>
                                     <input type="number" value="{{$v->qty}}" class="Quantity" name="qty[]"> <a href="javascript:;" class="plus"></a>
                                 </label>
+                                @endif
                             </div>
                         </div>
                     </li>
@@ -402,12 +404,14 @@ html, body {
                         <div class="or">or</div>
                     </div>
                     <div class="share">
-                        <a class="g_login" href="{{url('gRedirect')}}">
+                        <a href="{{url('fbRedirect')}}" class="fb_login">
                             <img src="{{url('images/login_social_32.png')}}" alt="">
                         </a>
-                        <a href="{{url('fbRedirect')}}" class="fb_login">
-                            <img src="{{url('images/login_social_30.png')}}" alt="">
+                        <a class="g_login" href="{{url('gRedirect')}}">
+                          <img src="{{url('images/login_social_30.png')}}" alt="">
+                            
                         </a>
+
                     </div>
                 </div>
                 <div class="forgetPW ">

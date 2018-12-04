@@ -70,6 +70,29 @@ class CartController extends Controller
 	
 	}
 
+	public function showCompleteForm(Request $request){
+		if(!Session::has('cart') || count(Session::get('cart')) < 1 )
+		return redirect('products');
+		$meta = Meta::find(1);
+		$social = Social::where('published', 1)->orderBy('sort', 'asc')->get();
+		//$footer_post = Post::where('published', 1)->with('category')->orderBy('published_at','desc')->take(5)->skip(0)->get();
+		$order = Session::get('order'); 
+		$order = Order::where('order_number', $order['order_number'])->first();
+
+
+		Session::forget('bill');
+		Session::forget('cart');
+		Session::forget('order');
+        return view('front.shop.complete',
+            [
+                'meta' => $meta,
+				'social' => $social,
+				'order' => $order
+            ]
+
+        );
+	}
+
 	public function allPayReturn(Request $request){
 		if(!Session::has('cart') || count(Session::get('cart')) < 1 )
 		return redirect('products');
@@ -86,7 +109,7 @@ class CartController extends Controller
 		$order->TradeNo = $request->TradeNo; //綠界的交易編號
 		$order->TradeAmt = $request->TradeAmt; //交易金額
 		$order->PaymentDate = $request->PaymentDate; //付款時間
-		$order->PaymentType = $request->PaymentType; //付款時間
+		//$order->PaymentType = $request->PaymentType; //付款方式
 		$order->save();
 	
 		//$order->payment_result = $order->payment_code;
@@ -187,18 +210,20 @@ class CartController extends Controller
 		$data->to_address = $order['to_address'];//收件地址
 		$data->invoice = $order['invoice'];//發票號碼
 		$data->invoice_number= $order['uniform'];
+		$data->invoice_title= $order['uniform_title'];//發票抬頭
 		$data->invoice_name = $order['uniform_name'];//發票收件人
 		$data->invoice_address = $order['uniform_address'];//發票地址
 		$data->ship_time = $order['ship_time'];//收件時間
 		if(isset($order['discount']))$data->coupon = $order['discount']['code'];//折扣金額
 		$data->discount = $order['bill']['discount'];//折扣金額
-		
-
+		$data->PaymentType = $order['PaymentType'];//付款方式
+		$data->RtnCode = ($order['PaymentType'] == '銀行匯款')?'匯款確認中':'刷卡失敗';
 		$data->subtotal = $order['bill']['subtotal'];//小計
 		$data->shipping_fee = $order['bill']['freight_normal'];//常溫運費
 		$data->shipping_fee_temp = $order['bill']['freight_special'];//常溫運費
 		$data->total = $order['bill']['total'];//總計
 		$data->MerchantTradeNo = $order['merchant_trade'];
+		
 		$data->save();
 
 		foreach ($order['cart'] as $k => $v) {
@@ -219,7 +244,7 @@ class CartController extends Controller
 		}
 		Session::put('order', $order);
 		
-
+		
 		$from = ['email'=> 'no-reply@jinjind.com',
 					'name'=> '金錦町 JIN JIN DING 線上自動回覆',
 					'subject'=>'感謝您 使用金錦町 JIN JIN DING線上訂購優質商品'
@@ -235,7 +260,13 @@ class CartController extends Controller
 			$message->from($from['email'], $from['name']);
 			$message->to($to['email'], $to['name'])->cc($from['email'])->subject('感謝您 使用金錦町 JIN JIN DING線上訂購優質商品');
 		});
-		return new CreateOrder();
+
+		if($order['PaymentType'] == '銀行匯款'){
+			return redirect('complete');
+		}else{
+			return new CreateOrder();
+		}
+		
 	}
 	
 	public function showCheckoutForm(){
@@ -272,7 +303,8 @@ class CartController extends Controller
 		$user = Auth::user();
 		if($user)$user->category = UserCategory::find($user->category_id);
 	
-		$cart = Session::get('cart'); 
+		$plugin = new CartPluginController;
+		$bill = $plugin->total(Session::get('cart'));
 
         //foreach ($bonus as $k => $v) {
             # code...
@@ -283,6 +315,7 @@ class CartController extends Controller
 			$plugin = new CartPluginController;
 			$bill = $plugin->total(Session::get('cart'),$order['discount']); 
 		}
+		$cart = Session::get('cart'); 
 		$order['bill'] = Session::get('bill');
 		
 		Session::put('order',$order);
@@ -328,6 +361,7 @@ class CartController extends Controller
 		$order['ship_time'] = $request->ship_time; 
 		$order['invoice'] = $request->invoice;
 		$order['uniform'] = $request->uniform;
+		$order['uniform_title'] = $request->uniform_title;
 		$order['uniform_name'] = $request->uniform_name;
 		$order['uniform_address'] = $request->uniform_address;
 
@@ -349,9 +383,9 @@ class CartController extends Controller
 		$bill = $plugin->total(Session::get('cart')); 
 		$cart = Session::get('cart');
 		$order = session::get('order');
-		
-		
-		
+		//付款方式
+		$order['PaymentType'] = isset($_GET['PaymentType'])?$_GET['PaymentType']:'信用卡';
+		Session::put('order', $order);
 		//if (Auth::check()) {
 			// 這個使用者已經登入...
 			$user = Auth::user();
@@ -368,6 +402,7 @@ class CartController extends Controller
 			$order['to_tel'] = isset($order['to_tel'])?$order['to_tel']:'';
 			$order['to_phone'] = isset($order['to_phone'])?$order['to_phone']:'';
 			$order['to_email'] = isset($order['to_email'])?$order['to_email']:'';
+			
 		//}
 		//$bonus = Bonus::with('order')->where('published',1)->where('user_id',$user->id)->orderBy('published_at','desc')->get();
 		

@@ -65,7 +65,7 @@
           <div class="mainBox" style="background-image: url(images/relation.jpg);">
           </div>
           <div class="darkMask"></div>
-          <a class="titleBox" href="#">
+          <a class="titleBox" href="{{url('relationship')}}">
               <p class="first">To Make the</p>
               <p class="sec">RELATION</p>
               <span class="box">幾何關係</span>

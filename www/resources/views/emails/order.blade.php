@@ -47,6 +47,7 @@
 
 		<h3>付款資訊</h3>
 		訂單編號：{{ $order_number }}<br>
+		付款方式：{{ $PaymentType }}<br>
 		商品小計：{{ $bill['subtotal'] }}<br>
 		@if($bill['discount']>0)
 		折扣金額：{{ $bill['discount'] }}<br>
@@ -65,11 +66,22 @@
 		<br>
 		<h3>發票資訊</h3>
 		{{ $invoice }}<br>
+		公司抬頭：{{ $uniform_title }}<br>
 		統一編號：{{ $uniform }}<br>
 		收件人：{{ $uniform_name }}<br>
 		收件地址：{{ $uniform_address }}<br>
 		<br>
 		<br>
+		@if($PaymentType == '銀行匯款')
+        <h3>匯款資訊</h3>
+            戶名：金鉑國際股份有限公司<br>
+            銀行：上海商業銀行 北中和分行<br>
+            銀行代碼：011<br>
+			帳戶號碼：56102000023608<br>
+		<br>
+		<br>
+		@endif
+		
 		***系統自動發信，有問題請使用客服系統詢問***
 		<br>
 		<br>

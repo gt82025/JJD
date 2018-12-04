@@ -37,11 +37,11 @@
             <div class="loginPop ">
                 <form  method="post" action="{{ url('login') }}">
                 {!! csrf_field() !!}
-                <label class="emailForm" for="email_2">E-mail
-                    <input placeholder="請輸入您註冊的E-mail" type="email" name="email" id="email_2" required>
+                <label class="emailForm" for="email_9">E-mail
+                    <input placeholder="請輸入您註冊的E-mail" type="email" name="email" id="email_9" required>
                 </label>
-                <label class="emailForm" for="password">密碼
-                    <input placeholder="請輸入您的密碼" type="password" name="password" id="password" aria-describedby="passwordHelpText" required>
+                <label class="emailForm" for="password8">密碼
+                    <input placeholder="請輸入您的密碼" type="password" name="password" id="password8" aria-describedby="passwordHelpText" required>
                 </label>
                 <a class="login btnbox" href="javascript:;">
                     
