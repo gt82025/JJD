@@ -36,6 +36,44 @@
     opacity: 1;
   }
 }
+@keyframes svgLoop_a1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes svgLoop_a2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes svgLoop_b {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes Relation_Sweeter {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+}
 html, body {
   margin: 0;
   padding: 0;

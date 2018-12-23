@@ -213,6 +213,9 @@ class CartController extends Controller
 		$data->invoice_title= $order['uniform_title'];//發票抬頭
 		$data->invoice_name = $order['uniform_name'];//發票收件人
 		$data->invoice_address = $order['uniform_address'];//發票地址
+
+		$data->remark = $order['remark'];//備註
+		
 		$data->ship_time = $order['ship_time'];//收件時間
 		if(isset($order['discount']))$data->coupon = $order['discount']['code'];//折扣金額
 		$data->discount = $order['bill']['discount'];//折扣金額
@@ -365,6 +368,10 @@ class CartController extends Controller
 		$order['uniform_name'] = $request->uniform_name;
 		$order['uniform_address'] = $request->uniform_address;
 
+		
+		$order['remark'] = strip_tags($request->remark)?strip_tags($request->remark):'無'; 
+
+		//$order['remark'] = preg_match("/['.,:;*?~`!@#$%^&+=)(<>{}]|]|[|/|\|||/",$request->remark);
 	
 		Session::put('order', $order);
 		return redirect('checkout');

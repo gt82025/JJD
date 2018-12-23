@@ -293,6 +293,7 @@ function scrollMagicStart() {
         })
         .on('enter', function(event) {
             $('section#Banner').removeClass('leave');
+            console.log('on enter')
 
         }).on("leave", function(event) {
             $('section#Banner').addClass('leave');

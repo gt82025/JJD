@@ -281,7 +281,18 @@
                 </div>
                 <div class="cf"></div>
             </section>
+        
+            
+        
         </div>
+
+        <section class="recipient">
+            <h4>特殊需求備註</h4>
+            <div class="formContainer ">
+            <textarea rows="3" name="remark"></textarea>
+            </div>
+        </section>
+
         <div class="btnContainer">
             <a href="{{url('cart')}}" class=" prevStep btnbox">上一步
                         <span class="line1">  </span>

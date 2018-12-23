@@ -1,6 +1,9 @@
     // global var 
     var mySwiper
     var onePageScrollIndex
+    var $eventContent
+    var $eventBtn
+
 
 
 
@@ -26,7 +29,8 @@
 
         IndexSlider();
         sectionHover();
-        fullPagesJs()
+        fullPagesJs();
+        eventIndex();
 
 
 
@@ -129,3 +133,16 @@
     function imgFill() {
         // $('picture').imagefill();
     }
+
+    //首頁 event Lightbox
+    function eventIndex(){
+        $('#event_1').click(function(){
+            $('.eventLightBox').addClass('active');
+        })
+        $('#eventClose').click(function(){
+             $('.eventLightBox').removeClass('active');
+
+
+        })
+    }
+

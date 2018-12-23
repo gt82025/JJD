@@ -386,6 +386,20 @@ input[type="submit"] {
                         </div>
                         @endif
                     </div>
+                    @if($v->remark)
+                    <div class="left" style="width:100%;">
+                        <h3>
+                        特殊需求備註
+                        </h3>
+                        <div class="box">
+                            
+                            <div class="content">
+                            {{$v->remark}}
+                            </div>
+                        </div>
+                       
+                    </div>
+                    @endif
                     <div class="orderContainer">
                         <ul class="ListTitle">
                             <li class="pd">

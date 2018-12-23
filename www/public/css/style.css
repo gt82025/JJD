@@ -652,6 +652,44 @@ th {
     opacity: 1;
   }
 }
+@keyframes svgLoop_a1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes svgLoop_a2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes svgLoop_b {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes Relation_Sweeter {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+}
 /**
  * Foundation for Sites by ZURB
  * Version 6.4.4-rc1
@@ -5854,6 +5892,11 @@ body {
   height: 100%;
   opacity: 1;
 }
+@media screen and (max-width: 37.5em) {
+  body {
+    width: 100vw;
+  }
+}
 body.inside {
   height: auto;
   background-color: #fff;
@@ -7722,7 +7765,7 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
   padding-right: 150px;
   width: 500px;
 }
-.mainContainer.products .product_content .mainPicContain .textContent.left {
+.mainContainer.products .product_content .mainPicContain .textContent.left, .mainContainer.products .product_content .mainPicContain .relation .People .openDoor .textContent.right, .relation .People .openDoor .mainContainer.products .product_content .mainPicContain .textContent.right, .mainContainer.products .product_content .mainPicContain article.mainContainer section.stories .People .openDoor .textContent.right, article.mainContainer section.stories .People .openDoor .mainContainer.products .product_content .mainPicContain .textContent.right {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: start;
@@ -9516,6 +9559,9 @@ article.shopping .main div.preview .buy_price .shoppingNow:hover {
 .shopping section.picks .mainContent .swiper-button-next:hover {
   opacity: 1;
 }
+.shopping section.picks .mainContent .swiper-button-next.swiper-button-disabled {
+  opacity: 0.3;
+}
 .shopping section.picks .mainContent .swiper-button-prev {
   right: 0;
   width: 50px;
@@ -9557,6 +9603,9 @@ article.shopping .main div.preview .buy_price .shoppingNow:hover {
 }
 .shopping section.picks .mainContent .swiper-button-prev:hover {
   opacity: 1;
+}
+.shopping section.picks .mainContent .swiper-button-prev.swiper-button-disabled {
+  opacity: 0.3;
 }
 .shopping section.picks .mainContent h2, .shopping section.picks .mainContent h3 {
   margin-top: 0;
@@ -10597,20 +10646,20 @@ article.checkout .orderInfo .formContainer .wide .credit_card_img, article.check
   margin-left: 10px;
   margin-right: 10px;
 }
-article.checkout .orderInfo .formContainer .left, article.checkout .recipient .formContainer .left, article.checkout .freight .formContainer .left, article.checkout .invoice .formContainer .left {
+article.checkout .orderInfo .formContainer .left, article.checkout .orderInfo .formContainer .relation .People .openDoor .right, .relation .People .openDoor article.checkout .orderInfo .formContainer .right, article.checkout .orderInfo .formContainer article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor article.checkout .orderInfo .formContainer .right, article.checkout .recipient .formContainer .left, article.checkout .recipient .formContainer .relation .People .openDoor .right, .relation .People .openDoor article.checkout .recipient .formContainer .right, article.checkout .recipient .formContainer article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor article.checkout .recipient .formContainer .right, article.checkout .freight .formContainer .left, article.checkout .freight .formContainer .relation .People .openDoor .right, .relation .People .openDoor article.checkout .freight .formContainer .right, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right, article.checkout .invoice .formContainer .left, article.checkout .invoice .formContainer .relation .People .openDoor .right, .relation .People .openDoor article.checkout .invoice .formContainer .right, article.checkout .invoice .formContainer article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor article.checkout .invoice .formContainer .right {
   width: 50%;
   padding-top: 20px;
 }
 @media screen and (max-width: 37.5em) {
-  article.checkout .orderInfo .formContainer .left, article.checkout .recipient .formContainer .left, article.checkout .freight .formContainer .left, article.checkout .invoice .formContainer .left {
+  article.checkout .orderInfo .formContainer .left, article.checkout .orderInfo .formContainer .relation .People .openDoor .right, .relation .People .openDoor article.checkout .orderInfo .formContainer .right, article.checkout .orderInfo .formContainer article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor article.checkout .orderInfo .formContainer .right, article.checkout .recipient .formContainer .left, article.checkout .recipient .formContainer .relation .People .openDoor .right, .relation .People .openDoor article.checkout .recipient .formContainer .right, article.checkout .recipient .formContainer article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor article.checkout .recipient .formContainer .right, article.checkout .freight .formContainer .left, article.checkout .freight .formContainer .relation .People .openDoor .right, .relation .People .openDoor article.checkout .freight .formContainer .right, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right, article.checkout .invoice .formContainer .left, article.checkout .invoice .formContainer .relation .People .openDoor .right, .relation .People .openDoor article.checkout .invoice .formContainer .right, article.checkout .invoice .formContainer article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor article.checkout .invoice .formContainer .right {
     width: 100%;
   }
 }
-article.checkout .orderInfo .formContainer .left .box, article.checkout .recipient .formContainer .left .box, article.checkout .freight .formContainer .left .box, article.checkout .invoice .formContainer .left .box {
+article.checkout .orderInfo .formContainer .left .box, article.checkout .orderInfo .formContainer .relation .People .openDoor .right .box, .relation .People .openDoor article.checkout .orderInfo .formContainer .right .box, article.checkout .orderInfo .formContainer article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor article.checkout .orderInfo .formContainer .right .box, article.checkout .recipient .formContainer .left .box, article.checkout .recipient .formContainer .relation .People .openDoor .right .box, .relation .People .openDoor article.checkout .recipient .formContainer .right .box, article.checkout .recipient .formContainer article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor article.checkout .recipient .formContainer .right .box, article.checkout .freight .formContainer .left .box, article.checkout .freight .formContainer .relation .People .openDoor .right .box, .relation .People .openDoor article.checkout .freight .formContainer .right .box, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right .box, article.checkout .invoice .formContainer .left .box, article.checkout .invoice .formContainer .relation .People .openDoor .right .box, .relation .People .openDoor article.checkout .invoice .formContainer .right .box, article.checkout .invoice .formContainer article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor article.checkout .invoice .formContainer .right .box {
   width: 100%;
 }
 @media screen and (max-width: 37.5em) {
-  article.checkout .orderInfo .formContainer .left .box, article.checkout .recipient .formContainer .left .box, article.checkout .freight .formContainer .left .box, article.checkout .invoice .formContainer .left .box {
+  article.checkout .orderInfo .formContainer .left .box, article.checkout .orderInfo .formContainer .relation .People .openDoor .right .box, .relation .People .openDoor article.checkout .orderInfo .formContainer .right .box, article.checkout .orderInfo .formContainer article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor article.checkout .orderInfo .formContainer .right .box, article.checkout .recipient .formContainer .left .box, article.checkout .recipient .formContainer .relation .People .openDoor .right .box, .relation .People .openDoor article.checkout .recipient .formContainer .right .box, article.checkout .recipient .formContainer article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor article.checkout .recipient .formContainer .right .box, article.checkout .freight .formContainer .left .box, article.checkout .freight .formContainer .relation .People .openDoor .right .box, .relation .People .openDoor article.checkout .freight .formContainer .right .box, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right .box, article.checkout .invoice .formContainer .left .box, article.checkout .invoice .formContainer .relation .People .openDoor .right .box, .relation .People .openDoor article.checkout .invoice .formContainer .right .box, article.checkout .invoice .formContainer article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor article.checkout .invoice .formContainer .right .box {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -10857,10 +10906,10 @@ article.checkout .invoice {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-article.checkout .invoice .formContainer .left {
+article.checkout .invoice .formContainer .left, article.checkout .invoice .formContainer .relation .People .openDoor .right, .relation .People .openDoor article.checkout .invoice .formContainer .right, article.checkout .invoice .formContainer article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor article.checkout .invoice .formContainer .right {
   width: 100%;
 }
-article.checkout .invoice .formContainer .left fieldset {
+article.checkout .invoice .formContainer .left fieldset, article.checkout .invoice .formContainer .relation .People .openDoor .right fieldset, .relation .People .openDoor article.checkout .invoice .formContainer .right fieldset, article.checkout .invoice .formContainer article.mainContainer section.stories .People .openDoor .right fieldset, article.mainContainer section.stories .People .openDoor article.checkout .invoice .formContainer .right fieldset {
   width: 100%;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -10868,7 +10917,7 @@ article.checkout .invoice .formContainer .left fieldset {
   color: #333;
   letter-spacing: 1px;
 }
-article.checkout .invoice .formContainer .left fieldset label {
+article.checkout .invoice .formContainer .left fieldset label, article.checkout .invoice .formContainer .relation .People .openDoor .right fieldset label, .relation .People .openDoor article.checkout .invoice .formContainer .right fieldset label, article.checkout .invoice .formContainer article.mainContainer section.stories .People .openDoor .right fieldset label, article.mainContainer section.stories .People .openDoor article.checkout .invoice .formContainer .right fieldset label {
   margin-right: 15px;
 }
 article.checkout .invoice .formContainer .box .title {
@@ -10901,21 +10950,21 @@ article.checkout .freight {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-article.checkout .freight .formContainer .left {
+article.checkout .freight .formContainer .left, article.checkout .freight .formContainer .relation .People .openDoor .right, .relation .People .openDoor article.checkout .freight .formContainer .right, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right {
   width: 100%;
 }
-article.checkout .freight .formContainer .left .title {
+article.checkout .freight .formContainer .left .title, article.checkout .freight .formContainer .relation .People .openDoor .right .title, .relation .People .openDoor article.checkout .freight .formContainer .right .title, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right .title, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right .title {
   width: 25%;
 }
 @media screen and (max-width: 50em) {
-  article.checkout .freight .formContainer .left .title {
+  article.checkout .freight .formContainer .left .title, article.checkout .freight .formContainer .relation .People .openDoor .right .title, .relation .People .openDoor article.checkout .freight .formContainer .right .title, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right .title, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right .title {
     width: 100%;
   }
 }
-article.checkout .freight .formContainer .left .content {
+article.checkout .freight .formContainer .left .content, article.checkout .freight .formContainer .relation .People .openDoor .right .content, .relation .People .openDoor article.checkout .freight .formContainer .right .content, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right .content, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right .content {
   width: 75%;
 }
-article.checkout .freight .formContainer .left .notice {
+article.checkout .freight .formContainer .left .notice, article.checkout .freight .formContainer .relation .People .openDoor .right .notice, .relation .People .openDoor article.checkout .freight .formContainer .right .notice, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right .notice, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right .notice {
   width: 100%;
   display: block;
   list-style: none;
@@ -10923,7 +10972,7 @@ article.checkout .freight .formContainer .left .notice {
   padding: 15px;
   margin-bottom: 0;
 }
-article.checkout .freight .formContainer .left .notice li {
+article.checkout .freight .formContainer .left .notice li, article.checkout .freight .formContainer .relation .People .openDoor .right .notice li, .relation .People .openDoor article.checkout .freight .formContainer .right .notice li, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right .notice li, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right .notice li {
   display: block;
   width: 100%;
   font-size: 0.8125rem;
@@ -10933,7 +10982,7 @@ article.checkout .freight .formContainer .left .notice li {
   padding-left: 20px;
   position: relative;
 }
-article.checkout .freight .formContainer .left .notice li:before {
+article.checkout .freight .formContainer .left .notice li:before, article.checkout .freight .formContainer .relation .People .openDoor .right .notice li:before, .relation .People .openDoor article.checkout .freight .formContainer .right .notice li:before, article.checkout .freight .formContainer article.mainContainer section.stories .People .openDoor .right .notice li:before, article.mainContainer section.stories .People .openDoor article.checkout .freight .formContainer .right .notice li:before {
   width: 3px;
   height: 3px;
   background-color: #bb9141;
@@ -12946,7 +12995,7 @@ label.quantity_main a.plus:hover:after {
   width: 100%;
   height: auto;
 }
-.dashboardContainer .dashboard .orderTracking .trackingList .left {
+.dashboardContainer .dashboard .orderTracking .trackingList .left, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right {
   width: 50%;
   height: auto;
   padding-right: 30px;
@@ -12954,13 +13003,13 @@ label.quantity_main a.plus:hover:after {
   padding-bottom: 30px;
 }
 @media screen and (max-width: 37.5em) {
-  .dashboardContainer .dashboard .orderTracking .trackingList .left {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
   }
 }
-.dashboardContainer .dashboard .orderTracking .trackingList .left h3 {
+.dashboardContainer .dashboard .orderTracking .trackingList .left h3, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right h3, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right h3, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right h3, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right h3 {
   display: inline-block;
   padding-bottom: 10px;
   border-bottom: 1px solid #dfdfdf;
@@ -12969,7 +13018,7 @@ label.quantity_main a.plus:hover:after {
   margin-bottom: 0;
   margin-top: 10px;
 }
-.dashboardContainer .dashboard .orderTracking .trackingList .left .notice {
+.dashboardContainer .dashboard .orderTracking .trackingList .left .notice, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .notice, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .notice, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .notice, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .notice {
   width: 100%;
   height: auto;
   background-color: #f0e9d8;
@@ -12979,11 +13028,11 @@ label.quantity_main a.plus:hover:after {
   margin-top: 30px;
 }
 @media screen and (max-width: 37.5em) {
-  .dashboardContainer .dashboard .orderTracking .trackingList .left .notice {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left .notice, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .notice, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .notice, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .notice, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .notice {
     padding: 20px;
   }
 }
-.dashboardContainer .dashboard .orderTracking .trackingList .left .notice p {
+.dashboardContainer .dashboard .orderTracking .trackingList .left .notice p, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .notice p, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .notice p, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .notice p, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .notice p {
   padding-left: 25px;
   letter-spacing: 1px;
   line-height: 1.125rem;
@@ -12993,7 +13042,7 @@ label.quantity_main a.plus:hover:after {
   margin-top: 5px;
   display: inline-block;
 }
-.dashboardContainer .dashboard .orderTracking .trackingList .left .notice p:before {
+.dashboardContainer .dashboard .orderTracking .trackingList .left .notice p:before, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .notice p:before, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .notice p:before, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .notice p:before, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .notice p:before {
   width: 3px;
   height: 3px;
   background-color: #ba9142;
@@ -13003,7 +13052,7 @@ label.quantity_main a.plus:hover:after {
   top: 8px;
   left: 5px;
 }
-.dashboardContainer .dashboard .orderTracking .trackingList .left .box {
+.dashboardContainer .dashboard .orderTracking .trackingList .left .box, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .box, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box {
   width: 100%;
   display: -ms-flexbox;
   display: flex;
@@ -13014,23 +13063,23 @@ label.quantity_main a.plus:hover:after {
       flex-wrap: wrap;
   padding-top: 15px;
 }
-.dashboardContainer .dashboard .orderTracking .trackingList .left .box .title {
+.dashboardContainer .dashboard .orderTracking .trackingList .left .box .title, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .box .title, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .title, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .box .title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .title {
   width: 20%;
   position: relative;
   font-size: 1rem;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 50em) {
-  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .title {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .title, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .box .title, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .title, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .box .title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .title {
     width: 32%;
   }
 }
 @media screen and (max-width: 37.5em) {
-  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .title {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .title, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .box .title, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .title, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .box .title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .title {
     width: 30%;
   }
 }
-.dashboardContainer .dashboard .orderTracking .trackingList .left .box .title:after {
+.dashboardContainer .dashboard .orderTracking .trackingList .left .box .title:after, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .box .title:after, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .title:after, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .box .title:after, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .title:after {
   width: 5px;
   display: block;
   position: absolute;
@@ -13041,18 +13090,18 @@ label.quantity_main a.plus:hover:after {
   font-size: 1rem;
   line-height: 16px;
 }
-.dashboardContainer .dashboard .orderTracking .trackingList .left .box .content {
+.dashboardContainer .dashboard .orderTracking .trackingList .left .box .content, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .box .content, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .content, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .box .content, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .content {
   width: 80%;
   font-size: 1rem;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 50em) {
-  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .content {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .content, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .box .content, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .content, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .box .content, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .content {
     width: 68%;
   }
 }
 @media screen and (max-width: 37.5em) {
-  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .content {
+  .dashboardContainer .dashboard .orderTracking .trackingList .left .box .content, .dashboardContainer .dashboard .orderTracking .trackingList .relation .People .openDoor .right .box .content, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .content, .dashboardContainer .dashboard .orderTracking .trackingList article.mainContainer section.stories .People .openDoor .right .box .content, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .trackingList .right .box .content {
     width: 70%;
   }
 }
@@ -13195,21 +13244,21 @@ label.quantity_main a.plus:hover:after {
   height: 1px;
   background-color: #dfdfdf;
 }
-.dashboardContainer .dashboard .Info_content .editContent .left, .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .left, .dashboardContainer .dashboard .orderTracking .editContent .right {
+.dashboardContainer .dashboard .Info_content .editContent .left, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .left, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .right {
   width: 50%;
   padding-top: 20px;
 }
 @media screen and (max-width: 64.0625em) {
-  .dashboardContainer .dashboard .Info_content .editContent .left, .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .left, .dashboardContainer .dashboard .orderTracking .editContent .right {
+  .dashboardContainer .dashboard .Info_content .editContent .left, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .left, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .right {
     padding-right: 10px;
   }
 }
 @media screen and (max-width: 37.5em) {
-  .dashboardContainer .dashboard .Info_content .editContent .left, .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .left, .dashboardContainer .dashboard .orderTracking .editContent .right {
+  .dashboardContainer .dashboard .Info_content .editContent .left, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .Info_content .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .left, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right, .dashboardContainer .dashboard .orderTracking .editContent .right {
     width: 100%;
   }
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box, .dashboardContainer .dashboard .Info_content .editContent .right .box, .dashboardContainer .dashboard .orderTracking .editContent .left .box, .dashboardContainer .dashboard .orderTracking .editContent .right .box {
+.dashboardContainer .dashboard .Info_content .editContent .left .box, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box, .dashboardContainer .dashboard .Info_content .editContent .right .box, .dashboardContainer .dashboard .orderTracking .editContent .left .box, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box, .dashboardContainer .dashboard .orderTracking .editContent .right .box {
   width: 100%;
   display: -ms-flexbox;
   display: flex;
@@ -13222,20 +13271,20 @@ label.quantity_main a.plus:hover:after {
   padding-bottom: 10px;
   text-align: left;
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .title, .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .title, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .title, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .title, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title {
   width: 20%;
 }
 @media screen and (max-width: 50em) {
-  .dashboardContainer .dashboard .Info_content .editContent .left .box .title, .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .title, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .title, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .title, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title {
     width: 100%;
   }
 }
 @media screen and (max-width: 37.5em) {
-  .dashboardContainer .dashboard .Info_content .editContent .left .box .title, .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .title, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .title, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .Info_content .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .title, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title {
     width: 100%;
   }
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .title label, .dashboardContainer .dashboard .Info_content .editContent .right .box .title label, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title label, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title label {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .title label, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .title label, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .title label, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .title label, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .title label, .dashboardContainer .dashboard .Info_content .editContent .right .box .title label, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title label, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .title label, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .title label, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .title label, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .title label, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title label {
   margin: 0;
   padding: 0;
   height: 40px;
@@ -13243,35 +13292,35 @@ label.quantity_main a.plus:hover:after {
   color: #333;
   font-size: 1rem;
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .title label i, .dashboardContainer .dashboard .Info_content .editContent .right .box .title label i, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title label i, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title label i {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .title label i, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .title label i, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .title label i, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .title label i, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .title label i, .dashboardContainer .dashboard .Info_content .editContent .right .box .title label i, .dashboardContainer .dashboard .orderTracking .editContent .left .box .title label i, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .title label i, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .title label i, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .title label i, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .title label i, .dashboardContainer .dashboard .orderTracking .editContent .right .box .title label i {
   color: #ec735e;
   display: inline-block;
   margin-right: 5px;
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .content, .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .content, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content {
   width: 80%;
 }
 @media screen and (max-width: 50em) {
-  .dashboardContainer .dashboard .Info_content .editContent .left .box .content, .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .content, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content {
     width: 100%;
   }
 }
 @media screen and (max-width: 37.5em) {
-  .dashboardContainer .dashboard .Info_content .editContent .left .box .content, .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .content, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .Info_content .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content {
     width: 100%;
   }
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .content p, .dashboardContainer .dashboard .Info_content .editContent .right .box .content p, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content p, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content p {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .content p, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content p, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content p, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content p, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content p, .dashboardContainer .dashboard .Info_content .editContent .right .box .content p, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content p, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content p, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content p, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content p, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content p, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content p {
   margin-top: 5px;
   margin-bottom: 5px;
   color: #c09441;
   letter-spacing: 1px;
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .content p.gray, .dashboardContainer .dashboard .Info_content .editContent .right .box .content p.gray, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content p.gray, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content p.gray {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .content p.gray, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content p.gray, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content p.gray, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content p.gray, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content p.gray, .dashboardContainer .dashboard .Info_content .editContent .right .box .content p.gray, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content p.gray, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content p.gray, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content p.gray, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content p.gray, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content p.gray, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content p.gray {
   font-size: 0.8125rem;
   color: #999;
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .content input, .dashboardContainer .dashboard .Info_content .editContent .right .box .content input, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content input, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .content input, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content input, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content input, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content input, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content input, .dashboardContainer .dashboard .Info_content .editContent .right .box .content input, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content input, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content input, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content input, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input {
   height: 40px;
   margin-bottom: 0;
   padding: 5px;
@@ -13282,23 +13331,23 @@ label.quantity_main a.plus:hover:after {
   letter-spacing: 1px;
   max-width: inherit;
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .Info_content .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input#fullName {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content input#fullName, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content input#fullName, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .Info_content .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content input#fullName, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content input#fullName, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input#fullName {
   width: 280px;
 }
 @media screen and (max-width: 37.5em) {
-  .dashboardContainer .dashboard .Info_content .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .Info_content .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input#fullName {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content input#fullName, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content input#fullName, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .Info_content .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content input#fullName, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content input#fullName, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input#fullName, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content input#fullName {
     width: 100%;
     max-width: inherit;
   }
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .content select, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .content select, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content select, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content select, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content select, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content select, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select {
   height: 40px;
   padding: 5px 10px;
   background-position: right 6px center;
   margin: 0;
   cursor: pointer;
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .content select#title, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#title {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .content select#title, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content select#title, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#title, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content select#title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#title, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content select#title, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content select#title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#title {
   width: 280px;
   height: 40px;
   padding: 5px 10px;
@@ -13307,12 +13356,12 @@ label.quantity_main a.plus:hover:after {
   cursor: pointer;
 }
 @media screen and (max-width: 37.5em) {
-  .dashboardContainer .dashboard .Info_content .editContent .left .box .content select#title, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#title {
+  .dashboardContainer .dashboard .Info_content .editContent .left .box .content select#title, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content select#title, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#title, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content select#title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#title, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content select#title, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content select#title, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#title, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#title {
     width: 100%;
     max-width: inherit;
   }
 }
-.dashboardContainer .dashboard .Info_content .editContent .left .box .content select#month, .dashboardContainer .dashboard .Info_content .editContent .left .box .content select#date, .dashboardContainer .dashboard .Info_content .editContent .left .box .content select#year, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#month, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#date, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#year, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#month, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#date, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#year, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#month, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#date, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#year {
+.dashboardContainer .dashboard .Info_content .editContent .left .box .content select#month, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content select#month, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#month, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content select#month, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#month, .dashboardContainer .dashboard .Info_content .editContent .left .box .content select#date, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content select#date, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#date, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content select#date, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#date, .dashboardContainer .dashboard .Info_content .editContent .left .box .content select#year, .dashboardContainer .dashboard .Info_content .editContent .relation .People .openDoor .right .box .content select#year, .relation .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#year, .dashboardContainer .dashboard .Info_content .editContent article.mainContainer section.stories .People .openDoor .right .box .content select#year, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#year, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#month, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#date, .dashboardContainer .dashboard .Info_content .editContent .right .box .content select#year, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#month, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content select#month, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#month, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content select#month, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#month, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#date, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content select#date, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#date, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content select#date, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#date, .dashboardContainer .dashboard .orderTracking .editContent .left .box .content select#year, .dashboardContainer .dashboard .orderTracking .editContent .relation .People .openDoor .right .box .content select#year, .relation .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#year, .dashboardContainer .dashboard .orderTracking .editContent article.mainContainer section.stories .People .openDoor .right .box .content select#year, article.mainContainer section.stories .People .openDoor .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#year, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#month, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#date, .dashboardContainer .dashboard .orderTracking .editContent .right .box .content select#year {
   padding: 5px;
   margin-right: 5px;
   width: 28%;
@@ -13652,6 +13701,1297 @@ label.quantity_main a.plus:hover:after {
     height: auto !important;
   }
 }
+.relation .main, article.mainContainer section.stories .main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.relation .main .textBox, article.mainContainer section.stories .main .textBox {
+  width: 100%;
+  z-index: 200;
+  transform: translateY(-50px) scale(1);
+  filter: blur(30px);
+  opacity: 0.3;
+}
+.relation .main .textBox.in, article.mainContainer section.stories .main .textBox.in {
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0.6s;
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.relation .main .textBox.leave, article.mainContainer section.stories .main .textBox.leave {
+  transform: translateY(100px) scale(0.75);
+}
+.relation .main .textBox h1, article.mainContainer section.stories .main .textBox h1 {
+  font-size: 3.125rem;
+  text-align: center;
+  color: #ba9142;
+  font-weight: normal;
+  line-height: 3.125rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.relation .main .textBox h1 span, article.mainContainer section.stories .main .textBox h1 span {
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.relation .main picture, article.mainContainer section.stories .main picture {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  filter: blur(30px);
+  opacity: 0.3;
+  transform: translateY(-50px) scale(1);
+  z-index: 50;
+}
+.relation .main picture.in, article.mainContainer section.stories .main picture.in {
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0.3s;
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.relation .main picture.leave, article.mainContainer section.stories .main picture.leave {
+  transition-property: all;
+  transition-duration: 2s;
+  transition-delay: 0.3s;
+  transform: translateY(50px) scale(0.95);
+  opacity: 0.5;
+}
+.relation .main picture.back, article.mainContainer section.stories .main picture.back {
+  transition-property: all;
+  transition-duration: 1.5s;
+  transition-delay: 0s;
+}
+.relation .main picture img, article.mainContainer section.stories .main picture img, .relation .main picture source, article.mainContainer section.stories .main picture source {
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+.relation .People, article.mainContainer section.stories .People {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #fff;
+}
+.relation .People .content, article.mainContainer section.stories .People .content {
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.relation .People .content.active, article.mainContainer section.stories .People .content.active {
+  opacity: 1;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-delay: 1s;
+}
+.relation .People .content .colorfulground, article.mainContainer section.stories .People .content .colorfulground {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #c1e4f0;
+  height: 60%;
+}
+.relation .People .content .colorfulground .hexagonContainer, article.mainContainer section.stories .People .content .colorfulground .hexagonContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.relation .People .content .colorfulground .hexagonContainer .hexagon1, article.mainContainer section.stories .People .content .colorfulground .hexagonContainer .hexagon1 {
+  width: 23%;
+  height: auto;
+  position: absolute;
+  right: -8%;
+  top: -12%;
+  z-index: 91;
+}
+.relation .People .content .colorfulground .hexagonContainer .hexagon2, article.mainContainer section.stories .People .content .colorfulground .hexagonContainer .hexagon2 {
+  width: 6.4%;
+  height: auto;
+  position: absolute;
+  right: 7%;
+  top: 35%;
+  z-index: 92;
+}
+.relation .People .content .colorfulground .hexagonContainer .hexagon3, article.mainContainer section.stories .People .content .colorfulground .hexagonContainer .hexagon3 {
+  width: 12%;
+  height: auto;
+  position: absolute;
+  right: 9%;
+  top: auto;
+  bottom: -7%;
+  z-index: 93;
+}
+.relation .People .content .colorfulground .hexagonContainer .hexagon4, article.mainContainer section.stories .People .content .colorfulground .hexagonContainer .hexagon4 {
+  width: 17%;
+  height: auto;
+  position: absolute;
+  right: auto;
+  left: 5%;
+  top: 15%;
+  bottom: auto;
+  z-index: 94;
+}
+.relation .People .content .colorfulground .hexagonContainer .hexagon5, article.mainContainer section.stories .People .content .colorfulground .hexagonContainer .hexagon5 {
+  width: 4.8%;
+  height: auto;
+  position: absolute;
+  right: auto;
+  left: 5%;
+  top: auto;
+  bottom: 3.4%;
+  z-index: 95;
+}
+.relation .People .content .colorfulground .hexagonContainer .hexagon6, article.mainContainer section.stories .People .content .colorfulground .hexagonContainer .hexagon6 {
+  width: 28%;
+  height: auto;
+  position: absolute;
+  left: -8%;
+  right: auto;
+  top: -70%;
+  z-index: 90;
+}
+.relation .People .content .colorfulground .girlContainer, article.mainContainer section.stories .People .content .colorfulground .girlContainer {
+  width: 100%;
+  max-width: 1200px;
+  height: 113%;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #2abffb;
+  margin-top: -150px;
+  background-image: url(../images/people_girl.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  overflow: hidden;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(30%);
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+.relation .People .content .colorfulground .girlContainer.active, article.mainContainer section.stories .People .content .colorfulground .girlContainer.active {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.relation .People .content .colorfulground .girlContainer .cake, article.mainContainer section.stories .People .content .colorfulground .girlContainer .cake {
+  position: absolute;
+}
+.relation .People .content .colorfulground .girlContainer .hand_cake_1, article.mainContainer section.stories .People .content .colorfulground .girlContainer .hand_cake_1 {
+  width: 27%;
+  top: 15%;
+  left: 0;
+}
+.relation .People .content .colorfulground .girlContainer .hand_cake_2, article.mainContainer section.stories .People .content .colorfulground .girlContainer .hand_cake_2 {
+  width: 27%;
+  top: 53%;
+  left: 0;
+}
+.relation .People .content .colorfulground .girlContainer .hand_cake_3, article.mainContainer section.stories .People .content .colorfulground .girlContainer .hand_cake_3 {
+  width: 27.5%;
+  top: 56%;
+  right: 0;
+}
+.relation .People .content .colorfulground .girlContainer .hand_cake_4, article.mainContainer section.stories .People .content .colorfulground .girlContainer .hand_cake_4 {
+  width: 31%;
+  top: -5%;
+  right: 0;
+}
+.relation .People .content .colorfulground .girlContainer .hand_cake_5, article.mainContainer section.stories .People .content .colorfulground .girlContainer .hand_cake_5 {
+  width: 14%;
+  top: -8%;
+  left: 42%;
+}
+.relation .People .openDoor, article.mainContainer section.stories .People .openDoor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 300;
+}
+.relation .People .openDoor.active, article.mainContainer section.stories .People .openDoor.active {
+  pointer-events: none;
+}
+.relation .People .openDoor .hexagon_intro, article.mainContainer section.stories .People .openDoor .hexagon_intro {
+  width: 380px;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  left: calc( 50% - 190px );
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+@media screen and (max-width: 37.5em) {
+  .relation .People .openDoor .hexagon_intro, article.mainContainer section.stories .People .openDoor .hexagon_intro {
+    width: 70%;
+    left: 15%;
+  }
+}
+.relation .People .openDoor .hexagon_intro .hexagon, article.mainContainer section.stories .People .openDoor .hexagon_intro .hexagon {
+  width: 100%;
+  position: relative;
+  transform: rotateY(90deg);
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0.6s;
+}
+.relation .People .openDoor .hexagon_intro .hexagon.active, article.mainContainer section.stories .People .openDoor .hexagon_intro .hexagon.active {
+  transform: rotateY(0deg);
+}
+.relation .People .openDoor .hexagon_intro .hexagon.active .textBox h2, article.mainContainer section.stories .People .openDoor .hexagon_intro .hexagon.active .textBox h2 {
+  opacity: 1;
+}
+.relation .People .openDoor .hexagon_intro .hexagon.active .textBox h3, article.mainContainer section.stories .People .openDoor .hexagon_intro .hexagon.active .textBox h3 {
+  opacity: 1;
+}
+.relation .People .openDoor .hexagon_intro .hexagon img, article.mainContainer section.stories .People .openDoor .hexagon_intro .hexagon img {
+  position: relative;
+}
+.relation .People .openDoor .hexagon_intro .hexagon .textBox, article.mainContainer section.stories .People .openDoor .hexagon_intro .hexagon .textBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.relation .People .openDoor .hexagon_intro .hexagon .textBox h2, article.mainContainer section.stories .People .openDoor .hexagon_intro .hexagon .textBox h2 {
+  text-align: center;
+  font-size: 2.875rem;
+  color: #fff;
+  line-height: 3.25rem;
+  font-weight: normal;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 30px;
+  margin-top: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 1s;
+}
+.relation .People .openDoor .hexagon_intro .hexagon .textBox h2::after, article.mainContainer section.stories .People .openDoor .hexagon_intro .hexagon .textBox h2::after {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: calc(50% - 50px);
+  background-color: #fff;
+  position: absolute;
+}
+.relation .People .openDoor .hexagon_intro .hexagon .textBox h3, article.mainContainer section.stories .People .openDoor .hexagon_intro .hexagon .textBox h3 {
+  text-align: center;
+  font-size: 1.125rem;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.75rem;
+  font-weight: normal;
+  margin: 0;
+  width: 100%;
+  display: inline-block;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 1.5s;
+}
+.relation .People .openDoor .left, article.mainContainer section.stories .People .openDoor .left, .relation .People .openDoor .right, article.mainContainer section.stories .People .openDoor .right {
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  top: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  background-color: #b19359;
+  transform: translateX(0%);
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+.relation .People .openDoor .left.active, article.mainContainer section.stories .People .openDoor .left.active, .relation .People .openDoor .active.right, article.mainContainer section.stories .People .openDoor .active.right {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+}
+.relation .People .openDoor .left.active .picConteiner, article.mainContainer section.stories .People .openDoor .left.active .picConteiner, .relation .People .openDoor .active.right .picConteiner, article.mainContainer section.stories .People .openDoor .active.right .picConteiner {
+  filter: blur(0);
+}
+.relation .People .openDoor .left .picConteiner, article.mainContainer section.stories .People .openDoor .left .picConteiner, .relation .People .openDoor .right .picConteiner, article.mainContainer section.stories .People .openDoor .right .picConteiner {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  text-align: right;
+  position: relative;
+  filter: blur(20px);
+  transition-property: filter;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+.relation .People .openDoor .left .picConteiner img, article.mainContainer section.stories .People .openDoor .left .picConteiner img, .relation .People .openDoor .right .picConteiner img, article.mainContainer section.stories .People .openDoor .right .picConteiner img {
+  width: 122%;
+  height: auto;
+  display: block;
+  position: absolute;
+  max-width: inherit;
+  right: 0;
+  margin-right: 0;
+  left: auto;
+  margin-left: auto;
+}
+.relation .People .openDoor .right, article.mainContainer section.stories .People .openDoor .right {
+  right: 0;
+  left: auto;
+  transform: translateX(0%);
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+.relation .People .openDoor .right.active, article.mainContainer section.stories .People .openDoor .right.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.relation .People .openDoor .right .picConteiner img, article.mainContainer section.stories .People .openDoor .right .picConteiner img {
+  right: auto;
+  left: 0;
+}
+.relation .feelingStory, article.mainContainer section.stories .feelingStory {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+.relation .feelingStory .container, article.mainContainer section.stories .feelingStory .container {
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  height: 100%;
+}
+.relation .feelingStory .container .dotItemBig, article.mainContainer section.stories .feelingStory .container .dotItemBig {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.relation .feelingStory .container .dotItemBig img, article.mainContainer section.stories .feelingStory .container .dotItemBig img {
+  opacity: 0;
+  position: absolute;
+}
+.relation .feelingStory .container .dotItemBig.active img, article.mainContainer section.stories .feelingStory .container .dotItemBig.active img {
+  opacity: 1;
+}
+.relation .feelingStory .container .dotItemBig.a, article.mainContainer section.stories .feelingStory .container .dotItemBig.a {
+  left: 0;
+  top: 0;
+  z-index: 90;
+}
+.relation .feelingStory .container .dotItemBig.a img, article.mainContainer section.stories .feelingStory .container .dotItemBig.a img {
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  bottom: 0vh;
+  right: 0vw;
+}
+.relation .feelingStory .container .dotItemBig.b, article.mainContainer section.stories .feelingStory .container .dotItemBig.b {
+  left: 0;
+  top: 0;
+  z-index: 95;
+}
+.relation .feelingStory .container .dotItemBig.b img, article.mainContainer section.stories .feelingStory .container .dotItemBig.b img {
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0.4s;
+  bottom: 0vh;
+  right: 0vw;
+}
+.relation .feelingStory .container .dotItemBig.c, article.mainContainer section.stories .feelingStory .container .dotItemBig.c {
+  left: 0;
+  top: 0;
+  z-index: 105;
+}
+.relation .feelingStory .container .dotItemBig.c img, article.mainContainer section.stories .feelingStory .container .dotItemBig.c img {
+  bottom: 0;
+  right: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0.8s;
+}
+.relation .feelingStory .container .picOuter1, article.mainContainer section.stories .feelingStory .container .picOuter1 {
+  position: absolute;
+  width: 38%;
+  right: 16%;
+  top: 10%;
+  z-index: 100;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+.relation .feelingStory .container .picOuter1 .feeling_pic_1, article.mainContainer section.stories .feelingStory .container .picOuter1 .feeling_pic_1 {
+  width: 100%;
+  display: block;
+  z-index: 100;
+  max-width: inherit;
+  transform: rotateY(-8deg);
+  transform-origin: center;
+  opacity: 0;
+  position: relative;
+  transition-timing-function: cubic-bezier(0.29, -0.01, 0.75, 1.23);
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+.relation .feelingStory .container .picOuter1 .feeling_pic_1.active, article.mainContainer section.stories .feelingStory .container .picOuter1 .feeling_pic_1.active {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+.relation .feelingStory .container .picOuter2, article.mainContainer section.stories .feelingStory .container .picOuter2 {
+  position: absolute;
+  width: 53%;
+  left: 0;
+  top: auto;
+  bottom: 10%;
+  z-index: 99;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+.relation .feelingStory .container .picOuter2 .feeling_pic_2, article.mainContainer section.stories .feelingStory .container .picOuter2 .feeling_pic_2 {
+  width: 100%;
+  position: relative;
+  height: auto;
+  display: block;
+  z-index: 90;
+  transform-origin: center;
+  max-width: inherit;
+  transform: rotateY(5deg);
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.29, -0.01, 0.75, 1.23);
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+.relation .feelingStory .container .picOuter2 .feeling_pic_2.active, article.mainContainer section.stories .feelingStory .container .picOuter2 .feeling_pic_2.active {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+.relation .feelingStory .container .textBox, article.mainContainer section.stories .feelingStory .container .textBox {
+  position: absolute;
+  width: 30%;
+  right: 15%;
+  top: auto;
+  bottom: 10%;
+  display: block;
+  z-index: 95;
+  text-align: center;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  transform: scale(0.8);
+}
+.relation .feelingStory .container .textBox.active, article.mainContainer section.stories .feelingStory .container .textBox.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.relation .feelingStory .container .textBox h2, article.mainContainer section.stories .feelingStory .container .textBox h2 {
+  font-size: 3.25rem;
+  color: #ba9142;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.relation .feelingStory .container .textBox h3, article.mainContainer section.stories .feelingStory .container .textBox h3 {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: normal;
+}
+.relation .relationSweeter, article.mainContainer section.stories .relationSweeter {
+  width: 100vw;
+  height: 100vh;
+  background: #d6b77c;
+  background: linear-gradient(to bottom, #d6b77c 0%, #b19459 100%);
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.relation .relationSweeter .container, article.mainContainer section.stories .relationSweeter .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.relation .relationSweeter .container .box, article.mainContainer section.stories .relationSweeter .container .box {
+  position: absolute;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.relation .relationSweeter .container .box .pic, article.mainContainer section.stories .relationSweeter .container .box .pic {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 500;
+}
+.relation .relationSweeter .container .box .picLayer2, article.mainContainer section.stories .relationSweeter .container .box .picLayer2 {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.relation .relationSweeter .container .box.active .bgColor, article.mainContainer section.stories .relationSweeter .container .box.active .bgColor {
+  transform: scaleY(1) !important;
+  transition-property: transform !important;
+  transition-duration: 1s !important;
+  transition-delay: 0s !important;
+}
+.relation .relationSweeter .container .box.active .bgColor .textBox, article.mainContainer section.stories .relationSweeter .container .box.active .bgColor .textBox {
+  opacity: 1 !important;
+  transition-property: opacity !important;
+  transition-duration: 0.6s !important;
+  transition-delay: 1.5s !important;
+}
+.relation .relationSweeter .container .box.active .bgColor .pic, article.mainContainer section.stories .relationSweeter .container .box.active .bgColor .pic {
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.active .bgColor .pic:hover, article.mainContainer section.stories .relationSweeter .container .box.active .bgColor .pic:hover {
+  opacity: 1;
+}
+.relation .relationSweeter .container .box.active .bgColor .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.active .bgColor .picLayer2 {
+  opacity: 1 !important;
+  transition-property: all !important;
+  transition-duration: 0.5s !important;
+  transition-delay: 1.2s !important;
+}
+.relation .relationSweeter .container .box.item1, article.mainContainer section.stories .relationSweeter .container .box.item1 {
+  width: calc(100% / 6);
+  height: calc(100% / 3);
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+.relation .relationSweeter .container .box.item1 .bgColor, article.mainContainer section.stories .relationSweeter .container .box.item1 .bgColor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #fff2cd;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item1 .bgColor .pic, article.mainContainer section.stories .relationSweeter .container .box.item1 .bgColor .pic {
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0s;
+  background-image: url(../images/switter_cake.png);
+  position: relative;
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.item1 .bgColor .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.item1 .bgColor .picLayer2 {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-image: url(../images/rw_1.png);
+  background-color: #ffdc60;
+  z-index: 100;
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.item2, article.mainContainer section.stories .relationSweeter .container .box.item2 {
+  width: calc((100% / 6)*2);
+  height: calc((100% / 3)*2);
+  top: 0;
+  left: calc(100% / 6);
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item2 .bgColor, article.mainContainer section.stories .relationSweeter .container .box.item2 .bgColor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #87e2e5;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item2 .bgColor .textBox, article.mainContainer section.stories .relationSweeter .container .box.item2 .bgColor .textBox {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  z-index: 600;
+  font-size: 2.8125rem;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 3.4375rem;
+  text-transform: uppercase;
+  opacity: 1;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item2 .bgColor .pic, article.mainContainer section.stories .relationSweeter .container .box.item2 .bgColor .pic {
+  background-image: url(../images/switter_cake_3.png);
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item2 .bgColor .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.item2 .bgColor .picLayer2 {
+  z-index: 120;
+  background-image: url(../images/switter_cake_3_2.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.item3, article.mainContainer section.stories .relationSweeter .container .box.item3 {
+  width: calc((100% / 6)*2);
+  height: 100%;
+  top: 0;
+  left: calc((100% / 6)*3);
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item3 .bgColor, article.mainContainer section.stories .relationSweeter .container .box.item3 .bgColor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #e9cd5a;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item3 .bgColor .textBox, article.mainContainer section.stories .relationSweeter .container .box.item3 .bgColor .textBox {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  z-index: 600;
+  font-size: 2.8125rem;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 3.4375rem;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item3 .bgColor .pic, article.mainContainer section.stories .relationSweeter .container .box.item3 .bgColor .pic {
+  background-image: url(../images/switter_cake_4.png);
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item3 .bgColor .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.item3 .bgColor .picLayer2 {
+  position: relative;
+  z-index: 120;
+  background-image: url(../images/switter_cake_4_2.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.item4, article.mainContainer section.stories .relationSweeter .container .box.item4 {
+  width: calc(100% / 6);
+  height: calc(100% / 3);
+  top: 0;
+  left: calc((100% / 6)*5);
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item4 .bgColor, article.mainContainer section.stories .relationSweeter .container .box.item4 .bgColor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #4a453f;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item4 .bgColor .pic, article.mainContainer section.stories .relationSweeter .container .box.item4 .bgColor .pic {
+  background-image: url(../images/rw_4.png);
+  background-color: #4a453f;
+  background-size: 100%;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item4 .bgColor .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.item4 .bgColor .picLayer2 {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-image: url(../images/hexagon_line.png);
+  z-index: 100;
+  background-color: #4a453f;
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.item5, article.mainContainer section.stories .relationSweeter .container .box.item5 {
+  width: calc(100% / 6);
+  height: calc(100% / 3);
+  top: calc(100% / 3);
+  left: 0;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item5 .bgColor, article.mainContainer section.stories .relationSweeter .container .box.item5 .bgColor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #679d66;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item5 .bgColor .pic, article.mainContainer section.stories .relationSweeter .container .box.item5 .bgColor .pic {
+  background-image: url(../images/switter_cake_2.png);
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item5 .bgColor .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.item5 .bgColor .picLayer2 {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-image: url(../images/rw_5.png);
+  background-color: #7c9225;
+  z-index: 100;
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.item6, article.mainContainer section.stories .relationSweeter .container .box.item6 {
+  width: calc(100% / 6);
+  height: calc(100% / 3);
+  top: calc(100% / 3);
+  left: calc((100% / 6)*5);
+}
+.relation .relationSweeter .container .box.item6 .bgColor, article.mainContainer section.stories .relationSweeter .container .box.item6 .bgColor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #73e3ab;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item6 .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.item6 .picLayer2 {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #73e3ab;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-image: url(../images/diamond2-line.png);
+  z-index: 100;
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.item6 .pic, article.mainContainer section.stories .relationSweeter .container .box.item6 .pic {
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0s;
+  opacity: 0;
+  background-image: url(../images/switter_cake_5.png);
+}
+.relation .relationSweeter .container .box.item7, article.mainContainer section.stories .relationSweeter .container .box.item7 {
+  width: calc(100% / 6);
+  height: calc(100% / 3);
+  top: calc((100% / 3)*2);
+  left: 0;
+}
+.relation .relationSweeter .container .box.item7 .bgColor, article.mainContainer section.stories .relationSweeter .container .box.item7 .bgColor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #d7cec7;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item7 .pic, article.mainContainer section.stories .relationSweeter .container .box.item7 .pic {
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0s;
+  opacity: 0;
+  background-image: url(../images/switter_cake_6.png);
+}
+.relation .relationSweeter .container .box.item7 .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.item7 .picLayer2 {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-image: url(../images/rw6.png);
+  background-position: center;
+  background-color: #ffa406;
+  z-index: 100;
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.item8, article.mainContainer section.stories .relationSweeter .container .box.item8 {
+  width: calc(100% / 6);
+  height: calc(100% / 3);
+  top: calc((100% / 3)*2);
+  left: calc(100% / 6);
+}
+.relation .relationSweeter .container .box.item8 .bgColor, article.mainContainer section.stories .relationSweeter .container .box.item8 .bgColor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #5ba5de;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item8 .pic, article.mainContainer section.stories .relationSweeter .container .box.item8 .pic {
+  background-image: url(../images/rw8.png);
+  background-color: #5ba5de;
+  background-size: cover;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item8 .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.item8 .picLayer2 {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-image: url(../images/diamond-line.png);
+  background-position: center;
+  background-color: #5ba5de;
+  z-index: 100;
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.item9, article.mainContainer section.stories .relationSweeter .container .box.item9 {
+  width: calc(100% / 6);
+  height: calc(100% / 3);
+  top: calc((100% / 3)*2);
+  left: calc((100% / 6)*2);
+}
+.relation .relationSweeter .container .box.item9 .bgColor, article.mainContainer section.stories .relationSweeter .container .box.item9 .bgColor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #f88f97;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item9 .pic, article.mainContainer section.stories .relationSweeter .container .box.item9 .pic {
+  opacity: 0;
+  background-image: url(../images/switter_cake_7.png);
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item9 .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.item9 .picLayer2 {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-image: url(../images/rw7.png);
+  background-position: center;
+  background-color: #ff5874;
+  z-index: 100;
+  opacity: 0;
+}
+.relation .relationSweeter .container .box.item10, article.mainContainer section.stories .relationSweeter .container .box.item10 {
+  width: calc(100% / 6);
+  height: calc(100% / 3);
+  top: calc((100% / 3)*2);
+  left: calc((100% / 6)*5);
+}
+.relation .relationSweeter .container .box.item10 .bgColor, article.mainContainer section.stories .relationSweeter .container .box.item10 .bgColor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #ffbc7a;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-delay: 0.5s;
+}
+.relation .relationSweeter .container .box.item10 .pic, article.mainContainer section.stories .relationSweeter .container .box.item10 .pic {
+  background-image: url(../images/rw9.png);
+  background-color: #ffbc7a;
+  background-size: cover;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-delay: 0s;
+}
+.relation .relationSweeter .container .box.item10 .picLayer2, article.mainContainer section.stories .relationSweeter .container .box.item10 .picLayer2 {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-image: url(../images/quad-line.png);
+  background-position: center;
+  background-color: #ffbc7a;
+  z-index: 100;
+  opacity: 0;
+}
+.relation .Last_cut, article.mainContainer section.stories .Last_cut {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #e75d7c;
+  overflow: hidden;
+}
+.relation .Last_cut .container, article.mainContainer section.stories .Last_cut .container {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url(../images/relation_sweeter_bottom.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.relation .Last_cut .container.active .textbox p.des1, article.mainContainer section.stories .Last_cut .container.active .textbox p.des1 {
+  transition-property: all;
+  transition-duration: 0.5s !important;
+  transition-delay: 1s !important;
+  opacity: 1;
+  transform-origin: top;
+  transform: rotateX(0deg);
+}
+.relation .Last_cut .container.active .textbox p.des2, article.mainContainer section.stories .Last_cut .container.active .textbox p.des2 {
+  transition-property: all;
+  transition-duration: 0.5s !important;
+  transition-delay: 2s !important;
+  opacity: 1;
+  transform-origin: top;
+  transform: rotateX(0deg);
+}
+.relation .Last_cut .container.active .textbox h2, article.mainContainer section.stories .Last_cut .container.active .textbox h2 {
+  transition-property: all;
+  transition-duration: 0.5s !important;
+  transition-delay: 1.5s !important;
+  transform-origin: top;
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+.relation .Last_cut .container .textbox, article.mainContainer section.stories .Last_cut .container .textbox {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+.relation .Last_cut .container .textbox p, article.mainContainer section.stories .Last_cut .container .textbox p {
+  font-size: 1.375rem;
+  letter-spacing: 1px;
+  margin: 15px;
+  line-height: 1.375rem;
+  display: inline-block;
+  width: 100%;
+}
+.relation .Last_cut .container .textbox p:first-child, article.mainContainer section.stories .Last_cut .container .textbox p:first-child {
+  margin-top: 80px;
+}
+.relation .Last_cut .container .textbox p.des1, article.mainContainer section.stories .Last_cut .container .textbox p.des1 {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform-origin: top;
+  transform: rotateX(90deg);
+  text-shadow: 0 2px #a8354c;
+}
+.relation .Last_cut .container .textbox p.des2, article.mainContainer section.stories .Last_cut .container .textbox p.des2 {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  opacity: 0;
+  transform-origin: top;
+  transform: rotateX(90deg);
+  text-shadow: 0 2px #a8354c;
+}
+.relation .Last_cut .container .textbox h2, article.mainContainer section.stories .Last_cut .container .textbox h2 {
+  font-size: 3.125rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 3.125rem;
+  display: inline-block;
+  opacity: 1;
+  transform-origin: top;
+  transform: rotateX(90deg);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  text-shadow: 0 2px #a8354c;
+}
+.relation .Geometric, article.mainContainer section.stories .Geometric {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #d6b77c;
+  background: linear-gradient(to bottom, #d6b77c 0%, #b19459 100%);
+  overflow: hidden;
+}
+.relation .Geometric .textBox, article.mainContainer section.stories .Geometric .textBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 200;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+.relation .Geometric .textBox.active h2, article.mainContainer section.stories .Geometric .textBox.active h2 {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  opacity: 1;
+  filter: blur(0);
+}
+.relation .Geometric .textBox.active h3, article.mainContainer section.stories .Geometric .textBox.active h3 {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+  opacity: 1;
+  filter: blur(0);
+}
+.relation .Geometric .textBox h2, article.mainContainer section.stories .Geometric .textBox h2 {
+  color: #fff;
+  font-size: 3.25rem;
+  letter-spacing: 3px;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+  width: 100%;
+  display: inline-block;
+  opacity: 0;
+  filter: blur(30px);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+.relation .Geometric .textBox h3, article.mainContainer section.stories .Geometric .textBox h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: normal;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 1.5px;
+  opacity: 0;
+  filter: blur(30px);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.relation .Geometric .svgContainerA .svgBox, article.mainContainer section.stories .Geometric .svgContainerA .svgBox, .relation .Geometric .svgContainerB .svgBox, article.mainContainer section.stories .Geometric .svgContainerB .svgBox, .relation .Geometric .svgContainerB .svgBox, article.mainContainer section.stories .Geometric .svgContainerB .svgBox {
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+.relation .Geometric .svgContainerA .svgBox canvas, article.mainContainer section.stories .Geometric .svgContainerA .svgBox canvas, .relation .Geometric .svgContainerB .svgBox canvas, article.mainContainer section.stories .Geometric .svgContainerB .svgBox canvas, .relation .Geometric .svgContainerB .svgBox canvas, article.mainContainer section.stories .Geometric .svgContainerB .svgBox canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.relation .Geometric .svgContainerA .svgBox .item, article.mainContainer section.stories .Geometric .svgContainerA .svgBox .item, .relation .Geometric .svgContainerB .svgBox .item, article.mainContainer section.stories .Geometric .svgContainerB .svgBox .item, .relation .Geometric .svgContainerB .svgBox .item, article.mainContainer section.stories .Geometric .svgContainerB .svgBox .item {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+@media screen and (max-width: 37.5em) {
+  .relation .Geometric .svgContainerA .svgBox .item, article.mainContainer section.stories .Geometric .svgContainerA .svgBox .item, .relation .Geometric .svgContainerB .svgBox .item, article.mainContainer section.stories .Geometric .svgContainerB .svgBox .item, .relation .Geometric .svgContainerB .svgBox .item, article.mainContainer section.stories .Geometric .svgContainerB .svgBox .item {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+.relation .Geometric .svgContainerA .svgBox .item svg, article.mainContainer section.stories .Geometric .svgContainerA .svgBox .item svg, .relation .Geometric .svgContainerB .svgBox .item svg, article.mainContainer section.stories .Geometric .svgContainerB .svgBox .item svg, .relation .Geometric .svgContainerB .svgBox .item svg, article.mainContainer section.stories .Geometric .svgContainerB .svgBox .item svg {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+}
+.relation .Geometric .svgContainerA, article.mainContainer section.stories .Geometric .svgContainerA, .relation .Geometric .svgContainerB, article.mainContainer section.stories .Geometric .svgContainerB {
+  width: 120%;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+}
+@media screen and (max-width: 37.5em) {
+  .relation .Geometric .svgContainerA, article.mainContainer section.stories .Geometric .svgContainerA, .relation .Geometric .svgContainerB, article.mainContainer section.stories .Geometric .svgContainerB {
+    width: 260%;
+  }
+}
+.relation .Geometric .svgContainerA.a1, article.mainContainer section.stories .Geometric .svgContainerA.a1, .relation .Geometric .a1.svgContainerB, article.mainContainer section.stories .Geometric .a1.svgContainerB {
+  left: 0;
+  animation-timing-function: linear;
+}
+.relation .Geometric .svgContainerA.a2, article.mainContainer section.stories .Geometric .svgContainerA.a2, .relation .Geometric .a2.svgContainerB, article.mainContainer section.stories .Geometric .a2.svgContainerB {
+  left: -120%;
+  animation-timing-function: linear;
+}
+@media screen and (max-width: 37.5em) {
+  .relation .Geometric .svgContainerA.a2, article.mainContainer section.stories .Geometric .svgContainerA.a2, .relation .Geometric .a2.svgContainerB, article.mainContainer section.stories .Geometric .a2.svgContainerB {
+    left: -260%;
+  }
+}
+.relation .Geometric .svgContainerA .svgBox polyline, article.mainContainer section.stories .Geometric .svgContainerA .svgBox polyline, .relation .Geometric .svgContainerB .svgBox polyline, article.mainContainer section.stories .Geometric .svgContainerB .svgBox polyline, .relation .Geometric .svgContainerA .svgBox line, article.mainContainer section.stories .Geometric .svgContainerA .svgBox line, .relation .Geometric .svgContainerB .svgBox line, article.mainContainer section.stories .Geometric .svgContainerB .svgBox line, .relation .Geometric .svgContainerA .svgBox rect, article.mainContainer section.stories .Geometric .svgContainerA .svgBox rect, .relation .Geometric .svgContainerB .svgBox rect, article.mainContainer section.stories .Geometric .svgContainerB .svgBox rect, .relation .Geometric .svgContainerA .svgBox polygon, article.mainContainer section.stories .Geometric .svgContainerA .svgBox polygon, .relation .Geometric .svgContainerB .svgBox polygon, article.mainContainer section.stories .Geometric .svgContainerB .svgBox polygon, .relation .Geometric .svgContainerA .svgBox circle, article.mainContainer section.stories .Geometric .svgContainerA .svgBox circle, .relation .Geometric .svgContainerB .svgBox circle, article.mainContainer section.stories .Geometric .svgContainerB .svgBox circle, .relation .Geometric .svgContainerA .svgBox path, article.mainContainer section.stories .Geometric .svgContainerA .svgBox path, .relation .Geometric .svgContainerB .svgBox path, article.mainContainer section.stories .Geometric .svgContainerB .svgBox path {
+  stroke-dasharray: 2500;
+  stroke-dashoffset: -2500;
+}
+.relation .Geometric .svgContainerA.active .svgBox polyline, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox polyline, .relation .Geometric .active.svgContainerB .svgBox polyline, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox polyline, .relation .Geometric .svgContainerA.active .svgBox line, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox line, .relation .Geometric .active.svgContainerB .svgBox line, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox line, .relation .Geometric .svgContainerA.active .svgBox rect, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox rect, .relation .Geometric .active.svgContainerB .svgBox rect, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox rect, .relation .Geometric .svgContainerA.active .svgBox polygon, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox polygon, .relation .Geometric .active.svgContainerB .svgBox polygon, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox polygon, .relation .Geometric .svgContainerA.active .svgBox circle, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox circle, .relation .Geometric .active.svgContainerB .svgBox circle, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox circle, .relation .Geometric .svgContainerA.active .svgBox path, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox path, .relation .Geometric .active.svgContainerB .svgBox path, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox path {
+  transition-property: all;
+  transition-duration: 5s;
+  transition-delay: 0s;
+  stroke-dashoffset: 0;
+}
+.relation .Geometric .svgContainerB, article.mainContainer section.stories .Geometric .svgContainerB {
+  bottom: 10%;
+  overflow: hidden;
+  top: auto;
+  left: auto;
+}
+.relation .Geometric .svgContainerB.b1, article.mainContainer section.stories .Geometric .svgContainerB.b1 {
+  right: 0;
+  animation-timing-function: linear;
+}
+.relation .Geometric .svgContainerB.b2, article.mainContainer section.stories .Geometric .svgContainerB.b2 {
+  right: -260%;
+  animation-timing-function: linear;
+}
 .relation .about, article.mainContainer section.stories .about {
   width: 100%;
   height: 100vh;
@@ -13777,7 +15117,7 @@ label.quantity_main a.plus:hover:after {
   max-width: 980px;
   display: inline-block;
 }
-.relation .about .content .box .left, article.mainContainer section.stories .about .content .box .left {
+.relation .about .content .box .left, article.mainContainer section.stories .about .content .box .left, .relation .about .content .box .People .openDoor .right, .relation .People .openDoor .about .content .box .right, article.mainContainer section.stories .about .content .box .People .openDoor .right, article.mainContainer section.stories .People .openDoor .about .content .box .right {
   display: inline-block;
   margin-bottom: 0;
   margin-top: 0;
@@ -13787,11 +15127,11 @@ label.quantity_main a.plus:hover:after {
   width: 49%;
 }
 @media screen and (max-width: 37.5em) {
-  .relation .about .content .box .left, article.mainContainer section.stories .about .content .box .left {
+  .relation .about .content .box .left, article.mainContainer section.stories .about .content .box .left, .relation .about .content .box .People .openDoor .right, .relation .People .openDoor .about .content .box .right, article.mainContainer section.stories .about .content .box .People .openDoor .right, article.mainContainer section.stories .People .openDoor .about .content .box .right {
     width: 100%;
   }
 }
-.relation .about .content .box .left h1, article.mainContainer section.stories .about .content .box .left h1 {
+.relation .about .content .box .left h1, article.mainContainer section.stories .about .content .box .left h1, .relation .about .content .box .People .openDoor .right h1, .relation .People .openDoor .about .content .box .right h1, article.mainContainer section.stories .about .content .box .People .openDoor .right h1, article.mainContainer section.stories .People .openDoor .about .content .box .right h1 {
   font-size: 2.875rem;
   line-height: 3.4375rem;
   color: #fff;
@@ -13804,12 +15144,12 @@ label.quantity_main a.plus:hover:after {
   margin-bottom: 0;
 }
 @media screen and (max-width: 50em) {
-  .relation .about .content .box .left h1, article.mainContainer section.stories .about .content .box .left h1 {
+  .relation .about .content .box .left h1, article.mainContainer section.stories .about .content .box .left h1, .relation .about .content .box .People .openDoor .right h1, .relation .People .openDoor .about .content .box .right h1, article.mainContainer section.stories .about .content .box .People .openDoor .right h1, article.mainContainer section.stories .People .openDoor .about .content .box .right h1 {
     font-size: 2.375rem;
     line-height: 2.6875rem;
   }
 }
-.relation .about .content .box .left .stick, article.mainContainer section.stories .about .content .box .left .stick {
+.relation .about .content .box .left .stick, article.mainContainer section.stories .about .content .box .left .stick, .relation .about .content .box .People .openDoor .right .stick, .relation .People .openDoor .about .content .box .right .stick, article.mainContainer section.stories .about .content .box .People .openDoor .right .stick, article.mainContainer section.stories .People .openDoor .about .content .box .right .stick {
   display: block;
   width: 100px;
   height: 2px;
@@ -13817,7 +15157,7 @@ label.quantity_main a.plus:hover:after {
   background-color: #ba9142;
   position: absolute;
 }
-.relation .about .content .box .left h2, article.mainContainer section.stories .about .content .box .left h2 {
+.relation .about .content .box .left h2, article.mainContainer section.stories .about .content .box .left h2, .relation .about .content .box .People .openDoor .right h2, .relation .People .openDoor .about .content .box .right h2, article.mainContainer section.stories .about .content .box .People .openDoor .right h2, article.mainContainer section.stories .People .openDoor .about .content .box .right h2 {
   font-size: 1.25rem;
   color: #fff;
   letter-spacing: 1px;

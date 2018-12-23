@@ -218,6 +218,15 @@
                         @endif
                     </ul>
                 </div>
+                <div class="orderInfo" style="width:100%;padding-bottom:10px;">
+                    <h3>
+                    特殊需求備註
+                    </h3>
+                    <ul class="content">
+                    {{$order['remark']}}
+                    </ul>
+                </div>
+
             </div>
             <div class="confirmCart">
                 <div class="head">
