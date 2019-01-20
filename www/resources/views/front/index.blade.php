@@ -31,23 +31,35 @@
       <!--首頁slider -->
       <!-- news index -->
       <section class="indesSlider">
-          <div class="newsboard" style="display: none;">
-              <a class="container" href="javascript:;" id="event_1">
-                  <div class="picContainer">
-                      <img src="images/indexEvent.jpg" alt="">
-                  </div>
-                  <div class="detialContainer">
-                      <p>NEWS</p>
-                      <!-- <h3>{{$post->title}}</h3> -->
-                      <!-- <span class="data">{{$post->publish_at}}</span> -->
+            <div class="swiper-container newsboard swiper-news " style="display: none;">
+                <div class="swiper-wrapper">
+                    <a class="container swiper-slide newsContent" href="javascript:;" id="">
+                <div class="picContainer">
+                    <img src="images/indexEvent.jpg" alt="">
+                </div>
+                <div class="detialContainer">
+                    <p>EVENT</p>
                     <h3>新年限定合歡禮盒85折優惠中</h3>
                     <span class="prev">象徵喜悅的「金雀」搭上幸福滋養的「丹鶴」...</span>
                     <span class="data">2018.12.23</span>
-                  </div>
-              </a>
-          </div>
+                </div>
+            </a>
+                    <a class="container swiper-slide newsContent" href="javascript:;" id="">
+                <div class="picContainer">
+                    <img src="images/indexEvent.jpg" alt="">
+                </div>
+                <div class="detialContainer">
+                    <p>EVENT2</p>
+                    <h3>新年限定合歡禮盒85折優惠中</h3>
+                    <span class="prev">象徵喜悅的「金雀」搭上幸福滋養的「丹鶴」...</span>
+                    <span class="data">2018.12.23</span>
+                </div>
+            </a>
+                </div>
+                 <div class="swiper-pagination-news newsDot"></div>
+            </div>
           <!-- Slider main container -->
-          <div class="swiper-container">
+          <div class="swiper-container mainSlider">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                   <!-- Slides -->

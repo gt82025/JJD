@@ -1,6 +1,10 @@
     // global var 
     var mySwiper
     var onePageScrollIndex
+    var $eventContent
+    var $eventBtn
+    var newsSlider
+
 
 
 
@@ -10,23 +14,25 @@
         $('html').addClass('index');
         $('picture').imagesLoaded()
             .always(function(instance) {
-                //console.log('all images loaded');
+                console.log('all images loaded');
             })
             .done(function(instance) {
-                //console.log('all images successfully loaded');
+                console.log('all images successfully loaded');
                 imgFill();
             })
             .fail(function() {
-                //console.log('all images loaded, at least one is broken');
+                console.log('all images loaded, at least one is broken');
             })
             .progress(function(instance, image) {
                 var result = image.isLoaded ? 'loaded' : 'broken';
-                //console.log('image is ' + result + ' for ' + image.img.src);
+                console.log('image is ' + result + ' for ' + image.img.src);
             });
 
         IndexSlider();
         sectionHover();
-        fullPagesJs()
+        fullPagesJs();
+        eventIndex();
+        eventSlider();
 
 
 
@@ -55,7 +61,7 @@
             keyboardScrolling: true,
             touchSensitivity: 15,
             afterLoad: function(anchorLink, index) {
-                //console.log(index);
+                console.log(index);
                 if(index == 2){
                     $('#header').addClass('active');
                 }else if(index == 1){
@@ -77,7 +83,7 @@
     //首頁 swiper slider 請參考 http://idangero.us/swiper/
     function IndexSlider() {
 
-        mySwiper = new Swiper('.swiper-container', {
+        mySwiper = new Swiper('.mainSlider', {
             // Optional parameters
             loop: true,
             autoplay: {
@@ -128,4 +134,38 @@
     //首頁 slider image fill 請參考 http://idangero.us/swiper/
     function imgFill() {
         // $('picture').imagefill();
+    }
+
+    //首頁 event Lightbox
+    function eventIndex(){
+        $('.newsContent').click(function(){
+            $('.eventLightBox').addClass('active');
+        })
+        $('#eventClose').click(function(){
+             $('.eventLightBox').removeClass('active');
+
+
+        })
+    }
+    //首頁 event slider
+    function eventSlider(){
+                newsSlider = new Swiper('.swiper-news', {
+            // Optional parameters
+            loop: false,
+            autoplay: {
+                delay: 5000,
+            },
+            speed: 500,
+            spaceBetween: 0,
+             slidesPerView: 1,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination-news',
+                clickable: true,
+            }
+        })
+
+
+
     }

@@ -365,5 +365,5 @@
 @endsection
 
 @section('script')
-<script src="js/page/product.js"></script>
+<script src="js/page/product.min.js"></script>
 @endsection
