@@ -512,7 +512,7 @@ html, body {
     <script src="{{url('js/vendor/userAgentChecker.min.js')}}"></script>
     <!--     <script src="js/vendor/clamp.min.js"></script> -->
     <script src="{{url('js/vendor/scroll-scope.min.js')}}"></script>
-    <script src="{{url('js/app.js')}}"></script>
+    <script src="{{url('js/app.min.js')}}"></script>
 
     <script src="{{url('js/vendor/jquery.easeScroll.min.js')}}"></script>
     <script src="{{url('js/vendor/TweenLite.min.js')}}"></script>

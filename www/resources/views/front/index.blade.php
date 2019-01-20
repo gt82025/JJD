@@ -1,20 +1,48 @@
 @extends('layouts.home')
 
 @section('content')
+<div class="eventLightBox">
+    <div class="content">
+        <a class="close" href="#" id="eventClose">
+            <span class="btnBox"></span>
+        </a>
+        <div class="left" style="background-image: url(images/indexEvent.jpg)"></div>
+        <div class="right">
+            <h3>新年限定合歡禮盒85折優惠中</h3>
+            <p class="period">活動期間：2018/01/01-2018/02/19
+                
+            </p>
+            <p class="eventContent">
+                象徵喜悅的「金雀」搭上幸福滋養的「丹鶴」，在新的一年，獻給最重要珍愛的人。
+
+                
+            </p>
+            
+
+        </div>
+
+        <div class="" style="clear:both;"></div>
+        
+    </div>
+    
+</div>
 <div class="wrapper index">
   <article class="mainContainer" id="fullpage">
       <!--首頁slider -->
       <!-- news index -->
       <section class="indesSlider">
-          <div class="newsboard">
-              <a class="container">
+          <div class="newsboard" style="display: none;">
+              <a class="container" href="javascript:;" id="event_1">
                   <div class="picContainer">
-                      <img src="images/news_pic.jpg" alt="">
+                      <img src="images/indexEvent.jpg" alt="">
                   </div>
                   <div class="detialContainer">
                       <p>NEWS</p>
-                      <h3>{{$post->title}}</h3>
-                      <span class="data">{{$post->publish_at}}</span>
+                      <!-- <h3>{{$post->title}}</h3> -->
+                      <!-- <span class="data">{{$post->publish_at}}</span> -->
+                    <h3>新年限定合歡禮盒85折優惠中</h3>
+                    <span class="prev">象徵喜悅的「金雀」搭上幸福滋養的「丹鶴」...</span>
+                    <span class="data">2018.12.23</span>
                   </div>
               </a>
           </div>

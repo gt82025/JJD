@@ -628,7 +628,7 @@ th {
  *   height: 200px;
  *   background-color: blue;
  *
- *   @include animation(fade 5s infinite);
+ *   @include animation(fade 5s infinite); 
  *
  * }
  *
@@ -11550,7 +11550,7 @@ label.quantity_main a.plus:hover:after {
   }
 }
 .total_box .ShippingDetails {
-  width: 57%;
+  width: 35%;
   padding: 20px 30px;
   border: #ba9142 1px solid;
   line-height: 1.75rem;
@@ -11579,7 +11579,7 @@ label.quantity_main a.plus:hover:after {
   }
 }
 .total_box .ShippingDetails .ship_remark {
-  width: 60%;
+  width: 45%;
 }
 .total_box .ShippingDetails .ship_remark h4 {
   color: #ba9142;
@@ -11601,7 +11601,7 @@ label.quantity_main a.plus:hover:after {
 }
 .total_box .ShippingDetails .ship_remark:nth-child(2) {
   position: relative;
-  width: 30%;
+  width: 47%;
 }
 .total_box .ShippingDetails .ship_remark:nth-child(2):after {
   width: 1px;
