@@ -1,5 +1,27 @@
 @extends('layouts.home')
 
+@section('css')
+<style>
+    .eventLightBox span.btnbox
+    {
+        display: block;
+        background-color: #ba9142;
+        padding: 12px 25px;
+        float: left;
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        margin-top: 30px;
+        line-height: 1.25rem;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-delay: .8s;
+        transition-timing-function: cubic-bezier(.19,.8,.22,1);
+   
+        
+    }
+</style>   
+@endsection
 @section('content')
 <div class="eventLightBox">
     <div class="content">
@@ -7,57 +29,56 @@
             <span class="btnBox"></span>
         </a>
         <div class="left" style="background-image: url(images/indexEvent.jpg)"></div>
-        <div class="right">
+        <div class="right" style="overflow-y: scroll;">
             <h3>新年限定合歡禮盒85折優惠中</h3>
-            <p class="period">活動期間：2018/01/01-2018/02/19
-                
-            </p>
+            <p class="period">活動期間：2018/01/01-2018/02/19</p>
             <p class="eventContent">
                 象徵喜悅的「金雀」搭上幸福滋養的「丹鶴」，在新的一年，獻給最重要珍愛的人。
-
-                
             </p>
+            <a class="box" href="">
             
-
+            </a>
         </div>
-
         <div class="" style="clear:both;"></div>
-        
     </div>
-    
 </div>
+
 <div class="wrapper index">
   <article class="mainContainer" id="fullpage">
       <!--首頁slider -->
       <!-- news index -->
       <section class="indesSlider">
-            <div class="swiper-container newsboard swiper-news " style="display: none;">
+            <!--新聞START-->
+            @if(count($post))
+            <div class="swiper-container newsboard swiper-news " >
                 <div class="swiper-wrapper">
+                   
+                    @foreach($post as $k => $v)
                     <a class="container swiper-slide newsContent" href="javascript:;" id="">
-                <div class="picContainer">
-                    <img src="images/indexEvent.jpg" alt="">
-                </div>
-                <div class="detialContainer">
-                    <p>EVENT</p>
-                    <h3>新年限定合歡禮盒85折優惠中</h3>
-                    <span class="prev">象徵喜悅的「金雀」搭上幸福滋養的「丹鶴」...</span>
-                    <span class="data">2018.12.23</span>
-                </div>
-            </a>
-                    <a class="container swiper-slide newsContent" href="javascript:;" id="">
-                <div class="picContainer">
-                    <img src="images/indexEvent.jpg" alt="">
-                </div>
-                <div class="detialContainer">
-                    <p>EVENT2</p>
-                    <h3>新年限定合歡禮盒85折優惠中</h3>
-                    <span class="prev">象徵喜悅的「金雀」搭上幸福滋養的「丹鶴」...</span>
-                    <span class="data">2018.12.23</span>
-                </div>
-            </a>
+                        <input name="title" type="hidden" value="{{$v->title}}">
+                        <input name="subtitle" type="hidden" value="{{$v->subtitle}}">
+                        <input name="content" type="hidden" value=" {!! nl2br($v->content) !!}">
+                        <input name="publish_at" type="hidden" value="{{date('Y.m.d',strtotime($v->publish_at))}}">
+                        <input name="cover" type="hidden" value="{{url($v->cover)}}">
+                        <input name="btn" type="hidden" value="{{$v->btn}}">
+                        <input name="url" type="hidden" value="{{$v->url}}">
+
+                      <div class="picContainer">
+                          <img src="{{url($v->cover)}}" alt="{{$v->title}}">
+                      </div>
+                      <div class="detialContainer">
+                          <p>EVENT</p>
+                          <h3>{{$v->title}}</h3>
+                          <span class="prev">{{$v->brief}}</span>
+                          <span class="data">{{date('Y.m.d',strtotime($v->publish_at))}}</span>
+                      </div>
+                    </a>
+                    @endforeach
                 </div>
                  <div class="swiper-pagination-news newsDot"></div>
             </div>
+            <!--新聞END-->
+            @endif
           <!-- Slider main container -->
           <div class="swiper-container mainSlider">
               <!-- Additional required wrapper -->
@@ -187,4 +208,40 @@
       </section>
   </article>
 </div>
+@endsection
+
+@section('script')
+<script>
+$('.swiper-slide').click(function(){
+    //console.log($(this).find( "input[name='title']" ).val());
+   
+    $('.eventLightBox').find('.left').css( 'background-image', 'url(' + $(this).find( "input[name='cover']" ).val() + ')');
+    $('.eventLightBox').find('h3').text($(this).find( "input[name='title']" ).val());
+    $('.eventLightBox').find('.period').text($(this).find( "input[name='subtitle']" ).val());
+    $('.eventLightBox').find('.eventContent').html($(this).find( "input[name='content']" ).val());
+    
+    if($(this).find( "input[name='url']").val()){
+        $('.eventLightBox').find('.box').attr('href',$(this).find( "input[name='url']").val());
+        $btn = '<div class="buybox"><span  class="btnbox"><span class="line1"></span><span class="line2"></span>'+$(this).find( "input[name='btn']").val()+'</span></div>'
+        $('.eventLightBox').find('.box').html($btn);
+    }else{
+        $('.eventLightBox').find('.box').html('');
+    }
+   
+  
+
+    
+                
+                    
+                    
+
+                    
+                
+            
+
+
+
+});
+
+</script>
 @endsection

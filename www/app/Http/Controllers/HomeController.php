@@ -48,10 +48,15 @@ class HomeController extends Controller
 
     public function index(){
         $meta = Meta::find(1);
-        $post = Post::where('published', 1)->orderBy('publish_at', 'desc')->first();
+        $post = Post::where('published', 1)->orderBy('publish_at', 'desc')->get();
         $banner = Banner::where('published', 1)->orderBy('publish_at', 'desc')->get();
         $social = Social::where('published', 1)->orderBy('sort', 'asc')->get();
-       
+
+        foreach ($post as $k => $v) {
+            # code...
+            $post[$k]->brief =  mb_substr(strip_tags($v->content), 0, 18, 'UTF-8').'...';
+        }
+      
         return view('front.index',
         	[
         		'meta' => $meta,
