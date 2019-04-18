@@ -6884,7 +6884,7 @@ article.mainContainer section.relation .titleBox p.sec, article.mainContainer se
     line-height: 2.8125rem;
   }
 }
-article.mainContainer section.relation .titleBox span.box, article.mainContainer section.stories .titleBox span.box {
+article.mainContainer section.relation .titleBox span.box, article.mainContainer section.stories .titleBox span.box, article.mainContainer section.relation .titleBox h2.box, article.mainContainer section.stories .titleBox h2.box {
   width: 160px;
   height: 50px;
   border: #fff 1px solid;
@@ -6894,6 +6894,7 @@ article.mainContainer section.relation .titleBox span.box, article.mainContainer
   font-size: 1.125rem;
   color: #fff;
   margin-top: 30px;
+  font-weight: normal;
   transition-property: all;
   transition-duration: 0.5s;
   transition-delay: 0s;

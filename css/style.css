@@ -5987,6 +5987,12 @@ header#header .mainContainer .logo {
   transition-duration: 0.5s;
   transition-delay: 0s;
 }
+@media only screen and (max-height: 400px) {
+  header#header .mainContainer .logo {
+    bottom: auto;
+    top: 0;
+  }
+}
 @media screen and (max-width: 37.5em) {
   header#header .mainContainer .logo {
     width: 120px;
@@ -6268,6 +6274,7 @@ header#header .mainContainer nav .cart i:before {
   margin: 0;
   vertical-align: middle;
   margin-left: -5px;
+  line-height: 44px;
 }
 @media screen and (max-width: 50em) {
   header#header .mainContainer nav .cart.pc {
@@ -6877,7 +6884,7 @@ article.mainContainer section.relation .titleBox p.sec, article.mainContainer se
     line-height: 2.8125rem;
   }
 }
-article.mainContainer section.relation .titleBox span.box, article.mainContainer section.stories .titleBox span.box {
+article.mainContainer section.relation .titleBox span.box, article.mainContainer section.stories .titleBox span.box, article.mainContainer section.relation .titleBox h2.box, article.mainContainer section.stories .titleBox h2.box {
   width: 160px;
   height: 50px;
   border: #fff 1px solid;
@@ -6887,6 +6894,7 @@ article.mainContainer section.relation .titleBox span.box, article.mainContainer
   font-size: 1.125rem;
   color: #fff;
   margin-top: 30px;
+  font-weight: normal;
   transition-property: all;
   transition-duration: 0.5s;
   transition-delay: 0s;
@@ -6896,7 +6904,7 @@ article.mainContainer section.relation .titleBox:hover span.box, article.mainCon
   letter-spacing: 3px;
   border: #ba9142 1px solid;
 }
-article.mainContainer section.indesSlider .newsboard {
+article.mainContainer section.indesSlider .newsboard.swiper-container {
   width: 520px;
   height: 178px;
   position: absolute;
@@ -6905,18 +6913,47 @@ article.mainContainer section.indesSlider .newsboard {
   bottom: 0;
   z-index: 10;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  padding: 15px 20px;
-  bottom: 5vh;
+  padding: 15px 0;
+  bottom: 6vh !important;
+  overflow: hidden;
+}
+@media only screen and (max-height: 400px) {
+  article.mainContainer section.indesSlider .newsboard.swiper-container {
+    height: 100px;
+    width: 450px;
+  }
 }
 @media screen and (max-width: 37.5em) {
-  article.mainContainer section.indesSlider .newsboard {
+  article.mainContainer section.indesSlider .newsboard.swiper-container {
     width: 90%;
     left: 5%;
     bottom: 20px;
     height: auto;
   }
 }
-article.mainContainer section.indesSlider .newsboard .container {
+article.mainContainer section.indesSlider .newsboard.swiper-container .newsDot {
+  width: 100%;
+  position: absolute;
+  display: block;
+  bottom: 15px;
+  text-align: right;
+  height: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  z-index: 50;
+}
+article.mainContainer section.indesSlider .newsboard.swiper-container .newsDot .swiper-pagination-bullet {
+  display: inline-block;
+  background-color: #ba9142 !important;
+  border-radius: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 10px;
+  height: 10px;
+}
+article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container {
   width: 100%;
   position: relative;
   height: 100%;
@@ -6924,24 +6961,38 @@ article.mainContainer section.indesSlider .newsboard .container {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
 }
-article.mainContainer section.indesSlider .newsboard .container .picContainer {
+article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .picContainer {
   width: 37%;
   height: 100%;
   position: relative;
+  overflow: hidden;
 }
-article.mainContainer section.indesSlider .newsboard .container .detialContainer {
+@media only screen and (max-height: 400px) {
+  article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .picContainer {
+    width: 20%;
+  }
+}
+article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .detialContainer {
   width: 63%;
   height: 100%;
   position: relative;
   padding-left: 20px;
 }
+@media only screen and (max-height: 400px) {
+  article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .detialContainer {
+    width: 75%;
+  }
+}
 @media screen and (max-width: 37.5em) {
-  article.mainContainer section.indesSlider .newsboard .container .detialContainer {
+  article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .detialContainer {
     padding-bottom: 30px;
   }
 }
-article.mainContainer section.indesSlider .newsboard .container .detialContainer p {
+article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .detialContainer p {
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.125rem;
@@ -6951,7 +7002,7 @@ article.mainContainer section.indesSlider .newsboard .container .detialContainer
   float: left;
   color: #333;
 }
-article.mainContainer section.indesSlider .newsboard .container .detialContainer h3 {
+article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .detialContainer h3 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   width: 100%;
@@ -6962,17 +7013,22 @@ article.mainContainer section.indesSlider .newsboard .container .detialContainer
   color: #333;
 }
 @media screen and (max-width: 37.5em) {
-  article.mainContainer section.indesSlider .newsboard .container .detialContainer h3 {
+  article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .detialContainer h3 {
     font-size: 1rem;
     line-height: 1.5625rem;
   }
 }
-article.mainContainer section.indesSlider .newsboard .container .detialContainer .prev {
+article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .detialContainer .prev {
   font-size: 0.9375rem;
   letter-spacing: 1px;
   color: #565656;
 }
-article.mainContainer section.indesSlider .newsboard .container .detialContainer .data {
+@media only screen and (max-height: 400px) {
+  article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .detialContainer .prev {
+    display: none;
+  }
+}
+article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .detialContainer .data {
   width: 100%;
   display: block;
   position: absolute;
@@ -6981,6 +7037,11 @@ article.mainContainer section.indesSlider .newsboard .container .detialContainer
   letter-spacing: 1px;
   font-size: 0.8125rem;
   color: #333;
+}
+@media only screen and (max-height: 400px) {
+  article.mainContainer section.indesSlider .newsboard.swiper-container .swiper-wrapper .container .detialContainer .data {
+    display: none;
+  }
 }
 article.mainContainer section.indesSlider .swiper-container {
   width: 100%;
@@ -7026,6 +7087,12 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain .slo
     padding-left: 2.5%;
   }
 }
+@media only screen and (max-height: 400px) {
+  article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain {
+    padding-top: 17vh;
+    padding-left: 4%;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain {
     padding-top: 12vh;
@@ -7040,6 +7107,11 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain .slo
   transition-property: padding;
   transition-duration: 0.8s;
   transition-delay: 0s;
+}
+@media only screen and (max-height: 400px) {
+  article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain .box {
+    width: 100%;
+  }
 }
 article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain .box:hover .sloganBox p {
   color: #ba9142;
@@ -7080,10 +7152,16 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain .slo
   transform: translateY(100%);
   position: relative;
 }
+@media only screen and (max-height: 400px) {
+  article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain .box .sloganBox p {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
+}
 @media screen and (max-width: 37.5em) {
   article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain .box .sloganBox p {
     font-size: 2.1875rem;
-    line-height: 2.8125rem;
+    line-height: 2.5rem;
   }
 }
 article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain .box .buybox {
@@ -7110,6 +7188,14 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain .slo
   transform: translateY(-100px);
   position: relative;
   z-index: 10;
+}
+@media only screen and (max-height: 400px) {
+  article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain .box .buybox span.btnbox {
+    padding: 9px 25px;
+    margin-top: 10px;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+  }
 }
 article.mainContainer section.indesSlider .swiper-container .slider-contain .sloganContain .box .buybox span.btnbox .line1 {
   position: absolute;
@@ -7233,20 +7319,20 @@ article.mainContainer section.indesSlider .swiper-container .slider-contain pict
   clear: both;
 }
 
-.swiper-pagination-bullet {
-  width: 15px !important;
-  height: 15px !important;
+.indesSlider .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
   border: #fff 2px solid !important;
-  margin: 8px !important;
+  margin: 8px;
   background-color: rgba(255, 255, 255, 0) !important;
   opacity: 1 !important;
 }
-.swiper-pagination-bullet.swiper-pagination-bullet-active {
+.indesSlider .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: white !important;
 }
-
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.indesSlider .swiper-container .swiper-pagination .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 50px;
+  margin: 0;
 }
 
 .swiper-slide-duplicate-active .slider-contain, .swiper-slide-active .slider-contain {
@@ -9080,6 +9166,8 @@ article.shopping .main div.preview .buy_price .class {
   margin-bottom: 0;
   display: block;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 article.shopping .main div.preview .buy_price h2.PdName {
   color: #333;
@@ -15464,7 +15552,7 @@ label.quantity_main a.plus:hover:after {
 }
 .relation .Geometric .svgContainerA .svgBox polyline, article.mainContainer section.stories .Geometric .svgContainerA .svgBox polyline, .relation .Geometric .svgContainerB .svgBox polyline, article.mainContainer section.stories .Geometric .svgContainerB .svgBox polyline, .relation .Geometric .svgContainerA .svgBox line, article.mainContainer section.stories .Geometric .svgContainerA .svgBox line, .relation .Geometric .svgContainerB .svgBox line, article.mainContainer section.stories .Geometric .svgContainerB .svgBox line, .relation .Geometric .svgContainerA .svgBox rect, article.mainContainer section.stories .Geometric .svgContainerA .svgBox rect, .relation .Geometric .svgContainerB .svgBox rect, article.mainContainer section.stories .Geometric .svgContainerB .svgBox rect, .relation .Geometric .svgContainerA .svgBox polygon, article.mainContainer section.stories .Geometric .svgContainerA .svgBox polygon, .relation .Geometric .svgContainerB .svgBox polygon, article.mainContainer section.stories .Geometric .svgContainerB .svgBox polygon, .relation .Geometric .svgContainerA .svgBox circle, article.mainContainer section.stories .Geometric .svgContainerA .svgBox circle, .relation .Geometric .svgContainerB .svgBox circle, article.mainContainer section.stories .Geometric .svgContainerB .svgBox circle, .relation .Geometric .svgContainerA .svgBox path, article.mainContainer section.stories .Geometric .svgContainerA .svgBox path, .relation .Geometric .svgContainerB .svgBox path, article.mainContainer section.stories .Geometric .svgContainerB .svgBox path {
   stroke-dasharray: 2500;
-  stroke-dashoffset: -2500;
+  stroke-dashoffset: 2500;
 }
 .relation .Geometric .svgContainerA.active .svgBox polyline, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox polyline, .relation .Geometric .active.svgContainerB .svgBox polyline, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox polyline, .relation .Geometric .svgContainerA.active .svgBox line, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox line, .relation .Geometric .active.svgContainerB .svgBox line, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox line, .relation .Geometric .svgContainerA.active .svgBox rect, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox rect, .relation .Geometric .active.svgContainerB .svgBox rect, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox rect, .relation .Geometric .svgContainerA.active .svgBox polygon, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox polygon, .relation .Geometric .active.svgContainerB .svgBox polygon, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox polygon, .relation .Geometric .svgContainerA.active .svgBox circle, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox circle, .relation .Geometric .active.svgContainerB .svgBox circle, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox circle, .relation .Geometric .svgContainerA.active .svgBox path, article.mainContainer section.stories .Geometric .svgContainerA.active .svgBox path, .relation .Geometric .active.svgContainerB .svgBox path, article.mainContainer section.stories .Geometric .active.svgContainerB .svgBox path {
   transition-property: all;
@@ -16555,6 +16643,12 @@ input[type=submit] {
   background-color: #fff;
   position: relative;
 }
+@media screen and (max-width: 37.5em) {
+  .eventLightBox .content {
+    height: auto;
+    width: 92%;
+  }
+}
 .eventLightBox .content .close {
   width: 50px;
   height: 50px;
@@ -16564,6 +16658,7 @@ input[type=submit] {
   right: 0;
   top: 0;
   background-color: #a57b2a;
+  z-index: 500;
 }
 .eventLightBox .content .close:hover .btnBox {
   transform: rotate(0deg);
@@ -16607,14 +16702,51 @@ input[type=submit] {
   height: 100%;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+@media screen and (max-width: 37.5em) {
+  .eventLightBox .content .left, .eventLightBox .content .relation .People .openDoor .right, .relation .People .openDoor .eventLightBox .content .right, .eventLightBox .content article.mainContainer section.stories .People .openDoor .right, article.mainContainer section.stories .People .openDoor .eventLightBox .content .right {
+    width: 100%;
+    float: none;
+    height: 40vh;
+  }
 }
 .eventLightBox .content .right {
   float: right;
   margin-left: 0;
   margin-right: auto;
   width: 50%;
-  height: 100%;
-  padding: 60px 50px;
+  height: 80%;
+  padding: 0 50px;
+  position: relative;
+  margin-top: 5%;
+  overflow: scroll;
+}
+@media screen and (max-width: 64.0625em) {
+  .eventLightBox .content .right {
+    padding: 0 20px;
+    overflow: scroll;
+    height: 80%;
+    margin-top: 5%;
+  }
+}
+@media screen and (max-width: 50em) {
+  .eventLightBox .content .right {
+    padding: 0 20px;
+    overflow: scroll;
+    height: 80%;
+    margin-top: 5%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .eventLightBox .content .right {
+    width: 100%;
+    float: none;
+    height: auto;
+    padding: 20px 20px;
+    height: 50vh;
+    overflow: scroll;
+  }
 }
 .eventLightBox .content .right h3 {
   font-size: 1.5625rem;
@@ -16623,6 +16755,11 @@ input[type=submit] {
   margin-top: 0;
   letter-spacing: 1px;
   color: #3e3e3e;
+}
+@media screen and (max-width: 37.5em) {
+  .eventLightBox .content .right h3 {
+    font-size: 1.25rem;
+  }
 }
 .eventLightBox .content .right p.period {
   margin-top: 10px;
